@@ -124,4 +124,16 @@
   <data name="Alarm_Plus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Alarm-Plus-icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Files_New_File_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Files-New-File-icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="floppy_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\floppy-icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="search_icon__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-icon (2).png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="symbol_delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\symbol-delete-icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

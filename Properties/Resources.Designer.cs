@@ -79,5 +79,45 @@ namespace ProyectoFinal_ContratacionEmpleados.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Files_New_File_icon {
+            get {
+                object obj = ResourceManager.GetObject("Files_New_File_icon", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] floppy_icon {
+            get {
+                object obj = ResourceManager.GetObject("floppy_icon", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] search_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("search_icon__2_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] symbol_delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("symbol_delete_icon", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
