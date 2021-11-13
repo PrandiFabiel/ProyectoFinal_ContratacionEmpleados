@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoFinal_ContratacionEmpleados.DAL
+namespace ProyectoFinal_ContratacionEmpleados.BLL
 {
-    class borrar2
+    public class InstructoresBLL
     {
+
     }
 }
