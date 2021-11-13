@@ -103,9 +103,9 @@ namespace ProyectoFinal_ContratacionEmpleados.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] search_icon__2_ {
+        internal static byte[] search_icon__3_ {
             get {
-                object obj = ResourceManager.GetObject("search_icon__2_", resourceCulture);
+                object obj = ResourceManager.GetObject("search_icon__3_", resourceCulture);
                 return ((byte[])(obj));
             }
         }

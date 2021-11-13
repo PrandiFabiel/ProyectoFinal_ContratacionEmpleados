@@ -130,8 +130,8 @@
   <data name="floppy_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floppy-icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="search_icon__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-icon (2).png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="search_icon__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-icon (3).png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="symbol_delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\symbol-delete-icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
