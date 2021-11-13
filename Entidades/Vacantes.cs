@@ -11,8 +11,8 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
         public int VacanteId { get; set; }
         public string NombreDeVacante { get; set; }
         public int DepartamentoId { get; set; }
-        public DateTime FechaDeRegistro { get; set; } = DateTime.Now;
-        public string Requisitos { get; set; }
-        public string Descripcion { get; set; }
+        public DateTime FechaDeRegistroVacante { get; set; } = DateTime.Now;
+        public string RequisitosVacante { get; set; }
+        public string DescripcionVacante { get; set; }
     }
 }

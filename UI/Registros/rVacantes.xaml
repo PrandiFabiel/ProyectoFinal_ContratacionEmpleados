@@ -8,13 +8,17 @@
         Title="Registro de Vacantes" Height="450" Width="500">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
+
+            <GroupBox>
+                
+            </GroupBox>
             <StackPanel Orientation="Vertical">
-                <Label Content="Vacante id:"/>
+                <Label Content="Vacante id:" />
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="VacanteId_TextBox" Width="100" Height="18" Margin="5,0,0,0" Text="{Binding VacanteId}"/>
                     <Button x:Name="Buscar_Button" Margin="5,0" Click="Buscar_Button_Click">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/search-icon.png" Height="22" Width="20" />
+                            <Image Source="/Resources/search-icon (3).png" />
                             <Label Content="Buscar"/>
                         </StackPanel>
                     </Button>
@@ -33,7 +37,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,20">
                 <Button x:Name="Nuevo_Button" Click="Nuevo_Button_Click">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Resources/File-new-icon.png" />
+                        <Image Source="/Resources/Files-New-File-icon.png" />
                         <Label Content="Nuevo"/>
                     </StackPanel>
                 </Button>
@@ -47,7 +51,7 @@
 
                 <Button x:Name="Eliminar_Button" Click="Eliminar_Button_Click">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Resources/delete-icon.png" />
+                        <Image Source="/Resources/symbol-delete-icon.png" />
                         <Label Content="Eliminar"/>
                     </StackPanel>
                 </Button>
