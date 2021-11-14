@@ -26,13 +26,13 @@
                 <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="380" HorizontalAlignment="Left"/>
 
                 <Label Content="Fecha de registro:"/>
-                <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding FechaRegistroUsuaio}" SelectedDateFormat="Short" Width="380" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+                <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding FechaRegistroUsuario}" SelectedDateFormat="Short" Width="380" HorizontalAlignment="Left" Margin="0,0,0,0"/>
 
                 <Label Content="Email:"/>
                 <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Width="380" HorizontalAlignment="Left" />
 
                 <Label Content="Clave:"/>
-                <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" Width="380" HorizontalAlignment="Left"/>
+                <PasswordBox x:Name="ClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" Width="380" HorizontalAlignment="Left"/>
 
                 <Label Content="Confirmar clave:"/>
                 <PasswordBox x:Name="ConfirmarClavePasswordBox" Width="380" HorizontalAlignment="Left"/>
