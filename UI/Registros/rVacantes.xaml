@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Vacantes" Height="450" Width="500">
+        Title="Registro de Vacantes" Height="599" Width="436">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
 
@@ -25,14 +25,17 @@
                 </StackPanel>
             </StackPanel>
 
-            <Label Content="Fecha:"/>
-            <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" Width="150" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-            <Label Content="Persona:"/>
-            <TextBox x:Name="Persona_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Persona}"/>
-            <Label Content="Concepto:"/>
-            <TextBox x:Name="Concepto_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Concepto}"/>
-            <Label Content="Monto:"/>
-            <TextBox x:Name="Monto_TextBox" Width="150" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Monto}"/>
+            <Label Content="Nombre:"/>
+            <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding NombreDeVacante}"/>
+            <Label Content="Fecha de registro:"/>
+            <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding FechaDeRegistroVacante}" SelectedDateFormat="Short" Width="150" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+
+            <Label Content="Departamento:"/>
+            <ComboBox x:Name="DepartamentoComboBox" SelectedValue="{Binding DepartamentoId}" Width="300" HorizontalAlignment="Left"/>
+            <Label Content="Requisitos:"/>
+            <TextBox x:Name="Requisitos_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding RequisitosVacante}" Height="137"/>
+            <Label Content="Descripcion:"/>
+            <TextBox x:Name="Descripcion_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding DescripcionVacante}" Height="76"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,20">
                 <Button x:Name="Nuevo_Button" Click="Nuevo_Button_Click">
@@ -42,7 +45,7 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="Guardar_Button" Click="Guardar_Button_Click" Margin="35,0">
+                <Button x:Name="Guardar_Button" Click="Guardar_Button_Click"  Margin="35,0">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/floppy-icon.png" />
                         <Label Content="Guardar"/>

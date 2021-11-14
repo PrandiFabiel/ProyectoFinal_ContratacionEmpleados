@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
 {
     public class Vacantes
     {
+        [Key]
         public int VacanteId { get; set; }
         public string NombreDeVacante { get; set; }
         public int DepartamentoId { get; set; }

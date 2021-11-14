@@ -12,34 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
+namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
 {
     /// <summary>
-    /// Interaction logic for rVacantes.xaml
+    /// Interaction logic for cVancates.xaml
     /// </summary>
-    public partial class rVacantes : Window
+    public partial class cVancates : Window
     {
-        public rVacantes()
+        public cVancates()
         {
             InitializeComponent();
         }
 
         private void Buscar_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Nuevo_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Guardar_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Eliminar_Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

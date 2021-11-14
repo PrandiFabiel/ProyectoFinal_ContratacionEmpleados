@@ -60,9 +60,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="DATA\" />
-    <Folder Include="UI\Consultas\" />
+    <None Update="DATA\RecursosHumanos.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
