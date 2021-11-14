@@ -5,29 +5,31 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProyectoFinal_ContratacionEmpleados.BLL
 {
-    public class VacantesBLL 
+    public class UsuariosBLL
     {
-        public static bool Guardar(Vacantes vacante)
+        public static bool Guardar(Usuarios usuario)
         {
-            if (!Existe(vacante.VacanteId))
-                return Insertar(vacante);
+            if (!Existe(usuario.UsuarioId))
+                return Insertar(usuario);
             else
-                return Modificar(vacante);
+                return Modificar(usuario);
         }
 
-        public static bool Insertar(Vacantes vacante)
+        public static bool Insertar(Usuarios usuario)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Vacantes.Add(vacante);
-                paso = contexto.SaveChanges() > 0;
+                usuario.Clave = GetSHA256(usuario.Clave);
+                if (contexto.Usuarios.Add(usuario) != null)
+                    paso = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -42,13 +44,15 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return paso;
         }
 
-        public static bool Modificar(Vacantes vacante)
+        public static bool Modificar(Usuarios usuario)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
+            usuario.Clave = GetSHA256(usuario.Clave);
+
             try
             {
-                contexto.Entry(vacante).State = EntityState.Modified;
+                contexto.Entry(usuario).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -60,6 +64,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             {
                 contexto.Dispose();
             }
+
             return paso;
         }
 
@@ -69,11 +74,11 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var vacante = contexto.Vacantes.Find(id);
+                var usuario = contexto.Usuarios.Find(id);
 
-                if (vacante != null)
+                if (usuario != null)
                 {
-                    contexto.Vacantes.Remove(vacante);
+                    contexto.Usuarios.Remove(usuario);
                     paso = contexto.SaveChanges() > 0;
                 }
 
@@ -96,7 +101,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             bool encontrado = false;
             try
             {
-                encontrado = contexto.Vacantes.Any(e => e.VacanteId == id);
+                encontrado = contexto.Usuarios.Any(e => e.UsuarioId == id);
             }
             catch (Exception)
             {
@@ -110,13 +115,13 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return encontrado;
         }
 
-        public static Vacantes Buscar(int id)
+        public static Usuarios Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Vacantes vacante;
+            Usuarios usuario;
             try
             {
-                vacante = contexto.Vacantes.Find(id);
+                usuario = contexto.Usuarios.Find(id);
             }
             catch (Exception)
             {
@@ -127,16 +132,16 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             {
                 contexto.Dispose();
             }
-            return vacante;
+            return usuario;
         }
 
-        public static List<Vacantes> GetList(Expression<Func<Vacantes, bool>> criterio)
+        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> criterio)
         {
-            List<Vacantes> lista = new List<Vacantes>();
+            List<Usuarios> lista = new List<Usuarios>();
             Contexto contexto = new Contexto();
             try
             {
-                lista = contexto.Vacantes.Where(criterio).ToList();
+                lista = contexto.Usuarios.Where(criterio).ToList();
             }
             catch (Exception)
             {
@@ -148,6 +153,43 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
                 contexto.Dispose();
             }
             return lista;
+        }
+
+        public static bool Validar(string nombre, string clave)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                paso = contexto.Usuarios
+                    .Any(u => u.NombreUsuario.Equals(nombre)
+                                && u.Clave.Equals(GetSHA256(clave))
+                          );
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return paso;
+        }
+
+
+        private static string GetSHA256(string str)
+        {
+            SHA256 sha256 = SHA256Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
         }
     }
 }
