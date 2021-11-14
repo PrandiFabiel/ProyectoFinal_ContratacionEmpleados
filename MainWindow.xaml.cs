@@ -50,5 +50,17 @@ namespace ProyectoFinal_ContratacionEmpleados
             cUsuarios cUsuarios = new cUsuarios();
             cUsuarios.Show(); 
         }
+
+        private void InstructoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rInstructores rInstructores = new rInstructores();
+            rInstructores.Show();
+        }
+
+        private void cInstructoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cInstructor cInstructor = new cInstructor();
+            cInstructor.Show();
+        }
     }
 }

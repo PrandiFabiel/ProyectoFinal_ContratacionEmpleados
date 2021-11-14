@@ -11,7 +11,10 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
     {
         [Key]
         public int InstructorId { get; set; }
+        public DateTime FechaInstructor { get; set; } = DateTime.Now;
         public string NombreInstructor { get; set; }
+        public string ApellidosInstructor { get; set; }
+        public string TelefonoInstructor { get; set; }
         public int CantidadEmpleados { get; set; }
 
     }

@@ -1,0 +1,77 @@
+﻿<Window x:Class="ProyectoFinal_ContratacionEmpleados.UI.Registros.rInstructores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Instructores" Height="470" Width="310" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <Label Content="Instructor Id:" FontFamily="Comic Sans MS" FontSize="12" Margin="10,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <TextBox x:Name="InstructorIdTextbox" Text="{Binding InstructorId}" Height="22" Width="85" FontFamily="Comic Sans MS" FontSize="12" />
+                    <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/search-icon (3).png" />
+                            <Label Content="Buscar" FontFamily="Comic Sans MS" FontSize="12"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <Label Content="Fecha:" FontFamily="Comic Sans MS" FontSize="12" Margin="10,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <DatePicker x:Name="FechaInstructorTextbox" SelectedDate="{Binding FechaInstructor}" Height="22" Width="270" FontFamily="Comic Sans MS"/>
+                </StackPanel>
+
+                <Label Content="Nombres:" FontFamily="Comic Sans MS" FontSize="12" Margin="10,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <TextBox x:Name="NombreInstructorTextbox" Text="{Binding NombreInstructor}" Height="22" Width="270" FontFamily="Comic Sans MS"/>
+                </StackPanel>
+
+                <Label Content="Apellidos:" FontFamily="Comic Sans MS" FontSize="12" Margin="10,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <TextBox x:Name="ApellidosInstructorTextbox" Text="{Binding ApellidosInstructor}" FontFamily="Comic Sans MS" FontSize="12" Height="22" Width="270"/>
+                </StackPanel>
+
+                <Label Content="Telefono:" FontFamily="Comic Sans MS" FontSize="12" Margin="10,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <TextBox x:Name="TelefonoInstructorTextbox" Text="{Binding TelefonoInstructor}" FontFamily="Comic Sans MS" FontSize="12" Height="22" Width="270"/>
+                </StackPanel>
+                
+                
+
+                <Label Content="Cantidad de empleados:" FontFamily="Comic Sans MS" FontSize="12" Margin="10,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <TextBox x:Name="CantidadEmpleadosInstructorTextbox" Text="{Binding CantidadEmpleados}" Height="22" Width="270" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                    <Button x:Name="NuevoButton" FontFamily="Comic Sans MS" Click="NuevoButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Files-New-File-icon.png" />
+                            <Label Content="Nuevo"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="GuardarButton" FontFamily="Comic Sans MS" Margin="10,0,0,0" Click="GuardarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/floppy-icon.png" />
+                            <Label Content="Guardar"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="EliminarButton" FontFamily="Comic Sans MS" Margin="10,0,0,0" Click="EliminarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/symbol-delete-icon.png" />
+                            <Label Content="Eliminar"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
