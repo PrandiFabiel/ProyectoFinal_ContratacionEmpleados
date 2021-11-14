@@ -38,5 +38,16 @@ namespace ProyectoFinal_ContratacionEmpleados
             cVancates cVancate = new cVancates();
             cVancate.Show();
         }
+
+        private void UsuariosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rUsuarios rUsuarios = new rUsuarios();
+            rUsuarios.Show(); 
+        }
+
+        private void cUsuariosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
