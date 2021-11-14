@@ -8,10 +8,6 @@
         Title="Registro de Vacantes" Height="599" Width="436">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
-
-            <GroupBox>
-                
-            </GroupBox>
             <StackPanel Orientation="Vertical">
                 <Label Content="Vacante id:" />
                 <StackPanel Orientation="Horizontal">

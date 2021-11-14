@@ -20,7 +20,6 @@
                         <ComboBox x:Name="Filtro_ComboBox" Width="150" Margin="0,0,0,5">
                             <ComboBoxItem Content="Id"/>
                             <ComboBoxItem Content="Nombre"/>
-                            <ComboBoxItem Content="Departamento"/>
                             <ComboBoxItem Content="Requisito"/>
                             <ComboBoxItem Content="Descripcion"/>
                         </ComboBox>

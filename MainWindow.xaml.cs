@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoFinal_ContratacionEmpleados.UI.Consultas;
+using ProyectoFinal_ContratacionEmpleados.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,18 @@ namespace ProyectoFinal_ContratacionEmpleados
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void VacantesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rVacantes rVacante = new rVacantes();
+            rVacante.Show();
+        }
+
+        private void cVacantesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cVancates cVancate = new cVancates();
+            cVancate.Show();
         }
     }
 }
