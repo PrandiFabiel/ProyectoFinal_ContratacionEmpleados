@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_ContratacionEmpleados.BLL
 {
-    class VecantesBLL
+    public class VecantesBLL
     {
+        public static int ToInt(string valor)
+        {
+            int retorno = 0;
+            int.TryParse(valor, out retorno);
+            return retorno;
+        }
     }
 }
