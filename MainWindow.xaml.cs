@@ -47,7 +47,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void cUsuariosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cUsuarios cUsuarios = new cUsuarios();
+            cUsuarios.Show(); 
         }
     }
 }

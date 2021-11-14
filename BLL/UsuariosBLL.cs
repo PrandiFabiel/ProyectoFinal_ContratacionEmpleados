@@ -135,13 +135,13 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return usuario;
         }
 
-        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> criterio)
+        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> usuario)
         {
             List<Usuarios> lista = new List<Usuarios>();
             Contexto contexto = new Contexto();
             try
             {
-                lista = contexto.Usuarios.Where(criterio).ToList();
+                lista = contexto.Usuarios.Where(usuario).ToList();
             }
             catch (Exception)
             {
