@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Consultas"
         mc:Ignorable="d"
-         Title="Consulta de usuarios" Height="530" Width="500" WindowStartupLocation="CenterScreen">
+         Title="Consulta de usuarios" Height="565" Width="500" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Horizontal">
@@ -63,7 +63,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <Label Content="Conteo" FontFamily="Comic Sans MS" FontSize="12"/>
-                <TextBox x:Name="ConteoTextbox" Height="22" Width="50" FontFamily="Comic Sans MS"/>
+                <TextBox x:Name="ConteoTextbox" IsReadOnly="True" Height="22" Width="50" FontFamily="Comic Sans MS"/>
             </StackPanel>
 
         </StackPanel>
