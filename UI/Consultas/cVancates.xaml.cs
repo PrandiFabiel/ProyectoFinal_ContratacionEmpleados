@@ -111,11 +111,21 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
             }
             else
             {
-                listado = VacantesBLL.GetList(c => true);
+                if (Desde_DataPicker.SelectedDate != null)
+                    listado = VacantesBLL.GetList(e => e.FechaDeRegistroVacante.Date >= Desde_DataPicker.SelectedDate);
+
+                if (Desde_DataPicker.SelectedDate != null)
+                    listado = VacantesBLL.GetList(e => e.FechaDeRegistroVacante.Date <= Hasta_DatePicker.SelectedDate);
+
+                if (Desde_DataPicker.SelectedDate == null && Hasta_DatePicker.SelectedDate == null)
+                    listado = VacantesBLL.GetList(x => true);
             }
 
             DatosDataGrid.ItemsSource = null;
             DatosDataGrid.ItemsSource = listado;
+
+            var conteo = listado.Count;
+            ConteoTextbox.Text = conteo.ToString();
         }
     }
 }
