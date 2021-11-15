@@ -97,5 +97,35 @@ namespace ProyectoFinal_ContratacionEmpleados
         {
 
         }
+
+        private void cEmpleadosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cPuestoDeTrabajoMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cDepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cCiudadesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cSectoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
