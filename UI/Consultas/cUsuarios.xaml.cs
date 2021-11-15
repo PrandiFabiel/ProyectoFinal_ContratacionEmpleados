@@ -73,11 +73,23 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
             }
             else
             {
-                listado = UsuariosBLL.GetList(c => true);
+                if (Desde_DataPicker.SelectedDate != null)
+                    listado = UsuariosBLL.GetList(e => e.FechaRegistroUsuario.Date >= Desde_DataPicker.SelectedDate);
+
+                if (Hasta_DatePicker.SelectedDate != null)
+                    listado = UsuariosBLL.GetList(e => e.FechaRegistroUsuario.Date <= Hasta_DatePicker.SelectedDate);
+
+                if (Desde_DataPicker.SelectedDate == null && Hasta_DatePicker.SelectedDate == null)
+                    listado = UsuariosBLL.GetList(c => true);
+
             }
 
             DatosDataGrid.ItemsSource = null;
             DatosDataGrid.ItemsSource = listado;
+
+
+            var conteo = listado.Count;
+            ConteoTextbox.Text = conteo.ToString();
 
         }
     }
