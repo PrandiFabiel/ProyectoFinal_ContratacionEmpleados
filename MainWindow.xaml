@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Recursos Humanos - Contratación" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
             <Menu Height="20">
@@ -13,12 +13,25 @@
                     <MenuItem x:Name="VacantesMenuItem" Header="Registro de Vacantes" Click="VacantesMenuItem_Click"/>
                     <MenuItem x:Name="UsuariosMenuItem" Header="Registro de usuarios" Click="UsuariosMenuItem_Click"/>
                     <MenuItem x:Name="InstructoresMenuItem" Header="Registro de Instructores" Click="InstructoresMenuItem_Click"/>
+                    <MenuItem x:Name="EmpleadosMenuItem" Header="Registro de Empelados" Click="EmpleadosMenuItem_Click"/>
+                    <MenuItem x:Name="PuestoDeTrabajoMenuItem" Header="Registro de Puestos de trabajo" Click="PuestoDeTrabajoMenuItem_Click"/>
+                    <MenuItem x:Name="DepartamentosMenuItem" Header="Registro de Departamentos" Click="DepartamentosMenuItem_Click"/>
+
+                    <MenuItem Header="Registros de Direcciones">
+                        <MenuItem x:Name="ProvinciaMenuItem" Header="Registro de Provincias" Click="ProvinciaMenuItem_Click"/>
+                        <MenuItem x:Name="CiudadesMenuItem" Header="Registro de Ciudades" Click="CiudadesMenuItem_Click"/>
+                        <MenuItem x:Name="SectoresMenuItem" Header="Registro de Sectores" Click="SectoresMenuItem_Click"/>
+                    </MenuItem>
                 </MenuItem>
 
                 <MenuItem Header="Consultas">
                     <MenuItem x:Name="cVacantesMenuItem" Header="Consulta de Vacantes" Click="cVacantesMenuItem_Click"/>
                     <MenuItem x:Name="cUsuariosMenuItem" Header="Consulta de usuarios" Click="cUsuariosMenuItem_Click"/>
                     <MenuItem x:Name="cInstructoresMenuItem" Header="Consulta de Instructores" Click="cInstructoresMenuItem_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Opciones">
+                    <MenuItem x:Name="CambiarContrasenaMenuItem" Header="Cambiar Contraseña" Click="CambiarContrasenaMenuItem_Click"/>
                 </MenuItem>
             </Menu>
         </StackPanel>

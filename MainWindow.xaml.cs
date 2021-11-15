@@ -62,5 +62,40 @@ namespace ProyectoFinal_ContratacionEmpleados
             cInstructor cInstructor = new cInstructor();
             cInstructor.Show();
         }
+
+        private void EmpleadosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PuestoDeTrabajoMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CiudadesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SectoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CambiarContrasenaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
