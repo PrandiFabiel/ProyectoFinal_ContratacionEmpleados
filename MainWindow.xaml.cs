@@ -51,18 +51,6 @@ namespace ProyectoFinal_ContratacionEmpleados
             cUsuarios.Show(); 
         }
 
-        private void InstructoresMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            rInstructores rInstructores = new rInstructores();
-            rInstructores.Show();
-        }
-
-        private void cInstructoresMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            cInstructor cInstructor = new cInstructor();
-            cInstructor.Show();
-        }
-
         private void EmpleadosMenuItem_Click(object sender, RoutedEventArgs e)
         {
 
@@ -124,6 +112,16 @@ namespace ProyectoFinal_ContratacionEmpleados
         }
 
         private void cSectoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GenerosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cGenerosMenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }

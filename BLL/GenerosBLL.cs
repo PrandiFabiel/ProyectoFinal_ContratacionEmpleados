@@ -10,47 +10,24 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_ContratacionEmpleados.BLL
 {
-    public class InstructoresBLL
+    public class GenerosBLL
     {
-        public static bool Guardar(Instructores Instructor)
+        public static bool Guardar(Generos Genero)
         {
-            if (!Existe(Instructor.InstructorId))
-                return Insertar(Instructor);
+            if (!Existe(Genero.GeneroId))
+                return Insertar(Genero);
             else
-                return Modificar(Instructor);
+                return Modificar(Genero);
         }
 
-        public static bool Insertar(Instructores Instructor)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-            try
-            {
-
-                contexto.Instructores.Add(Instructor); 
-                paso = (contexto.SaveChanges() > 0);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-
-            return paso;
-        }
-
-        public static bool Modificar(Instructores Instructor)
+        private static bool Insertar(Generos Genero)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
 
             try
             {
-                contexto.Entry(Instructor).State = EntityState.Modified;
+                contexto.Generos.Add(Genero);
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -62,24 +39,18 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             {
                 contexto.Dispose();
             }
-
             return paso;
         }
 
-        public static bool Eliminar(int id)
+        private static bool Modificar(Generos Genero)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
+
             try
             {
-                var instructor = contexto.Instructores.Find(id);
-
-                if (instructor != null)
-                {
-                    contexto.Instructores.Remove(instructor);
-                    paso = contexto.SaveChanges() > 0;
-                }
-
+                contexto.Entry(Genero).State = EntityState.Modified;
+                paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -93,13 +64,62 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return paso;
         }
 
+        public static bool Eliminar(int id)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                var genero = GenerosBLL.Buscar(id);
+
+                if(genero != null)
+                {
+                    contexto.Generos.Remove(genero);
+                    paso = contexto.SaveChanges() > 0;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return paso;
+        }
+
+        public static Generos Buscar(int id)
+        {
+            Contexto contexto = new Contexto();
+            Generos genero;
+
+            try
+            {
+                genero = contexto.Generos.Find(id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return genero;
+        }
+
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
             bool encontrado = false;
+
             try
             {
-                encontrado = contexto.Instructores.Any(e => e.InstructorId == id);
+                contexto.Generos.Any(x => x.GeneroId == id);
             }
             catch (Exception)
             {
@@ -113,13 +133,14 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return encontrado;
         }
 
-        public static Instructores Buscar(int id)
+        public static List<Generos> GetList(Expression<Func<Generos, bool>> Criterio)
         {
+            List<Generos> lista = new List<Generos>();
             Contexto contexto = new Contexto();
-            Instructores instructor;
+
             try
             {
-                instructor = contexto.Instructores.Find(id);
+                lista = contexto.Generos.Where(Criterio).ToList();
             }
             catch (Exception)
             {
@@ -130,16 +151,17 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             {
                 contexto.Dispose();
             }
-            return instructor;
+            return lista;
         }
 
-        public static List<Instructores> GetList(Expression<Func<Instructores, bool>> Criterio)
+        public static List<Generos> GetGeneros()
         {
-            List<Instructores> lista = new List<Instructores>();
             Contexto contexto = new Contexto();
+            List<Generos> lista = new List<Generos>();
+
             try
             {
-                lista = contexto.Instructores.Where(Criterio).ToList();
+                lista = contexto.Generos.ToList();
             }
             catch (Exception)
             {

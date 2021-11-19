@@ -12,7 +12,7 @@
                 <MenuItem Header="Registros">
                     <MenuItem x:Name="VacantesMenuItem" Header="Registro de Vacantes" Click="VacantesMenuItem_Click"/>
                     <MenuItem x:Name="UsuariosMenuItem" Header="Registro de usuarios" Click="UsuariosMenuItem_Click"/>
-                    <MenuItem x:Name="InstructoresMenuItem" Header="Registro de Instructores" Click="InstructoresMenuItem_Click"/>
+                    <MenuItem x:Name="GenerosMenuItem" Header="Registro de Generos" Click="GenerosMenuItem_Click"/>
                     <MenuItem x:Name="EmpleadosMenuItem" Header="Registro de Empelados" Click="EmpleadosMenuItem_Click"/>
                     <MenuItem x:Name="PuestoDeTrabajoMenuItem" Header="Registro de Puestos de trabajo" Click="PuestoDeTrabajoMenuItem_Click"/>
                     <MenuItem x:Name="DepartamentosMenuItem" Header="Registro de Departamentos" Click="DepartamentosMenuItem_Click"/>
@@ -27,7 +27,7 @@
                 <MenuItem Header="Consultas">
                     <MenuItem x:Name="cVacantesMenuItem" Header="Consulta de Vacantes" Click="cVacantesMenuItem_Click"/>
                     <MenuItem x:Name="cUsuariosMenuItem" Header="Consulta de usuarios" Click="cUsuariosMenuItem_Click"/>
-                    <MenuItem x:Name="cInstructoresMenuItem" Header="Consulta de Instructores" Click="cInstructoresMenuItem_Click"/>
+                    <MenuItem x:Name="cGenerosMenuItem" Header="Consulta de Generos" Click="cGenerosMenuItem_Click"/>
                     <MenuItem x:Name="cEmpleadosMenuItem" Header="Consulta de Empelados" Click="cEmpleadosMenuItem_Click"/>
                     <MenuItem x:Name="cPuestoDeTrabajoMenuItem" Header="Consulta de Puestos de trabajo" Click="cPuestoDeTrabajoMenuItem_Click"/>
                     <MenuItem x:Name="cDepartamentosMenuItem" Header="Consulta de Departamentos" Click="cDepartamentosMenuItem_Click"/>
