@@ -118,12 +118,14 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void GenerosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rGeneros rGeneros = new rGeneros();
+            rGeneros.Show();
         }
 
         private void cGenerosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cGeneros cGeneros = new cGeneros();
+            cGeneros.Show();
         }
     }
 }
