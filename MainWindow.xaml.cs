@@ -69,7 +69,7 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void ProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void CiudadesMenuItem_Click(object sender, RoutedEventArgs e)
@@ -125,6 +125,12 @@ namespace ProyectoFinal_ContratacionEmpleados
         private void cGenerosMenuItem_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void HabilidadesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rHabilidades rHabilidad = new rHabilidades();
+            rHabilidad.Show();
         }
     }
 }
