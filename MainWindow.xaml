@@ -14,7 +14,7 @@
                     <MenuItem x:Name="UsuariosMenuItem" Header="Registro de usuarios" Click="UsuariosMenuItem_Click"/>
                     <MenuItem x:Name="GenerosMenuItem" Header="Registro de Generos" Click="GenerosMenuItem_Click"/>
                     <MenuItem x:Name="EmpresasMenuItem" Header="Registro de Empresas" Click="EmpresasMenuItem_Click"/>
-                    <MenuItem x:Name="PuestoDeTrabajoMenuItem" Header="Registro de Puestos de trabajo" Click="PuestoDeTrabajoMenuItem_Click"/>
+                    <MenuItem x:Name="PermisoMenuItem" Header="Registro de Permisos" Click="PermisoMenuItem_Click"/>
                     <MenuItem x:Name="DepartamentosMenuItem" Header="Registro de Departamentos" Click="DepartamentosMenuItem_Click"/>
                     <MenuItem x:Name="HabilidadesMenuItem" Header="Registro de Habilidades" Click="HabilidadesMenuItem_Click"/>
 
@@ -30,7 +30,7 @@
                     <MenuItem x:Name="cUsuariosMenuItem" Header="Consulta de usuarios" Click="cUsuariosMenuItem_Click"/>
                     <MenuItem x:Name="cGenerosMenuItem" Header="Consulta de Generos" Click="cGenerosMenuItem_Click"/>
                     <MenuItem x:Name="cEmpresasMenuItem" Header="Consulta de Empresas" Click="cEmpresasMenuItem_Click"/>
-                    <MenuItem x:Name="cPuestoDeTrabajoMenuItem" Header="Consulta de Puestos de trabajo" Click="cPuestoDeTrabajoMenuItem_Click"/>
+                    <MenuItem x:Name="cPermisoMenuItem" Header="Consulta de Permiso" Click="cPermisoMenuItem_Click"/>
                     <MenuItem x:Name="cDepartamentosMenuItem" Header="Consulta de Departamentos" Click="cDepartamentosMenuItem_Click"/>
                     <MenuItem x:Name="cHabilidadesMenuItem" Header="Consulta de Habilidades" Click="cHabilidadesMenuItem_Click"/>
                     

@@ -51,9 +51,10 @@ namespace ProyectoFinal_ContratacionEmpleados
             cUsuarios.Show(); 
         }
 
-        private void PuestoDeTrabajoMenuItem_Click(object sender, RoutedEventArgs e)
+        private void PermisoMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rPermisos permisos = new rPermisos();
+            permisos.Show(); 
         }
 
         private void DepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
@@ -82,7 +83,7 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         }
 
-        private void cPuestoDeTrabajoMenuItem_Click(object sender, RoutedEventArgs e)
+        private void cPermisoMenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }
