@@ -27,6 +27,20 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
         {
             InitializeComponent();
             this.DataContext = vacante;
+
+            DepartamentoComboBox.ItemsSource = DepartamentosBLL.GetDepartamentos();
+            DepartamentoComboBox.SelectedValuePath = "DepartamentoId";
+            DepartamentoComboBox.DisplayMemberPath = "Nombre";
+
+            HabilidadComboBox.ItemsSource = HabilidadesBLL.GetHabilidades();
+            HabilidadComboBox.SelectedValuePath = "HabilidadId";
+            HabilidadComboBox.DisplayMemberPath = "Descripcion";
+        }
+
+        private void Cargar()
+        {
+            this.DataContext = null;
+            this.DataContext = vacante;
         }
 
         private void Limpiar()
@@ -44,21 +58,38 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
                 MessageBox.Show("El Campo Nombre no puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                NombreVacante_TextBox.Focus();
             }
-            /*if (DepartamentoComboBox.Text.Length == 0)
+            if (DepartamentoComboBox.Text.Length == 0)
             {
                 esValido = false;
                 MessageBox.Show("El Campo Departamento no puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }*/
+                DepartamentoComboBox.Focus();
+            }
             if (Requisitos_TextBox.Text.Length == 0)
             {
                 esValido = false;
                 MessageBox.Show("El Campo Requisitos no Puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Requisitos_TextBox.Focus();
             }
             if (Descripcion_TextBox.Text.Length == 0)
             {
                 esValido = false;
                 MessageBox.Show("El Campo Descripcion no Puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Descripcion_TextBox.Focus();
+            }
+
+            if (DisponibleVacante_TextBox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Falta llenar el campo disponible!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                DisponibleVacante_TextBox.Focus();
+            }
+
+            if (DetalleDataGrid.Items.Count == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Falta llenar el datagrid", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             return esValido;
@@ -67,14 +98,20 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void Buscar_Button_Click(object sender, RoutedEventArgs e)
         {
-            var vacante = VacantesBLL.Buscar(Utilidades.ToInt(VacanteId_TextBox.Text));
-            if (vacante == null)
-                MessageBox.Show("No existe vacante con ese id", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            if (vacante != null)
-                this.vacante = vacante;
+            var Vacante = VacantesBLL.Buscar(vacante.VacanteId);
+
+            if (Vacante != null)
+            {
+                this.vacante = Vacante;
+                this.DataContext = vacante;
+            }
             else
-                vacante = new Vacantes();
-            this.DataContext = this.vacante;
+            {
+                Limpiar();
+                MessageBox.Show("No existe Vacante con ese Id", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            Cargar();
         }
 
         private void Nuevo_Button_Click(object sender, RoutedEventArgs e)
@@ -107,6 +144,30 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             }
             else
                 MessageBox.Show("No fue posible eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+            var detalle = new VacantesDetalle
+            {
+                VacanteDetalleId = this.vacante.VacanteId,
+                Habilidad = (Habilidades)HabilidadComboBox.SelectedItem
+            };
+
+            vacante.VacantesDetalle.Add(detalle);
+
+            Cargar();
+        }
+
+        private void RemoverFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+            var detalle = (VacantesDetalle)DetalleDataGrid.SelectedItem;
+
+            if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
+            {
+                vacante.VacantesDetalle.RemoveAt(DetalleDataGrid.SelectedIndex);
+                Cargar();
+            }
         }
     }
 }

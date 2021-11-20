@@ -170,7 +170,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return encontrado;
         }
 
-        public static List<Departamentos> GetTiposAportes()
+        public static List<Departamentos> GetDepartamentos()
         {
             List<Departamentos> lista = new List<Departamentos>();
             Contexto contexto = new Contexto();

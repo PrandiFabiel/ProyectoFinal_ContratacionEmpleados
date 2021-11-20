@@ -170,7 +170,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return encontrado;
         }
 
-        public static List<Habilidades> GetTiposAportes()
+        public static List<Habilidades> GetHabilidades()
         {
             List<Habilidades> lista = new List<Habilidades>();
             Contexto contexto = new Contexto();
