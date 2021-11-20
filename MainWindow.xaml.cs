@@ -150,5 +150,10 @@ namespace ProyectoFinal_ContratacionEmpleados
             cEmpresas.Show();
         }
 
+        private void cRolesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cRoles Croles = new cRoles();
+            Croles.Show(); 
+        }
     }
 }

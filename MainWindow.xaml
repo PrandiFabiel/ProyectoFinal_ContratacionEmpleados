@@ -32,6 +32,7 @@
                     <MenuItem x:Name="cGenerosMenuItem" Header="Consulta de Generos" Click="cGenerosMenuItem_Click"/>
                     <MenuItem x:Name="cEmpresasMenuItem" Header="Consulta de Empresas" Click="cEmpresasMenuItem_Click"/>
                     <MenuItem x:Name="cPermisoMenuItem" Header="Consulta de Permiso" Click="cPermisoMenuItem_Click"/>
+                    <MenuItem x:Name="cRolesMenuItem" Header="Consulta de Roles" Click="cRolesMenuItem_Click"/>
                     <MenuItem x:Name="cDepartamentosMenuItem" Header="Consulta de Departamentos" Click="cDepartamentosMenuItem_Click"/>
                     <MenuItem x:Name="cHabilidadesMenuItem" Header="Consulta de Habilidades" Click="cHabilidadesMenuItem_Click"/>
                     
