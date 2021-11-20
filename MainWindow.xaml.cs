@@ -135,5 +135,11 @@ namespace ProyectoFinal_ContratacionEmpleados
             rEmpresas rEmpresas = new();
             rEmpresas.Show();
         }
+
+        private void cHabilidadesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cHabilidades cHabilidad = new cHabilidades();
+            cHabilidad.Show();
+        }
     }
 }
