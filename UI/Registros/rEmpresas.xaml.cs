@@ -17,43 +17,51 @@ using System.Windows.Shapes;
 namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 {
     /// <summary>
-    /// Interaction logic for rGeneros.xaml
+    /// Interaction logic for rEmpresas.xaml
     /// </summary>
-    public partial class rGeneros : Window
+    public partial class rEmpresas : Window
     {
-        private Generos Genero = new Generos();
-        public rGeneros()
+        private Empresas Empresa = new Empresas();
+        public rEmpresas()
         {
             InitializeComponent();
-            this.DataContext = Genero;
+            this.DataContext = Empresa;
         }
 
         private void Limpiar()
         {
-            this.Genero = new Generos();
-            this.DataContext = Genero;
+            this.Empresa = new Empresas();
+            this.DataContext = Empresa;
         }
 
         private bool validar()
         {
             bool esValido = true;
 
-            if(DescripcionTextbox.Text.Length == 0)
+            if (NombreTextbox.Text.Length == 0)
             {
                 esValido = false;
-                MessageBox.Show("Falta la descripcion", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Falta el Nombre", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+
+            if (TelefonoTextbox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Falta el Telefono", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+
             return esValido;
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var genero = GenerosBLL.Buscar(Genero.GeneroId);
+            var empresa = EmpresasBLL.Buscar(Empresa.EmpresaId);
 
-            if(Genero != null)
+            if (empresa != null)
             {
-                this.Genero = genero;
-                this.DataContext = Genero;
+                this.Empresa = empresa;
+                this.DataContext = Empresa;
             }
             else
             {
@@ -69,7 +77,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            bool paso = GenerosBLL.Guardar(Genero);
+            bool paso = EmpresasBLL.Guardar(Empresa);
 
             if (!validar())
                 return;
@@ -87,7 +95,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (GenerosBLL.Eliminar(Genero.GeneroId))
+            if (EmpresasBLL.Eliminar(Empresa.EmpresaId))
             {
                 Limpiar();
                 MessageBox.Show("Registro Eliminado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);

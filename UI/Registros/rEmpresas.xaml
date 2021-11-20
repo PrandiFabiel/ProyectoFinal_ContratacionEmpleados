@@ -1,0 +1,61 @@
+﻿<Window x:Class="ProyectoFinal_ContratacionEmpleados.UI.Registros.rEmpresas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Empresas" Height="290" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <Label Content="EmpresaId:" FontFamily="Comic Sans MS" Margin="10,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <TextBox x:Name="EmpresaIdTextbox" Text="{Binding EmpresaId}" Width="70" Height="22"/>
+                    <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/search-icon (3).png" Height="24"/>
+                            <Label Content="Buscar" FontFamily="Comic Sans MS"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Margin="10,10,0,0">
+                    <Label Content="Nombre:" FontFamily="Comic Sans Ms"/>
+                    <TextBox x:Name="NombreTextbox" Text="{Binding Nombre}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Margin="10,10,0,0">
+                    <Label Content="Telefono:" FontFamily="Comic Sans Ms"/>
+                    <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
+                    <Button x:Name="NuevoButton" Width="80" Click="NuevoButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Files-New-File-icon.png" />
+                            <Label Content="Nuevo" FontFamily="Comic Sans Ms"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="GuardarButton" Margin="10,0,0,0" Width="80" Click="GuardarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/floppy-icon.png" />
+                            <Label Content="Guardar" FontFamily="Comic Sans Ms"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="EliminarButton" Margin="10,0,0,0" Width="80" Click="EliminarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/symbol-delete-icon.png" />
+                            <Label Content="Eliminar" FontFamily="Comic Sans Ms"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
