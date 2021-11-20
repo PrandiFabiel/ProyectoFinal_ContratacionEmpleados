@@ -63,7 +63,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void DepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rDepartamentos rDepartamento = new rDepartamentos();
+            rDepartamento.Show();
         }
 
         private void ProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
