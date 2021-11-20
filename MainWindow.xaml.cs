@@ -63,6 +63,11 @@ namespace ProyectoFinal_ContratacionEmpleados
             rDepartamento.Show();
         }
 
+        private void RolesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rRoles roles = new rRoles();
+            roles.Show(); 
+        }
         private void ProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
         {
             
@@ -85,7 +90,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void cPermisoMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cPermisos cpermisos = new cPermisos();
+            cpermisos.Show(); 
         }
 
         private void cDepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
@@ -143,5 +149,6 @@ namespace ProyectoFinal_ContratacionEmpleados
             cEmpresas cEmpresas = new();
             cEmpresas.Show();
         }
+
     }
 }

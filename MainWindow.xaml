@@ -17,6 +17,7 @@
                     <MenuItem x:Name="PermisoMenuItem" Header="Registro de Permisos" Click="PermisoMenuItem_Click"/>
                     <MenuItem x:Name="DepartamentosMenuItem" Header="Registro de Departamentos" Click="DepartamentosMenuItem_Click"/>
                     <MenuItem x:Name="HabilidadesMenuItem" Header="Registro de Habilidades" Click="HabilidadesMenuItem_Click"/>
+                    <MenuItem x:Name="RolesMenuItem" Header="Registro de Roles" Click="RolesMenuItem_Click"/>
 
                     <MenuItem Header="Registros de Direcciones">
                         <MenuItem x:Name="ProvinciaMenuItem" Header="Registro de Provincias" Click="ProvinciaMenuItem_Click"/>
