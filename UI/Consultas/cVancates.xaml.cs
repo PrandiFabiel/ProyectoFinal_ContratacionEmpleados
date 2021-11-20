@@ -39,8 +39,8 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
                         {
                             if (Desde_DataPicker.SelectedDate != null)
                                 listado = VacantesBLL.GetList(
-                                    c => c.FechaDeRegistroVacante.Date >= Desde_DataPicker.SelectedDate &&
-                                    c.FechaDeRegistroVacante.Date <= Hasta_DatePicker.SelectedDate &&
+                                    c => c.Fecha.Date >= Desde_DataPicker.SelectedDate &&
+                                    c.Fecha.Date <= Hasta_DatePicker.SelectedDate &&
                                     c.VacanteId == Utilidades.ToInt(Criterio_TextBox.Text)
                                 );
                             else
@@ -57,12 +57,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
                         {
                             if (Desde_DataPicker.SelectedDate != null)
                                 listado = VacantesBLL.GetList(
-                                    c => c.FechaDeRegistroVacante.Date >= Desde_DataPicker.SelectedDate &&
-                                    c.FechaDeRegistroVacante.Date <= Hasta_DatePicker.SelectedDate &&
-                                    c.NombreDeVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower())
+                                    c => c.Fecha.Date >= Desde_DataPicker.SelectedDate &&
+                                    c.Fecha.Date <= Hasta_DatePicker.SelectedDate &&
+                                    c.NombreVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower())
                                 );
                             else
-                                listado = VacantesBLL.GetList(d => d.NombreDeVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
+                                listado = VacantesBLL.GetList(d => d.NombreVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
                         }
                         catch (FormatException)
                         {
@@ -75,12 +75,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
                         {
                             if (Desde_DataPicker.SelectedDate != null)
                                 listado = VacantesBLL.GetList(
-                                    c => c.FechaDeRegistroVacante.Date >= Desde_DataPicker.SelectedDate &&
-                                    c.FechaDeRegistroVacante.Date <= Hasta_DatePicker.SelectedDate &&
-                                    c.RequisitosVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower())
+                                    c => c.Fecha.Date >= Desde_DataPicker.SelectedDate &&
+                                    c.Fecha.Date <= Hasta_DatePicker.SelectedDate &&
+                                    c.Requisitos.ToLower().Contains(Criterio_TextBox.Text.ToLower())
                                 );
                             else
-                                listado = VacantesBLL.GetList(d => d.RequisitosVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
+                                listado = VacantesBLL.GetList(d => d.Requisitos.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
                         }
                         catch (FormatException)
                         {
@@ -93,12 +93,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
                         {
                             if (Desde_DataPicker.SelectedDate != null)
                                 listado = VacantesBLL.GetList(
-                                    c => c.FechaDeRegistroVacante.Date >= Desde_DataPicker.SelectedDate &&
-                                    c.FechaDeRegistroVacante.Date <= Hasta_DatePicker.SelectedDate &&
-                                    c.DescripcionVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower())
+                                    c => c.Fecha.Date >= Desde_DataPicker.SelectedDate &&
+                                    c.Fecha.Date <= Hasta_DatePicker.SelectedDate &&
+                                    c.Descripcion.ToLower().Contains(Criterio_TextBox.Text.ToLower())
                                 );
                             else
-                                listado = VacantesBLL.GetList(d => d.DescripcionVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
+                                listado = VacantesBLL.GetList(d => d.Descripcion.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
                         }
                         catch (FormatException)
                         {
@@ -112,10 +112,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
             else
             {
                 if (Desde_DataPicker.SelectedDate != null)
-                    listado = VacantesBLL.GetList(e => e.FechaDeRegistroVacante.Date >= Desde_DataPicker.SelectedDate);
+                    listado = VacantesBLL.GetList(e => e.Fecha.Date >= Desde_DataPicker.SelectedDate);
 
                 if (Desde_DataPicker.SelectedDate != null)
-                    listado = VacantesBLL.GetList(e => e.FechaDeRegistroVacante.Date <= Hasta_DatePicker.SelectedDate);
+                    listado = VacantesBLL.GetList(e => e.Fecha.Date <= Hasta_DatePicker.SelectedDate);
 
                 if (Desde_DataPicker.SelectedDate == null && Hasta_DatePicker.SelectedDate == null)
                     listado = VacantesBLL.GetList(x => true);
