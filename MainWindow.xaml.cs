@@ -82,11 +82,6 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         }
 
-        private void cEmpleadosMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void cPuestoDeTrabajoMenuItem_Click(object sender, RoutedEventArgs e)
         {
 
@@ -140,6 +135,12 @@ namespace ProyectoFinal_ContratacionEmpleados
         {
             cHabilidades cHabilidad = new cHabilidades();
             cHabilidad.Show();
+        }
+
+        private void cEmpresasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cEmpresas cEmpresas = new();
+            cEmpresas.Show();
         }
     }
 }

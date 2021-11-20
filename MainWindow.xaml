@@ -29,7 +29,7 @@
                     <MenuItem x:Name="cVacantesMenuItem" Header="Consulta de Vacantes" Click="cVacantesMenuItem_Click"/>
                     <MenuItem x:Name="cUsuariosMenuItem" Header="Consulta de usuarios" Click="cUsuariosMenuItem_Click"/>
                     <MenuItem x:Name="cGenerosMenuItem" Header="Consulta de Generos" Click="cGenerosMenuItem_Click"/>
-                    <MenuItem x:Name="cEmpleadosMenuItem" Header="Consulta de Empelados" Click="cEmpleadosMenuItem_Click"/>
+                    <MenuItem x:Name="cEmpresasMenuItem" Header="Consulta de Empresas" Click="cEmpresasMenuItem_Click"/>
                     <MenuItem x:Name="cPuestoDeTrabajoMenuItem" Header="Consulta de Puestos de trabajo" Click="cPuestoDeTrabajoMenuItem_Click"/>
                     <MenuItem x:Name="cDepartamentosMenuItem" Header="Consulta de Departamentos" Click="cDepartamentosMenuItem_Click"/>
                     <MenuItem x:Name="cHabilidadesMenuItem" Header="Consulta de Habilidades" Click="cHabilidadesMenuItem_Click"/>
