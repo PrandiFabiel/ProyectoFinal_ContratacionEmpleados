@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,18 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
     {
         [Key]
         public int VacanteId { get; set; }
-        public string NombreDeVacante { get; set; }
+        public string NombreVacante { get; set; }
         public int DepartamentoId { get; set; }
-        public DateTime FechaDeRegistroVacante { get; set; } = DateTime.Now;
-        public string RequisitosVacante { get; set; }
-        public string DescripcionVacante { get; set; }
+        public DateTime Fecha { get; set; } = DateTime.Now;
+        public string Requisitos { get; set; }
+        public string Descripcion { get; set; }
+        public int Disponible { get; set; }
+        public int UsusarioId { get; set; }
+
+        [ForeignKey("DepartamentoId")]
+        public virtual Departamentos Departamento { get; set; }
+
+        [ForeignKey("VacanteId")]
+        public virtual List<VacantesDetalle> VacantesDetalle { get; set; } = new List<VacantesDetalle>();
     }
 }

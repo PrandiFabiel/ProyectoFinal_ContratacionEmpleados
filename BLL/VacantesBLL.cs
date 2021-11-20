@@ -26,6 +26,12 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Contexto contexto = new Contexto();
             try
             {
+                foreach (var detalle in vacante.VacantesDetalle)
+                {
+                    detalle.Habilidad.VecesAsignada += 1;
+                    contexto.Entry(detalle.Habilidad).State = EntityState.Modified;
+                }
+                
                 contexto.Vacantes.Add(vacante);
                 paso = contexto.SaveChanges() > 0;
             }
@@ -48,6 +54,32 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Contexto contexto = new Contexto();
             try
             {
+                var proyectoAnterior = contexto.Vacantes
+                                               .Where(x => x.VacanteId == vacante.VacanteId)
+                                               .Include(x => x.VacantesDetalle)
+                                               .ThenInclude(x => x.Habilidad)
+                                               .AsNoTracking()
+                                               .SingleOrDefault();
+
+                foreach (var detalle in proyectoAnterior.VacantesDetalle)
+                {
+                    var habilidad = contexto.Habilidades.Find(detalle.Habilidad.HabilidadId);
+                    habilidad.VecesAsignada -= 1;
+                    detalle.Habilidad = habilidad;
+                    contexto.Entry(detalle.Habilidad).State = EntityState.Modified;
+                }
+
+                contexto.Database.ExecuteSqlRaw($"Delete FROM VacantesDetalle Where VacanteId = {vacante.VacanteId}");
+
+                foreach (var item in vacante.VacantesDetalle)
+                {
+                    contexto.Entry(item).State = EntityState.Added;
+                    var habilidad = contexto.Habilidades.Find(item.Habilidad.HabilidadId);
+                    habilidad.VecesAsignada += 1;
+                    item.Habilidad = habilidad;
+                    contexto.Entry(item.Habilidad).State = EntityState.Modified;
+                }
+
                 contexto.Entry(vacante).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
@@ -69,10 +101,16 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var vacante = contexto.Vacantes.Find(id);
+                var vacante = VacantesBLL.Buscar(id);
 
                 if (vacante != null)
                 {
+                    foreach (var detalle in vacante.VacantesDetalle)
+                    {
+                        detalle.Habilidad.VecesAsignada -= 1;
+                        contexto.Entry(detalle.Habilidad).State = EntityState.Modified;
+                    }
+
                     contexto.Vacantes.Remove(vacante);
                     paso = contexto.SaveChanges() > 0;
                 }
@@ -116,7 +154,10 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Vacantes vacante;
             try
             {
-                vacante = contexto.Vacantes.Find(id);
+                vacante = contexto.Vacantes.Where(x => x.VacanteId == id)
+                                             .Include(x => x.VacantesDetalle)
+                                             .ThenInclude(x => x.Habilidad)
+                                             .SingleOrDefault();
             }
             catch (Exception)
             {
