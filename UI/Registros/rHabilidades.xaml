@@ -1,0 +1,61 @@
+﻿<Window x:Class="ProyectoFinal_ContratacionEmpleados.UI.Registros.rHabilidades"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Habilidades" Height="250" Width="360" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Habilidad Id:"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="HabilidadIdTextBox" Text="{Binding HabilidadId}" Width="100" Height="18"/>
+                    <Button x:Name="BuscarButton" Margin="6,0" Click="BuscarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/search-icon (3).png" />
+                            <Label Content="Buscar"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
+                    <Label Content="Descripcion:"/>
+                    <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="323" />
+                </StackPanel>
+
+                <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
+                    <Label Content="Veces Asignada:"/>
+                    <TextBox x:Name="VecesAsignadaTextBox" Text="{Binding VecesAsignada}" Width="100" IsEnabled="False"/>
+                </StackPanel>
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,15">
+                <Button x:Name="NuevoButton" Click="NuevoButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Files-New-File-icon.png" />
+                        <Label Content="Nuevo"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="GuardarButton" Margin="45,0" Click="GuardarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/floppy-icon.png" />
+                        <Label Content="Guardar"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/symbol-delete-icon.png" />
+                        <Label Content="Eliminar"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -13,6 +13,8 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
         public DbSet<Vacantes> Vacantes { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Generos> Generos { get; set; }
+        public DbSet<Habilidades> Habilidades { get; set; }
+        public DbSet<Departamentos> Departamentos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

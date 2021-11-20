@@ -63,12 +63,13 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void DepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rDepartamentos rDepartamento = new rDepartamentos();
+            rDepartamento.Show();
         }
 
         private void ProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void CiudadesMenuItem_Click(object sender, RoutedEventArgs e)
@@ -126,6 +127,12 @@ namespace ProyectoFinal_ContratacionEmpleados
         {
             cGeneros cGeneros = new cGeneros();
             cGeneros.Show();
+        }
+
+        private void HabilidadesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rHabilidades rHabilidad = new rHabilidades();
+            rHabilidad.Show();
         }
     }
 }

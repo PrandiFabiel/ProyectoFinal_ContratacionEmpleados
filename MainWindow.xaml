@@ -16,6 +16,7 @@
                     <MenuItem x:Name="EmpleadosMenuItem" Header="Registro de Empelados" Click="EmpleadosMenuItem_Click"/>
                     <MenuItem x:Name="PuestoDeTrabajoMenuItem" Header="Registro de Puestos de trabajo" Click="PuestoDeTrabajoMenuItem_Click"/>
                     <MenuItem x:Name="DepartamentosMenuItem" Header="Registro de Departamentos" Click="DepartamentosMenuItem_Click"/>
+                    <MenuItem x:Name="HabilidadesMenuItem" Header="Registro de Habilidades" Click="HabilidadesMenuItem_Click"/>
 
                     <MenuItem Header="Registros de Direcciones">
                         <MenuItem x:Name="ProvinciaMenuItem" Header="Registro de Provincias" Click="ProvinciaMenuItem_Click"/>
