@@ -18,6 +18,7 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
         public DbSet<Empresas> Empresas { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Permisos> Permisos { get; set; }
+        public DbSet<Provincias> Provincias { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
