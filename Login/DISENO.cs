@@ -8,7 +8,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Login
 {
     class DISENO
     {
-        Title="Acceder al sistema" Height="185" Width="300" WindowStartupLocation="CenterScreen"//pegar en el titulo
+        /*Title="Acceder al sistema" Height="185" Width="300" WindowStartupLocation="CenterScreen"//pegar en el titulo
 
             <StackPanel Orientation = "Vertical" Margin="10">
             <StackPanel Orientation = "Vertical" >
@@ -32,6 +32,6 @@ namespace ProyectoFinal_ContratacionEmpleados.Login
                     </Button>
                 </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </StackPanel>*/
     }
 }
