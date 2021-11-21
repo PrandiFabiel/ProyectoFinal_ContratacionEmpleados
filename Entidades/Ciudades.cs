@@ -10,9 +10,10 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
 {
     public class Ciudades
     {
-        [Key]
+        [Key] 
         public int CiudadId { get; set; }
         public string Nombre { get; set; }
+        public int ProvinciaId { get; set; }
         public int UsuarioId { get; set; }
 
         [ForeignKey("ProvinciaId")]
