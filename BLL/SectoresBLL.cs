@@ -170,7 +170,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return encontrado;
         }
 
-        public static List<Sectores> GetCiudades()
+        public static List<Sectores> GetSectores()
         {
             List<Sectores> lista = new List<Sectores>();
             Contexto contexto = new Contexto();

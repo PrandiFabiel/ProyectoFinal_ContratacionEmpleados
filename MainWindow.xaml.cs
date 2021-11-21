@@ -117,7 +117,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void cSectoresMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cSectores cSector = new cSectores();
+            cSector.Show();
         }
 
         private void GenerosMenuItem_Click(object sender, RoutedEventArgs e)
