@@ -104,7 +104,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void cProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cProvincias cProvincias = new();
+            cProvincias.Show();
         }
 
         private void cCiudadesMenuItem_Click(object sender, RoutedEventArgs e)
