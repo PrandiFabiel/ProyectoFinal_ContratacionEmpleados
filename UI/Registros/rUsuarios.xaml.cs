@@ -22,10 +22,15 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
     public partial class rUsuarios : Window
     {
         private Usuarios usuario = new Usuarios();
+        Roles roles = new(); 
         public rUsuarios()
         {
             InitializeComponent();
             this.DataContext = usuario;
+
+            RolComboBox.ItemsSource = RolesBLL.GetRoles();
+            RolComboBox.SelectedValuePath = "RolId";
+            RolComboBox.DisplayMemberPath = "Descripcion"; 
         }
 
         private void Limpiar()
