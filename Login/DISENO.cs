@@ -23,7 +23,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Login
                     <Button x:Name="AccederButton" Margin="30,0" Click="AccederButton_Click" Background="#FF35EA00">
                         <StackPanel Orientation = "Horizontal" >
                             < Label Content="Acceder" FontWeight="Bold" />
-                        </StackPanel>
+                        </StackPanel>//
                     </Button>
                     <Button x:Name="CancelarButton" Click="CancelarButton_Click" Margin="40,0" Background="Red">
                         <StackPanel Orientation = "Horizontal" >
