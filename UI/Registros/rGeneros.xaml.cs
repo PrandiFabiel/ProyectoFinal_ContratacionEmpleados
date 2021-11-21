@@ -50,7 +50,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
         {
             var genero = GenerosBLL.Buscar(Genero.GeneroId);
 
-            if(Genero != null)
+            if(genero != null)
             {
                 this.Genero = genero;
                 this.DataContext = Genero;
