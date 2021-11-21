@@ -21,6 +21,7 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
         public DbSet<Provincias> Provincias { get; set; }
         public DbSet<Ciudades> Ciudades { get; set; }
         public DbSet<Sectores> Sectores { get; set; }
+        public DbSet<Personas> Personas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
