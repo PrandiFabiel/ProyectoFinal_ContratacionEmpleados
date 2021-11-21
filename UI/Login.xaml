@@ -1,0 +1,31 @@
+﻿<Window x:Class="ProyectoFinal_ContratacionEmpleados.UI.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI"
+        xmlns:PasswordHelper="clr-namespace:ProyectoFinal_ContratacionEmpleados.Resources.PasswordHelper"
+        mc:Ignorable="d"
+        Title="Login" Height="210" Width="300">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Nombre Usuario"/>
+
+                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" />
+
+                <Label Content="Contraseña"/>
+
+                <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+                    <Button x:Name="IngresarButton" Content="Acceder" Margin="5,0" Click="IngresarButton_Click"/>
+                    <Button x:Name="CancelarButton"   Click="CancelarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Cancelar" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
