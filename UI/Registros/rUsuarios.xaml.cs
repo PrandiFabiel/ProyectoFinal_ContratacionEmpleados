@@ -24,7 +24,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
         private Usuarios usuario = new Usuarios();
         Roles roles = new(); 
         public rUsuarios()
-        {
+        { 
             InitializeComponent();
             this.DataContext = usuario;
 

@@ -41,10 +41,7 @@
 
             <StackPanel HorizontalAlignment="Left" >
                 <DataGrid x:Name="DatosDataGrid" AutoGenerateColumns="False" Height="350" Width="463"  FontFamily="Comic Sans MS">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Ciudad Id" Binding="{Binding CiudadId}"/>
-                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
-                    </DataGrid.Columns>
+
                 </DataGrid>
             </StackPanel>
 

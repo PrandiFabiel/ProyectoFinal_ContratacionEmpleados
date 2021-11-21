@@ -26,7 +26,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
         {
             InitializeComponent();
             this.DataContext = ciudad;
-            //Necesito las BLL de provincia y al menos un registro guardado. 
+
+            ProvinciaComboBox.ItemsSource = ProvinciasBLL.GetProvincias();
+            ProvinciaComboBox.SelectedValuePath = "ProvinciaId";
+            ProvinciaComboBox.DisplayMemberPath = "Nombre"; 
         }
 
         private Ciudades ciudad = new Ciudades();
