@@ -190,5 +190,26 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             }
             return lista;
         }
+
+        public static List<Vacantes> GetVacantes()
+        {
+            Contexto contexto = new Contexto();
+            List<Vacantes> lista = new List<Vacantes>();
+
+            try
+            {
+                lista = contexto.Vacantes.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
+        }
     }
 }
