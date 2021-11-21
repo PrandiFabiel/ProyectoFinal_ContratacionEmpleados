@@ -75,7 +75,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void CiudadesMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rCiudades ciudad = new rCiudades();
+            ciudad.Show(); 
         }
 
         private void SectoresMenuItem_Click(object sender, RoutedEventArgs e)
@@ -106,7 +107,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void cCiudadesMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cCiudades ciudadC = new cCiudades();
+            ciudadC.Show(); 
         }
 
         private void cSectoresMenuItem_Click(object sender, RoutedEventArgs e)
