@@ -94,32 +94,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             Limpiar();
         }
 
-        private bool ExisteEnLaBaseDeDatos()
-        {
-            Roles esValido = RolesBLL.Buscar(Rol.RolId);
-
-            return (esValido != null);
-        }
-
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            bool paso = false;
+            if (!Validar())
+                return;
 
-            if (Rol.RolId == 0)
-            {
-                paso = RolesBLL.Guardar(Rol);
-            }
-            else
-            {
-                if (ExisteEnLaBaseDeDatos())
-                {
-                    paso = RolesBLL.Guardar(Rol);
-                }
-                else
-                {
-                    MessageBox.Show("No existe en la base de datos", "ERROR");
-                }
-            }
+            var paso = RolesBLL.Guardar(Rol);
 
             if (paso)
             {
@@ -147,6 +127,23 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
                 Limpiar();
             }
+        }
+
+        private bool Validar()
+        {
+            bool esValido = true;
+
+            if (DescripcionTextBox.Text.Length == 0)
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("Descripcion no puede está vacio", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                DescripcionTextBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
+
+            return esValido;
         }
     }
 }
