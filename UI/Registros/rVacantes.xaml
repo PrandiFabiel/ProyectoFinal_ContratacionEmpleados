@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Vacantes" Height="808" Width="747" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Registro de Vacantes" Height="775" Width="747" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Vertical">
@@ -26,10 +26,10 @@
             <Label Content="Disponible:"/>
             <TextBox x:Name="DisponibleVacante_TextBox" Width="301" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Disponible}"/>
             <Label Content="Fecha:"/>
-            <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" Width="150" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"/>
 
             <Label Content="Departamento:"/>
-            <ComboBox x:Name="DepartamentoComboBox" SelectedValue="{Binding DepartamentoId}" Width="304" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <ComboBox x:Name="DepartamentoComboBox" SelectedValue="{Binding DepartamentoId}" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" />
             <Label Content="Requisitos:"/>
             <TextBox x:Name="Requisitos_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="698" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Requisitos}" Height="46"/>
             <Label Content="Descripcion:"/>
@@ -53,6 +53,16 @@
                                 </Button>
                             </StackPanel>
 
+                            <StackPanel>
+
+                                <Button x:Name="RemoverFilaButton" Click="RemoverFilaButton_Click" Width="106" Margin="10,26,0,0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="/Resources/Alarm-Minus-icon.png" />
+                                        <Label Content="Remover fila"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+
                         </StackPanel>
 
                         <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding VacantesDetalle}" Height="128" AutoGenerateColumns="False" Margin="0,10" Width="670">
@@ -64,15 +74,7 @@
 
                         </DataGrid>
 
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-
-                            <Button x:Name="RemoverFilaButton" Click="RemoverFilaButton_Click" Width="100">
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Resources/Alarm-Minus-icon.png" />
-                                    <Label Content="Remover fila"/>
-                                </StackPanel>
-                            </Button>
-                        </StackPanel>
+                        
 
                     </StackPanel>
                 </GroupBox>
