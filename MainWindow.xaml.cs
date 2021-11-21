@@ -70,7 +70,8 @@ namespace ProyectoFinal_ContratacionEmpleados
         }
         private void ProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            
+            rProvincias rProvincias = new();
+            rProvincias.Show();
         }
 
         private void CiudadesMenuItem_Click(object sender, RoutedEventArgs e)
