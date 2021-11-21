@@ -97,7 +97,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void cDepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cDepartamentos cDepartamento = new cDepartamentos();
+            cDepartamento.Show();
         }
 
         private void cProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
