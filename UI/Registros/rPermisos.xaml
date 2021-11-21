@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,0,0,0">
             <StackPanel Orientation="Vertical">
-                <Label Content="Habilidad Id:"/>
+                <Label Content="Permiso Id:"/>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="PermisoIdTextBox" Text="{Binding PermisoId}" Width="100" Height="18"/>
