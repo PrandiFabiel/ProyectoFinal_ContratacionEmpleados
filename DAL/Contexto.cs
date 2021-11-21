@@ -27,5 +27,16 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
         {
             optionsBuilder.UseSqlite(@"Data Source = DATA\RecursosHumanos.db");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Usuarios>().HasData(new Usuarios
+            {
+                UsuarioId = 1,
+                NombreUsuario = "Admin",
+                Email = "profe098@gmail.com",
+                Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"//clave: 1234
+            });
+        }
     }
 }
