@@ -82,7 +82,8 @@ namespace ProyectoFinal_ContratacionEmpleados
 
         private void SectoresMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rSectores rSector = new rSectores();
+            rSector.Show();
         }
 
         private void CambiarContrasenaMenuItem_Click(object sender, RoutedEventArgs e)
