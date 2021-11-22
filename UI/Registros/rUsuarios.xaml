@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         xmlns:PasswordHelper="clr-namespace:ProyectoFinal_ContratacionEmpleados.Resources.PasswordHelper"
         mc:Ignorable="d"
-        Title="Registro de usuarios" Height="400" Width="420" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Registro de usuarios" Height="450" Width="420" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,0,0,0">
             <StackPanel Orientation="Vertical">
