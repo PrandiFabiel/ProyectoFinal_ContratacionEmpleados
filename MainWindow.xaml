@@ -12,6 +12,7 @@
                 <MenuItem Header="Registros">
                     <MenuItem x:Name="VacantesMenuItem" Header="Registro de Vacantes" Click="VacantesMenuItem_Click"/>
                     <MenuItem x:Name="UsuariosMenuItem" Header="Registro de usuarios" Click="UsuariosMenuItem_Click"/>
+                    <MenuItem x:Name="PersonasMenuItem" Header="Registro de Personas" Click="PersonasMenuItem_Click"/>
                     <MenuItem x:Name="GenerosMenuItem" Header="Registro de Generos" Click="GenerosMenuItem_Click"/>
                     <MenuItem x:Name="EmpresasMenuItem" Header="Registro de Empresas" Click="EmpresasMenuItem_Click"/>
                     <MenuItem x:Name="PermisoMenuItem" Header="Registro de Permisos" Click="PermisoMenuItem_Click"/>

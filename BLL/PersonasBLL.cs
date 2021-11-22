@@ -27,10 +27,17 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
+                
 
-                Persona.Vacante.Disponible -= 1;
-                contexto.Entry(Persona.Vacante).State = EntityState.Modified;
-
+               /* foreach(var item in VacantesBLL.GetVacantes())
+      SqliteException: SQLite Error 19: 'UNIQUE constraint failed: Empresas.EmpresaId'.          {
+                    contexto.EntrMicrosoft.EntityFrameworkCore.DbUpdateException: 'An error occurred while updating the entries. See the inner exception for details.'
+y(item).State = EntityState.Modified;
+                    if (item.VacanteId == Persona.VacanteId)
+                        item.Disponible -= 1;
+                }
+               */
+                
                 contexto.Personas.Add(Persona);
                 paso = contexto.SaveChanges() > 0;
             }

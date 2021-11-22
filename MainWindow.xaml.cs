@@ -162,5 +162,11 @@ namespace ProyectoFinal_ContratacionEmpleados
             cRoles Croles = new cRoles();
             Croles.Show(); 
         }
+
+        private void PersonasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rPersonas rPersonas = new();
+            rPersonas.Show();
+        }
     }
 }
