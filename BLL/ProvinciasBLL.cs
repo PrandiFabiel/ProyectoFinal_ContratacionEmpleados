@@ -27,6 +27,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
+                Provincia.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Provincias.Add(Provincia);
                 paso = contexto.SaveChanges() > 0;
             }

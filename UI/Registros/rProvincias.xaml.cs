@@ -74,7 +74,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 return;
 
             if (paso)
-            {
+            {  
                 Limpiar();
                 MessageBox.Show("Transaccion exitosa!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }

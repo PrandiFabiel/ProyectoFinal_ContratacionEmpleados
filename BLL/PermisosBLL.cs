@@ -31,6 +31,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
+                permiso.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Permisos.Add(permiso);
                 paso = contexto.SaveChanges() > 0;
             }

@@ -36,6 +36,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI
 
             if (paso)
             {
+                Utilidades.User = UsuariosBLL.GetUser(NombreUsuarioTextBox.Text);
                 this.Close();
                 Principal.Show();
             }

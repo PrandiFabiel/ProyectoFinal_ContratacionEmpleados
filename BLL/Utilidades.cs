@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_ContratacionEmpleados.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +17,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             return retorno;
         }
+
+        public static Usuarios User;
     }
 }

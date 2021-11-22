@@ -27,6 +27,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
+                Empresa.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Empresas.Add(Empresa);
                 paso = contexto.SaveChanges() > 0;
             }

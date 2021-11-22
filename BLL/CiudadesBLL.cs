@@ -31,6 +31,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
+                ciudad.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Ciudades.Add(ciudad);
                 paso = contexto.SaveChanges() > 0;
             }

@@ -31,6 +31,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
+                sector.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Sectores.Add(sector);
                 paso = contexto.SaveChanges() > 0;
             }

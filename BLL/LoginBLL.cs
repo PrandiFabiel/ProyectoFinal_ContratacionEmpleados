@@ -1,4 +1,5 @@
 ﻿using ProyectoFinal_ContratacionEmpleados.DAL;
+using ProyectoFinal_ContratacionEmpleados.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,9 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
                               select usuario;
 
                 if (validar.Count() > 0)
+                {
                     paso = true;
+                }  
                 else
                     paso = false;
             }

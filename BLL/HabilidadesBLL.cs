@@ -31,6 +31,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
+                habilidad.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Habilidades.Add(habilidad);
                 paso = contexto.SaveChanges() > 0;
             }

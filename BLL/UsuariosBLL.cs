@@ -180,6 +180,32 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return paso;
         }
 
+        public static Usuarios GetUser(string nombre)
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+            Usuarios user = new Usuarios();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                lista = contexto.Usuarios.Where(x => x.NombreUsuario == nombre).ToList();
+                foreach(var item in lista)
+                {
+                    user = item;
+                    break;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return user;
+        }
 
         private static string GetSHA256(string str)
         {
