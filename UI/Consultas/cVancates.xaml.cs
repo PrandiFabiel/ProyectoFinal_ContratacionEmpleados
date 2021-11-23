@@ -59,10 +59,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
                                 listado = VacantesBLL.GetList(
                                     c => c.Fecha.Date >= Desde_DataPicker.SelectedDate &&
                                     c.Fecha.Date <= Hasta_DatePicker.SelectedDate &&
-                                    c.NombreVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower())
+                                    c.Nombre.ToLower().Contains(Criterio_TextBox.Text.ToLower())
                                 );
                             else
-                                listado = VacantesBLL.GetList(d => d.NombreVacante.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
+                                listado = VacantesBLL.GetList(d => d.Nombre.ToLower().Contains(Criterio_TextBox.Text.ToLower()));
                         }
                         catch (FormatException)
                         {

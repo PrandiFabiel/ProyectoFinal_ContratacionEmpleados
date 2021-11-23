@@ -12,7 +12,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
     {
         [Key]
         public int VacanteId { get; set; }
-        public string NombreVacante { get; set; }
+        public string Nombre { get; set; }
         public int DepartamentoId { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
         public string Requisitos { get; set; }
