@@ -168,5 +168,11 @@ namespace ProyectoFinal_ContratacionEmpleados
             rPersonas rPersonas = new();
             rPersonas.Show();
         }
+
+        private void cPersonasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cPersonas cPersonas = new();
+            cPersonas.Show();
+        }
     }
 }

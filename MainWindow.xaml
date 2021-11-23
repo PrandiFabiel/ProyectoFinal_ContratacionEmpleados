@@ -29,7 +29,8 @@
 
                 <MenuItem Header="Consultas">
                     <MenuItem x:Name="cVacantesMenuItem" Header="Consulta de Vacantes" Click="cVacantesMenuItem_Click"/>
-                    <MenuItem x:Name="cUsuariosMenuItem" Header="Consulta de usuarios" Click="cUsuariosMenuItem_Click"/>
+                    <MenuItem x:Name="cUsuariosMenuItem" Header="Consulta de Usuarios" Click="cUsuariosMenuItem_Click"/>
+                    <MenuItem x:Name="cPersonasMenuItem" Header="Consulta de Personas" Click="cPersonasMenuItem_Click"/>
                     <MenuItem x:Name="cGenerosMenuItem" Header="Consulta de Generos" Click="cGenerosMenuItem_Click"/>
                     <MenuItem x:Name="cEmpresasMenuItem" Header="Consulta de Empresas" Click="cEmpresasMenuItem_Click"/>
                     <MenuItem x:Name="cPermisoMenuItem" Header="Consulta de Permiso" Click="cPermisoMenuItem_Click"/>
