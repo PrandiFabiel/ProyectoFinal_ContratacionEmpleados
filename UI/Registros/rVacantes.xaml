@@ -22,7 +22,7 @@
             </StackPanel>
 
             <Label Content="Nombre:"/>
-            <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding NombreVacante}"/>
+            <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Nombre}"/>
             <Label Content="Disponible:"/>
             <TextBox x:Name="DisponibleVacante_TextBox" Width="301" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Disponible}"/>
             <Label Content="Fecha:"/>
