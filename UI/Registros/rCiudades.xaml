@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Ciudades" Height="240" Width="360" WindowStartupLocation="CenterScreen">
+        Title="Registro de Ciudades" Height="270" Width="460" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,0,0,0">
             <StackPanel Orientation="Vertical">
                 <Label Content="Ciudad Id:"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="CiudadIdTextBox" Text="{Binding CiudadId}" Width="100" Height="18"/>
+                    <TextBox x:Name="CiudadIdTextBox" Text="{Binding CiudadId}" Width="100" Height="22"/>
                     <Button x:Name="BuscarButton" Margin="6,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" />
@@ -23,11 +23,11 @@
 
                 <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
                     <Label Content="Nombre:"/>
-                    <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" Width="323" />
+                    <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" Width="483" Height="22" />
                 </StackPanel>
                 <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
                     <Label Content="Provincia:"/>
-                    <ComboBox x:Name="ProvinciaComboBox" SelectedValue="{Binding ProvinciaId}" Width="100" />
+                    <ComboBox x:Name="ProvinciaComboBox" SelectedValue="{Binding ProvinciaId}" Width="100" Height="22" />
                 </StackPanel>
             </StackPanel>
 

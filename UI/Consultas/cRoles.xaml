@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Consultas"
         mc:Ignorable="d"
-        Title="cRoles" Height="550" Width="500">
+        Title="cRoles" Height="550" Width="520">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Horizontal">
@@ -30,7 +30,7 @@
                 </StackPanel>
 
                 <StackPanel Margin="35,25,0,0">
-                    <Button x:Name="Buscar_Button" Click="Buscar_Button_Click"  Height="72" Width="76" FontFamily="Comic Sans MS">
+                    <Button x:Name="Buscar_Button" Click="Buscar_Button_Click"  Height="72" Width="86" FontFamily="Comic Sans MS">
                         <StackPanel Orientation="Vertical" >
                             <Image Source="/Resources/search-icon (3).png" Height="28" Width="67"/>
                             <Label Content="Buscar" Width="59" FontWeight="Normal" FontStyle="Italic" FontSize="16" />

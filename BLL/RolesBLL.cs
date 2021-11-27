@@ -28,6 +28,9 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Permisos permiso = new();
             try
             {
+
+                rol.UsuarioId = Utilidades.User.UsuarioId;
+
                 contexto.Roles.Add(rol);
                 foreach (var Item in rol.RolesDetalle)
                 {
