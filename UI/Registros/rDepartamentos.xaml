@@ -1,53 +1,61 @@
 ﻿<Window x:Class="ProyectoFinal_ContratacionEmpleados.UI.Registros.rDepartamentos"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignLightBackground}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Departamentos" Height="207" Width="360" WindowStartupLocation="CenterScreen">
+        Title="Registro de Departamentos" Height="230" Width="420" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,0,0,0">
-            <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Margin="0,10">
                 <Label Content="Departamento Id:"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="DepartamentoIdTextBox" Text="{Binding DepartamentoId}" Width="100" Height="18"/>
+                    <TextBox x:Name="DepartamentoIdTextBox" Text="{Binding DepartamentoId}" Width="100" Height="22" Margin="5,0,0,0"/>
                     <Button x:Name="BuscarButton" Margin="6,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" />
-                            <Label Content="Buscar"/>
+                            <Label Content="Buscar" FontWeight="Bold" Foreground="White"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
 
                 <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
                     <Label Content="Nombre:"/>
-                    <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" Width="323" />
+                    <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" Width="350" Margin="5,0,0,0" Height="22"/>
                 </StackPanel>
 
             </StackPanel>
 
 
-            <StackPanel Orientation="Horizontal" Margin="0,15">
+            <StackPanel Orientation="Horizontal" Margin="5,15" HorizontalAlignment="Left">
                 <Button x:Name="NuevoButton" Click="NuevoButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Files-New-File-icon.png" />
-                        <Label Content="Nuevo"/>
+                        <Label Content="Nuevo" FontWeight="Bold" Foreground="White"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="GuardarButton" Margin="45,0" Click="GuardarButton_Click">
+                <Button x:Name="GuardarButton" Margin="20,0" Click="GuardarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/floppy-icon.png" />
-                        <Label Content="Guardar"/>
+                        <Label Content="Guardar" FontWeight="Bold" Foreground="White"/>
                     </StackPanel>
                 </Button>
 
                 <Button x:Name="EliminarButton" Click="EliminarButton_Click">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Resources/symbol-delete-icon.png" />
-                        <Label Content="Eliminar"/>
+                        <Image Source="/Resources/blue-document-cross-icon.png" />
+                        <Label Content="Eliminar" FontWeight="Bold" Foreground="White"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
