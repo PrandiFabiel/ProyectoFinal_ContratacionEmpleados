@@ -38,7 +38,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
             VacanteCombobox.ItemsSource = VacantesBLL.GetVacantes();
             VacanteCombobox.SelectedValuePath = "VacanteId";
-            VacanteCombobox.DisplayMemberPath = "NombreVacante";
+            VacanteCombobox.DisplayMemberPath = "Nombre";
 
             ProvinciaCombobox.ItemsSource = ProvinciasBLL.GetProvincias();
             ProvinciaCombobox.SelectedValuePath = "ProvinciaId";
