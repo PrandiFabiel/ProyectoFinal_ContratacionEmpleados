@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Empresas" Height="290" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Registro de Empresas" Height="405" Width="450" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
             <StackPanel>
@@ -29,24 +29,33 @@
                     <Label Content="Telefono:" FontFamily="Comic Sans Ms"/>
                     <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Width="280" Height="22" HorizontalAlignment="Left"/>
                 </StackPanel>
+                
+                <StackPanel Margin="10,10,0,0">
+                    <Label Content="Puesto:" FontFamily="Comic Sans Ms"/>
+                    <TextBox x:Name="PuestoTextbox" Text="{Binding Puesto}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                </StackPanel>
 
+                <StackPanel Margin="10,10,0,0">
+                    <Label Content="Duracion (meses):" FontFamily="Comic Sans Ms"/>
+                    <TextBox x:Name="DuracionTextbox" Text="{Binding Duracion}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
-                    <Button x:Name="NuevoButton" Width="80" Click="NuevoButton_Click">
+                    <Button x:Name="NuevoButton"  Width="110" Click="NuevoButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/Files-New-File-icon.png" />
                             <Label Content="Nuevo" FontFamily="Comic Sans Ms"/>
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="GuardarButton" Margin="10,0,0,0" Width="80" Click="GuardarButton_Click">
+                    <Button x:Name="GuardarButton" Margin="10,0,0,0"  Width="110" Click="GuardarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/floppy-icon.png" />
                             <Label Content="Guardar" FontFamily="Comic Sans Ms"/>
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="EliminarButton" Margin="10,0,0,0" Width="80" Click="EliminarButton_Click">
+                    <Button x:Name="EliminarButton" Margin="10,0,0,0" Width="110" Click="EliminarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/symbol-delete-icon.png" />
                             <Label Content="Eliminar" FontFamily="Comic Sans Ms"/>

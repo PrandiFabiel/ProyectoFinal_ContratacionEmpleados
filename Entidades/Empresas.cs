@@ -13,6 +13,8 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
         public int EmpresaId { get; set; }
         public string Nombre { get; set; }
         public string Telefono { get; set; }
+        public string Puesto { get; set; }
+        public int Duracion { get; set; }
         public int UsuarioId { get; set; }
     }
 }

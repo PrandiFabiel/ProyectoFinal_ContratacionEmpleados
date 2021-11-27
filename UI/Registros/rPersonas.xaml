@@ -115,7 +115,7 @@
                         <Label Content="Empresa" FontFamily="Comic Sans MS" Margin="155,0,0,0"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-                            <ComboBox x:Name="EmpresaCombobox" FontFamily="Comic Sans MS" Width="250"/>
+                            <ComboBox x:Name="EmpresaCombobox" FontFamily="Comic Sans MS" Width="250" SelectedValue="{Binding EmpresaId}"/>
 
                             <Button x:Name="AgregarButton" Margin="10,0,0,0" Width="120" Click="AgregarButton_Click">
                                 <StackPanel Orientation="Horizontal">

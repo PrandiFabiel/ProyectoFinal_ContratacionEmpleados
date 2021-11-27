@@ -207,7 +207,6 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             var detalle = new PersonasDetalle
             {
                 PersonaId = this.Persona.PersonaId,
-                EmpresaId = (int)EmpresaCombobox.SelectedValue,
                 Empresa = (Empresas)EmpresaCombobox.SelectedItem
             };
 

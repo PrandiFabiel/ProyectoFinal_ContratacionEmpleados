@@ -69,6 +69,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DATA\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="DATA\RecursosHumanos.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

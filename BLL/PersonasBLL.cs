@@ -27,17 +27,15 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
-                
 
-               /* foreach(var item in VacantesBLL.GetVacantes())
-      SqliteException: SQLite Error 19: 'UNIQUE constraint failed: Empresas.EmpresaId'.          {
-                    contexto.EntrMicrosoft.EntityFrameworkCore.DbUpdateException: 'An error occurred while updating the entries. See the inner exception for details.'
-y(item).State = EntityState.Modified;
-                    if (item.VacanteId == Persona.VacanteId)
-                        item.Disponible -= 1;
-                }
-               */
-                
+
+                //    foreach(var item in VacantesBLL.GetVacantes())
+                //    {
+                //        if (item.VacanteId == Persona.VacanteId)
+                //            item.Disponible -= 1;
+                //    }
+
+
                 contexto.Personas.Add(Persona);
                 paso = contexto.SaveChanges() > 0;
             }
@@ -154,11 +152,11 @@ y(item).State = EntityState.Modified;
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
-            bool encontrado = false;
+            bool esValido = false;
 
             try
             {
-                contexto.Personas.Any(x => x.PersonaId == id);
+                esValido = contexto.Personas.Any(x => x.PersonaId == id);
             }
             catch (Exception)
             {
@@ -169,7 +167,7 @@ y(item).State = EntityState.Modified;
             {
                 contexto.Dispose();
             }
-            return encontrado;
+            return esValido;
         }
 
         public static List<Personas> GetList(Expression<Func<Personas, bool>> Criterio)
