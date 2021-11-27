@@ -4,7 +4,7 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"        
+        TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignLightBackground}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Vacantes" Height="800" Width="747" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Vacantes" Height="820" Width="750" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Vertical">
@@ -30,23 +30,23 @@
             </StackPanel>
 
             <Label Content="Nombre:"/>
-            <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Nombre}"/>
-            <Label Content="Disponible:"/>
-            <TextBox x:Name="DisponibleVacante_TextBox" Width="301" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Disponible}"/>
-            <Label Content="Fecha:"/>
+            <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"  Text="{Binding Nombre}"/>
+            <Label Content="Disponible:" Margin="0,5"/>
+            <TextBox x:Name="DisponibleVacante_TextBox" Width="301" HorizontalAlignment="Left" Margin="5,0,0,0" Height="22" Text="{Binding Disponible}"/>
+            <Label Content="Fecha:"  Margin="0,5"/>
             <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"/>
 
-            <Label Content="Departamento:"/>
+            <Label Content="Departamento:"  Margin="0,5"/>
             <ComboBox x:Name="DepartamentoComboBox" SelectedValue="{Binding DepartamentoId}" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" />
-            <Label Content="Requisitos:"/>
-            <TextBox x:Name="Requisitos_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="698" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Requisitos}" Height="46"/>
-            <Label Content="Descripcion:"/>
+            <Label Content="Requisitos:"  Margin="0,5"/>
+            <TextBox x:Name="Requisitos_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="698" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Requisitos}" Height="42"/>
+            <Label Content="Descripcion:"  Margin="0,5"/>
             <TextBox x:Name="Descripcion_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="697" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Descripcion}" Height="42"/>
 
             <StackPanel Orientation="Vertical">
-                <GroupBox Margin="0,10" Header="Detalle de la Vacante" Width="708" HorizontalAlignment="Left">
-                    <StackPanel Margin="10">
-                        <StackPanel Orientation="Horizontal">
+                <GroupBox Margin="5,10" Header="Detalle de la Vacante" Width="700" HorizontalAlignment="Left">
+                    <StackPanel Margin="5">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <StackPanel Orientation="Vertical" Width="149">
                                 <Label Content="Habilidad"/>
                                 <ComboBox x:Name="HabilidadComboBox" SelectedValue="{Binding HabilidadId}" Height="30"/>
@@ -73,7 +73,7 @@
 
                         </StackPanel>
 
-                        <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding VacantesDetalle}" IsReadOnly="True" Height="128" AutoGenerateColumns="False" Margin="0,10" Width="670">
+                        <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding VacantesDetalle}" IsReadOnly="True" Height="100" AutoGenerateColumns="False" Margin="0,10" Width="700">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Habilidad Id" Binding="{Binding Habilidad.HabilidadId}" Width="120"/>
                                 <DataGridTextColumn Header="Descripcion" Binding="{Binding Habilidad.Descripcion}" Width="300"/>

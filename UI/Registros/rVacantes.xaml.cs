@@ -148,15 +148,22 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            var detalle = new VacantesDetalle
+            if(HabilidadComboBox.Text.Length == 0)
             {
-                VacanteDetalleId = this.vacante.VacanteId,
-                Habilidad = (Habilidades)HabilidadComboBox.SelectedItem
-            };
+                MessageBox.Show("Debe seleccionar una Habilidad", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                var detalle = new VacantesDetalle
+                {
+                    VacanteDetalleId = this.vacante.VacanteId,
+                    Habilidad = (Habilidades)HabilidadComboBox.SelectedItem
+                };
 
-            vacante.VacantesDetalle.Add(detalle);
+                vacante.VacantesDetalle.Add(detalle);
 
-            Cargar();
+                Cargar();
+            }
         }
 
         private void RemoverFilaButton_Click(object sender, RoutedEventArgs e)
