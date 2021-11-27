@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Roles" Height="450" Width="500">
+        Title="Registro de Roles" Height="580" Width="600">
     <Grid>
         <Grid>
             <StackPanel Orientation="Vertical" Margin="10,0,10,0">
@@ -14,7 +14,7 @@
                     <Label Content="RolId:"/>
 
                     <StackPanel Orientation="Horizontal">
-                        <TextBox x:Name="RolDetelleIdTextBox" Text="{Binding RolId}"  Width="100" Height="18"/>
+                        <TextBox x:Name="RolDetelleIdTextBox" Text="{Binding RolId}"  Width="100" Height="22"/>
                         <Button x:Name="BuscarButton" Margin="5,0" Click="BuscarButton_Click">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/search-icon (3).png" Height="24"/>
@@ -24,30 +24,30 @@
                     </StackPanel>
 
                     <Label Content="Descripcion"/>
-                    <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}"/>
+                    <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Height="25"/>
 
                     <StackPanel Orientation="Vertical">
-                        <GroupBox Header="Roles Detalle" Margin="0,0,0,0">
+                        <GroupBox Header="Roles Detalle" Margin="0,15,0,0">
                             <StackPanel Margin="10">
                                 <Label Content="Permiso"/>
                                 <ComboBox x:Name="PermisoComboBox" SelectedValue="{Binding PermisoId}" Width="200" Margin="0,0,229,0" />
 
                                 <StackPanel Orientation="Horizontal">
-                                    <Button x:Name="AgregarFilaButton" Margin="10" Click="AgregarFilaButton_Click"  Width="123">
+                                    <Button x:Name="AgregarFilaButton" Margin="10" Click="AgregarFilaButton_Click" Height="35" Width="123">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Resources/Alarm-Plus-icon.png" />
-                                            <Label Content="Agregar fila"/>
+                                            <Label Content="Agregar"/>
                                         </StackPanel>
                                     </Button>
-                                    <Button x:Name="RemoverFilaButton" Margin="10" Click="RemoverFilaButton_Click"  Width="115">
+                                    <Button x:Name="RemoverFilaButton" Margin="10" Click="RemoverFilaButton_Click" Height="35" Width="115">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Resources/Alarm-Minus-icon.png" />
-                                            <Label Content="Eliminar fila"/>
+                                            <Label Content="Eliminar"/>
                                         </StackPanel>
                                     </Button>
                                 </StackPanel>
 
-                                <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding RolesDetalle}" Height="80" AutoGenerateColumns="False" >
+                                <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding RolesDetalle}" Height="150" AutoGenerateColumns="False" >
                                     <DataGrid.Columns>
                                         <DataGridTextColumn Header="PermisoId" Binding="{Binding PermisoId}"/>
                                         <DataGridTextColumn Header="Descripcion" Binding="{Binding DescripcionPermiso}"/>

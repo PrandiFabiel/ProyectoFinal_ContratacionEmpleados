@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="rPermisos" Height="250" Width="360">
+        Title="rPermisos" Height="270" Width="460">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,0,0,0">
             <StackPanel Orientation="Vertical">
                 <Label Content="Permiso Id:"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="PermisoIdTextBox" Text="{Binding PermisoId}" Width="100" Height="18"/>
+                    <TextBox x:Name="PermisoIdTextBox" Text="{Binding PermisoId}" Width="100" Height="22"/>
                     <Button x:Name="BuscarButton" Margin="6,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" />
@@ -23,7 +23,7 @@
 
                 <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
                     <Label Content="Descripcion:"/>
-                    <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="323" />
+                    <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Width="453" Height="22" />
                 </StackPanel>
 
                 <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
@@ -49,7 +49,7 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="EliminarButton" Click="EliminarButton_Click">
+                <Button x:Name="EliminarButton" Click="EliminarButton_Click" Margin="0,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/symbol-delete-icon.png" />
                         <Label Content="Eliminar"/>
