@@ -168,6 +168,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 vacante.VacantesDetalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
