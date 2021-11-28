@@ -38,6 +38,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
                     }
                 }
 
+                persona.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Personas.Add(persona);
 
                 foreach (var item in persona.Detalle)

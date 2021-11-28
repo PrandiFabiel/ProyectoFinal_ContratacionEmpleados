@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consulta de usuarios" Height="565" Width="500" WindowStartupLocation="CenterScreen">
+        Title="Consulta de usuarios" Height="565" Width="600" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Horizontal">
@@ -44,11 +44,11 @@
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
                         <Label Content="Critero:"/>
-                        <TextBox x:Name="Criterio_TextBox" Width="144" Height="22"/>
+                        <TextBox x:Name="Criterio_TextBox" Width="144" Height="24"/>
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Margin="35,25,0,0">
+                <StackPanel Margin="125,25,0,0">
                     <Button x:Name="Buscar_Button" Click="Buscar_Button_Click"  Height="72" Width="76">
                         <StackPanel Orientation="Vertical" >
                             <Image Source="/Resources/search-icon (3).png" Height="28" Width="67"/>
@@ -61,7 +61,7 @@
 
 
             <StackPanel HorizontalAlignment="Left" >
-                <DataGrid x:Name="DatosDataGrid" IsReadOnly="True" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center" Height="350" Width="463">
+                <DataGrid x:Name="DatosDataGrid" IsReadOnly="True" AlternatingRowBackground="Gainsboro" TextBlock.TextAlignment="Center" Height="350" Width="545">
                     <DataGrid.Columns>
                         
                     </DataGrid.Columns>
