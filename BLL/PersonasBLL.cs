@@ -12,106 +12,90 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 {
     public class PersonasBLL
     {
-        public static bool Guardar(Personas Persona)
+        public static bool Guardar(Personas persona)
         {
-            if (!Existe(Persona.PersonaId))
-                return Insertar(Persona);
+            if (!Existe(persona.PersonaId))
+                return Insertar(persona);
             else
-                return Modificar(Persona);
+                return Modificar(persona);
         }
 
-        private static bool Insertar(Personas Persona)
+        private static bool Insertar(Personas persona)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
 
             try
             {
+                var vacante = VacantesBLL.GetVacantes();
 
-
-                //    foreach(var item in VacantesBLL.GetVacantes())
-                //    {
-                //        if (item.VacanteId == Persona.VacanteId)
-                //            item.Disponible -= 1;
-                //    }
-
-
-                contexto.Personas.Add(Persona);
-                paso = contexto.SaveChanges() > 0;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return paso;
-        }
-
-        private static bool Modificar(Personas Persona)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                var PersonaAnterior = contexto.Personas.Where(x => x.PersonaId == Persona.PersonaId)
-                                           .Include(x => x.Detalle)
-                                           .ThenInclude(x => x.Empresa)
-                                           .Include(x => x.Genero)
-                                           .Include(x => x.Vacante)
-                                           .Include(x => x.Provincia)
-                                           .AsNoTracking()
-                                           .SingleOrDefault();
-
-                PersonaAnterior.Vacante.Disponible += 1;
-                contexto.Entry(PersonaAnterior.Vacante).State = EntityState.Modified;
-
-                contexto.Database.ExecuteSqlRaw($"Delete From PersonasDetalle Where PersonaId = {Persona.PersonaId}");
-
-                Persona.Vacante.Disponible -= 1;
-                contexto.Entry(PersonaAnterior.Vacante).State = EntityState.Modified;
-
-                contexto.Entry(Persona).State = EntityState.Modified;
-                paso = contexto.SaveChanges() > 0;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return paso;
-        }
-
-        public static bool Eliminar(int id)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                var Persona = PersonasBLL.Buscar(id);
-
-                if (Persona != null)
+                foreach (var item in vacante)
                 {
-
-                    Persona.Vacante.Disponible += 1;
-                    contexto.Entry(Persona.Vacante).State = EntityState.Modified;
-
-                    contexto.Personas.Remove(Persona);
-                    paso = contexto.SaveChanges() > 0;
+                    if (item.VacanteId == persona.VacanteId)
+                    {
+                        item.Disponible -= 1;
+                        contexto.Entry(item).State = EntityState.Modified;
+                    }
                 }
+
+                contexto.Personas.Add(persona);
+
+                foreach (var item in persona.Detalle)
+                {
+                    contexto.Entry(item.Empresa).State = EntityState.Unchanged;
+                }
+
+                paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return paso;
+        }
 
+        private static bool Modificar(Personas persona)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                var vacante = VacantesBLL.GetVacantes();
+
+                foreach(var item in vacante)
+                {
+                    if(item.VacanteId == persona.VacanteId)
+                    {
+                        item.Disponible += 1;
+                        contexto.Entry(item).State = EntityState.Modified;
+                    }
+                }
+
+                contexto.Database.ExecuteSqlRaw($"Delete FROM PersonasDetalle Where PersonaId = {persona.PersonaId}");
+
+                foreach (var item in vacante)
+                {
+                    if (item.VacanteId == persona.VacanteId)
+                    {
+                        item.Disponible -= 1;
+                        contexto.Entry(item).State = EntityState.Modified;
+                    }
+                }
+
+                foreach (var item in persona.Detalle)
+                {
+                    contexto.Entry(item).State = EntityState.Added;
+                }
+
+                contexto.Entry(persona).State = EntityState.Modified;
+                paso = contexto.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
                 throw;
             }
             finally
@@ -123,18 +107,14 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
         public static Personas Buscar(int id)
         {
-            Contexto contexto = new Contexto();
             Personas Persona;
+            Contexto contexto = new Contexto();
 
             try
             {
                 Persona = contexto.Personas.Where(x => x.PersonaId == id)
                                            .Include(x => x.Detalle)
                                            .ThenInclude(x => x.Empresa)
-                                           .Include(x => x.Genero)
-                                           .Include(x => x.Vacante)
-                                           .Include(x => x.Provincia)
-                                           .AsNoTracking()
                                            .SingleOrDefault();
             }
             catch (Exception)
@@ -149,14 +129,31 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return Persona;
         }
 
-        public static bool Existe(int id)
+        public static bool Eliminar(int id)
         {
+            bool paso = false;
             Contexto contexto = new Contexto();
-            bool esValido = false;
-
             try
             {
-                esValido = contexto.Personas.Any(x => x.PersonaId == id);
+                var persona = PersonasBLL.Buscar(id);
+
+                if (persona != null)
+                {
+                    var vacante = VacantesBLL.GetVacantes();
+
+                    foreach (var item in vacante)
+                    {
+                        if (item.VacanteId == persona.VacanteId)
+                        {
+                            item.Disponible += 1;
+                            contexto.Entry(item).State = EntityState.Modified;
+                        }
+                    }
+
+                    contexto.Personas.Remove(persona);
+                    paso = contexto.SaveChanges() > 0;
+                }
+
             }
             catch (Exception)
             {
@@ -167,17 +164,36 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             {
                 contexto.Dispose();
             }
-            return esValido;
+            return paso;
         }
 
-        public static List<Personas> GetList(Expression<Func<Personas, bool>> Criterio)
+        public static bool Existe(int id)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+            try
+            {
+                encontrado = contexto.Personas.Any(x => x.PersonaId == id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
+
+        public static List<Personas> GetList(Expression<Func<Personas, bool>> criterio)
         {
             List<Personas> lista = new List<Personas>();
             Contexto contexto = new Contexto();
-
             try
             {
-                lista = contexto.Personas.Where(Criterio).ToList();
+                lista = contexto.Personas.Where(criterio).ToList();
             }
             catch (Exception)
             {
@@ -190,5 +206,6 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             }
             return lista;
         }
+        
     }
 }

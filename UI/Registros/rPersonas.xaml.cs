@@ -21,7 +21,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
     /// </summary>
     public partial class rPersonas : Window
     {
-        private Personas Persona = new Personas();
+        Personas Persona = new Personas();
         
         public rPersonas()
         {
@@ -47,8 +47,6 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             CiudadCombobox.ItemsSource = CiudadesBLL.GetCiudades();
             CiudadCombobox.SelectedValuePath = "ProvinciaId";
             CiudadCombobox.DisplayMemberPath = "Nombre";
-
-            
 
             SectorCombobox.ItemsSource = SectoresBLL.GetSectores();
             SectorCombobox.SelectedValuePath = "CiudadId";
@@ -151,21 +149,22 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             return esValido;
         }
 
-
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            Personas encontrado = PersonasBLL.Buscar(Persona.PersonaId);
+            var persona = PersonasBLL.Buscar(Persona.PersonaId);
 
-            if (encontrado != null)
+            if (persona != null)
             {
-                Persona = encontrado;
-                Cargar();
+                this.Persona = persona;
+                this.DataContext = Persona;
             }
             else
             {
                 Limpiar();
                 MessageBox.Show("Persona no existe en la base de datos", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            Cargar();
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -183,10 +182,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             if (paso)
             {
                 Limpiar();
-                MessageBox.Show("Guardado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Transaccion Exitosa!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
-                MessageBox.Show("Fallo al guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
 
         }
 
@@ -194,6 +193,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
         {
             if (PersonasBLL.Eliminar(Persona.PersonaId))
             {
+                Limpiar();
                 MessageBox.Show("Registro eliminado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
@@ -204,15 +204,24 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
-            var detalle = new PersonasDetalle
+            if(EmpresaCombobox.Text.Length == 0)
             {
-                PersonaId = this.Persona.PersonaId,
-                Empresa = (Empresas)EmpresaCombobox.SelectedItem
-            };
+                MessageBox.Show("Debe elegir una empresa", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            else
+            {
+                var detalle = new PersonasDetalle
+                {
+                    PersonaId = this.Persona.PersonaId,
+                    EmpresaId = (int)EmpresaCombobox.SelectedValue,
+                    Empresa = (Empresas)EmpresaCombobox.SelectedItem
+                };
 
 
-            Persona.Detalle.Add(detalle);
-            Cargar();
+                Persona.Detalle.Add(detalle);
+                Cargar();
+            }
         }
 
         private void QuitarButton_Click(object sender, RoutedEventArgs e)

@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Provincias" Height="250" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Registro de Provincias" Height="250" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <StackPanel>
                 <Label Content="ProvinciaId:" FontFamily="Comic Sans MS" Margin="10,10,0,0"/>
                 <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
-                    <TextBox x:Name="ProvinciaIdTextbox" Text="{Binding ProvinciaId}" Width="70" Height="22"/>
+                    <TextBox x:Name="ProvinciaIdTextbox" Text="{Binding ProvinciaId}" Width="100" Height="24"/>
                     <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" Height="24"/>
@@ -22,26 +22,26 @@
 
                 <StackPanel Margin="10,10,0,0">
                     <Label Content="Nombre:" FontFamily="Comic Sans Ms"/>
-                    <TextBox x:Name="NombreTextbox" Text="{Binding Nombre}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="NombreTextbox" Text="{Binding Nombre}" Width="300" Height="24" HorizontalAlignment="Left"/>
                 </StackPanel>
 
 
                 <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
-                    <Button x:Name="NuevoButton" Width="80" Click="NuevoButton_Click">
+                    <Button x:Name="NuevoButton" Width="110" Click="NuevoButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/Files-New-File-icon.png" />
                             <Label Content="Nuevo" FontFamily="Comic Sans Ms"/>
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="GuardarButton" Margin="10,0,0,0" Width="80" Click="GuardarButton_Click">
+                    <Button x:Name="GuardarButton" Margin="10,0,0,0" Width="110" Click="GuardarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/floppy-icon.png" />
                             <Label Content="Guardar" FontFamily="Comic Sans Ms"/>
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="EliminarButton" Margin="10,0,0,0" Width="80" Click="EliminarButton_Click">
+                    <Button x:Name="EliminarButton" Margin="10,0,0,0" Width="110" Click="EliminarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/symbol-delete-icon.png" />
                             <Label Content="Eliminar" FontFamily="Comic Sans Ms"/>

@@ -12,8 +12,8 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
     {
         [Key]
         public int PersonasDetalleId { get; set; }
-        public int EmpresaId { get; set; }
         public int PersonaId { get; set; }
+        public int EmpresaId { get; set; }
         public int UsuarioId { get; set; }
 
         [ForeignKey("EmpresaId")]

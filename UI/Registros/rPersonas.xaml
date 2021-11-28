@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Personas" Height="680" Width="855" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Registro de Personas" Height="710" Width="855" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="PersonaId" FontFamily="Comic Sans MS" Margin="10,10,0,0"/>
-                <Label Content="Fecha" FontFamily="Comic Sans Ms" Margin="490,10,0,0"/>
+                <Label Content="Fecha" FontFamily="Comic Sans Ms" Margin="495,10,0,0"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
-                <TextBox x:Name="PersonaIdTextbox" Text="{Binding PersonaId}" FontFamily="Comic Sans Ms" Height="22" Width="90"/>
+                <TextBox x:Name="PersonaIdTextbox" Text="{Binding PersonaId}" FontFamily="Comic Sans Ms" Height="24" Width="90"/>
                 <Button x:Name="BuscarButton" Click="BuscarButton_Click" Margin="10,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/search-icon (3).png" />
                         <Label Content="Buscar" FontFamily="Comic Sans Ms"/>
                     </StackPanel>
                 </Button>
-                <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left" Margin="385,0,0,0"/>
+                <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left" Margin="355,0,0,0"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -28,27 +28,27 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Nombres" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="NombresTextbox" Text="{Binding Nombres}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="NombresTextbox" Text="{Binding Nombres}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Apellidos" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="ApellidosTextbox" Text="{Binding Apellidos}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="ApellidosTextbox" Text="{Binding Apellidos}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Cedula" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="CedulaTextbox" Text="{Binding Cedula}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="CedulaTextbox" Text="{Binding Cedula}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Telefono" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Vacante" FontFamily="Comic Sans Ms"/>
-                        <ComboBox x:Name="VacanteCombobox" SelectedValue="{Binding VacanteId}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="VacanteCombobox" SelectedValue="{Binding VacanteId}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -56,27 +56,27 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Provincia" FontFamily="Comic Sans Ms"/>
-                        <ComboBox x:Name="ProvinciaCombobox" SelectedValue="{Binding ProvinciaId}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="ProvinciaCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Ciudad" FontFamily="Comic Sans Ms"/>
-                        <ComboBox x:Name="CiudadCombobox" SelectedValue="{Binding ProvinciaId}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="CiudadCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Sector" FontFamily="Comic Sans Ms"/>
-                        <ComboBox x:Name="SectorCombobox" SelectedValue="{Binding ProvinciaId}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="SectorCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Celular" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="CelularTextbox" Text="{Binding Celular}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="CelularTextbox" Text="{Binding Celular}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Genero" FontFamily="Comic Sans Ms"/>
-                        <ComboBox x:Name="GeneroCombobox" SelectedValue="{Binding GeneroId}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="GeneroCombobox" SelectedValue="{Binding GeneroId}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                 </StackPanel>
@@ -84,27 +84,27 @@
                 <StackPanel Margin="20,0,0,0">
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Email" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="EmailTextbox" Text="{Binding Email}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="EmailTextbox" Text="{Binding Email}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Referencia Familiar (Nombres)" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="NombreReferenciaFamiliarTextbox" Text="{Binding NombreReferenciaFamiliar}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="NombreReferenciaFamiliarTextbox" Text="{Binding NombreReferenciaFamiliar}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Referencia Familiar (Telefono)" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="TelefonoReferenciaFamiliarTextbox" Text="{Binding TelefonoReferenciaFamiliar}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="TelefonoReferenciaFamiliarTextbox" Text="{Binding TelefonoReferenciaFamiliar}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Referencia Personal (Nombres)" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="NombreReferenciaPersonalTextbox" Text="{Binding NombreReferenciaPersonal}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="NombreReferenciaPersonalTextbox" Text="{Binding NombreReferenciaPersonal}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Referencia Personal (Telefono)" FontFamily="Comic Sans Ms"/>
-                        <TextBox x:Name="TelefonoReferenciaPersonalTextbox" Text="{Binding TelefonoReferenciaPersonal}" Height="22" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="TelefonoReferenciaPersonalTextbox" Text="{Binding TelefonoReferenciaPersonal}" Height="24" Width="250" FontFamily="Comic Sans MS" HorizontalAlignment="Left"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
@@ -117,14 +117,14 @@
 
                             <ComboBox x:Name="EmpresaCombobox" FontFamily="Comic Sans MS" Width="250" SelectedValue="{Binding EmpresaId}"/>
 
-                            <Button x:Name="AgregarButton" Margin="10,0,0,0" Width="120" Click="AgregarButton_Click">
+                            <Button x:Name="AgregarButton" Margin="10,0,0,0" Width="150" Click="AgregarButton_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Resources/Alarm-Plus-icon.png"/>
                                     <Label Content="Agregar Fila" FontFamily="Comic Sans Ms"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button x:Name="QuitarButton" Margin="10,0,0,0" Width="120" Click="QuitarButton_Click">
+                            <Button x:Name="QuitarButton" Margin="10,0,0,0" Width="150" Click="QuitarButton_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Resources/Alarm-Minus-icon.png" />
                                     <Label Content="Eliminar Fila" FontFamily="Comic Sans Ms"/>
@@ -134,9 +134,12 @@
                         </StackPanel>
                         <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" AutoGenerateColumns="False" FontFamily="Comic Sans MS" Height="90" Margin="0,10,0,0">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="EmpresaId" Binding="{Binding Empresa.EmpresaId}"/>
-                                <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa.Nombre}" Width="300"/>
-                                <DataGridTextColumn Header="Telefono" Binding="{Binding Empresa.Telefono}" Width="300"/>
+                                <DataGridTextColumn Header="EmpresaId" Binding="{Binding EmpresaId}"/>
+                                <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa.Nombre}" Width="150"/>
+                                <DataGridTextColumn Header="Telefono" Binding="{Binding Empresa.Telefono}" Width="150"/>
+                                <DataGridTextColumn Header="Puesto" Binding="{Binding Empresa.Puesto}" Width="150"/>
+                                <DataGridTextColumn Header="Duracion (meses)" Binding="{Binding Empresa.Duracion}" Width="150"/>
+
                             </DataGrid.Columns>
                         </DataGrid>
                     </StackPanel>
@@ -144,21 +147,21 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
-                <Button x:Name="NuevoButton" Width="80" Click="NuevoButton_Click">
+                <Button x:Name="NuevoButton" Width="110" Click="NuevoButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Files-New-File-icon.png" />
                         <Label Content="Nuevo" FontFamily="Comic Sans Ms"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="GuardarButton" Margin="45,0,0,0" Width="80" Click="GuardarButton_Click">
+                <Button x:Name="GuardarButton" Margin="45,0,0,0" Width="110" Click="GuardarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/floppy-icon.png" />
                         <Label Content="Guardar" FontFamily="Comic Sans Ms"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="EliminarButton" Margin="45,0,0,0" Width="80" Click="EliminarButton_Click">
+                <Button x:Name="EliminarButton" Margin="45,0,0,0" Width="110" Click="EliminarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/symbol-delete-icon.png" />
                         <Label Content="Eliminar" FontFamily="Comic Sans Ms"/>

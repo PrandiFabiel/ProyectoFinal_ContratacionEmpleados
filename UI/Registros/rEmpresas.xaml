@@ -22,22 +22,22 @@
 
                 <StackPanel Margin="10,10,0,0">
                     <Label Content="Nombre:" FontFamily="Comic Sans Ms"/>
-                    <TextBox x:Name="NombreTextbox" Text="{Binding Nombre}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="NombreTextbox" Text="{Binding Nombre}" Width="280" Height="24" HorizontalAlignment="Left"/>
                 </StackPanel>
 
                 <StackPanel Margin="10,10,0,0">
                     <Label Content="Telefono:" FontFamily="Comic Sans Ms"/>
-                    <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Width="280" Height="24" HorizontalAlignment="Left"/>
                 </StackPanel>
                 
                 <StackPanel Margin="10,10,0,0">
                     <Label Content="Puesto:" FontFamily="Comic Sans Ms"/>
-                    <TextBox x:Name="PuestoTextbox" Text="{Binding Puesto}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="PuestoTextbox" Text="{Binding Puesto}" Width="280" Height="24" HorizontalAlignment="Left"/>
                 </StackPanel>
 
                 <StackPanel Margin="10,10,0,0">
                     <Label Content="Duracion (meses):" FontFamily="Comic Sans Ms"/>
-                    <TextBox x:Name="DuracionTextbox" Text="{Binding Duracion}" Width="280" Height="22" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="DuracionTextbox" Text="{Binding Duracion}" Width="280" Height="24" HorizontalAlignment="Left"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
