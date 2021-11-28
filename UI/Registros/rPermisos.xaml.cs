@@ -21,12 +21,13 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
     /// </summary>
     public partial class rPermisos : Window
     {
+        private Permisos permiso = new Permisos();
         public rPermisos()
         {
             InitializeComponent();
+            this.DataContext = permiso; 
         }
 
-        private Permisos permiso = new Permisos();
 
         private void Limpiar()
         {
