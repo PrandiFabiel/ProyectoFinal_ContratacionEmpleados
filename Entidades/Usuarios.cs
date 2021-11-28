@@ -17,7 +17,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
         public string Clave { get; set; }
         public DateTime FechaRegistroUsuario { get; set; } = DateTime.Now;
         public string Email { get; set; }
-
+        public int RolId { get; set; }
         [ForeignKey("RolId")]
         public virtual Roles Roles { get; set; }
 
