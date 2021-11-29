@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados"
         mc:Ignorable="d"
-        Title="Recursos Humanos - Contratación" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Recluctamiento" Height="450" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel>
             <Menu Height="40">
@@ -46,6 +46,16 @@
                 </MenuItem>
 
             </Menu>
+
+
+            <StackPanel Margin="-1,0,0,0">
+                <Image Source="/Resources/gabriel_isak-existence.png" Width="700"/>
+            </StackPanel>
+
+            
+
         </StackPanel>
+        
+        
     </Grid>
 </Window>

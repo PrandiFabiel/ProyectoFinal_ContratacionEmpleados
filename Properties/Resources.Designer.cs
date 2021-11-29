@@ -103,6 +103,16 @@ namespace ProyectoFinal_ContratacionEmpleados.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] gabriel_isak_existence {
+            get {
+                object obj = ResourceManager.GetObject("gabriel_isak_existence", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] search_icon__3_ {
             get {
                 object obj = ResourceManager.GetObject("search_icon__3_", resourceCulture);
