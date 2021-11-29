@@ -13,7 +13,6 @@
         Background="{DynamicResource MaterialDesignLightBackground}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        mc:Ignorable="d"
         Title="Consulta de Empresas" Height="530" Width="530" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
