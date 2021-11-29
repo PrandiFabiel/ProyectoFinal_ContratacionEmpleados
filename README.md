@@ -29,7 +29,21 @@ Este es un proyecto de la asignatura Programación Aplicada 1 el cual consiste e
 - Consultas para cada uno de los registros
 
 ### Screenshot
+Login:
 ![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/Login.jpg)
+Registros:
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rCiudades.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rSectores.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rRoles.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rUsuarios.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rProvincias.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rPermisos.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rEmpresas.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rGeneros.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rPersonas.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rHabilidades.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rDepartamentos.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rVacantes.jpg)
 ## Tecnologías
 ***
 Lista de tecnologias utilizadas en este proyecto:
