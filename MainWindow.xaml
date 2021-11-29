@@ -45,9 +45,6 @@
                     </MenuItem>
                 </MenuItem>
 
-                <MenuItem Header="Opciones">
-                    <MenuItem x:Name="CambiarContrasenaMenuItem" Header="Cambiar Contraseña" Click="CambiarContrasenaMenuItem_Click"/>
-                </MenuItem>
             </Menu>
         </StackPanel>
     </Grid>
