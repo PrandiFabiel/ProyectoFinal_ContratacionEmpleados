@@ -29,7 +29,7 @@ Este es un proyecto de la asignatura Programación Aplicada 1 el cual consiste e
 - Consultas para cada uno de los registros
 
 ### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/Login.jpg)
 ## Tecnologías
 ***
 Lista de tecnologias utilizadas en este proyecto:
