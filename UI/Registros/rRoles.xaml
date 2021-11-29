@@ -87,7 +87,7 @@
 
                     <Button x:Name="EliminarButton" Click="EliminarButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/symbol-delete-icon.png" />
+                            <Image Source="/Resources/blue-document-cross-icon.png" />
                             <Label Content="Eliminar" FontWeight="Bold" Foreground="White"/>
                         </StackPanel>
                     </Button>
