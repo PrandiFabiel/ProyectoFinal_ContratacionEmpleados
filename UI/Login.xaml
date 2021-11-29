@@ -14,26 +14,28 @@
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI"
         xmlns:PasswordHelper="clr-namespace:ProyectoFinal_ContratacionEmpleados.Resources.PasswordHelper"
         mc:Ignorable="d"
-        Title="Login" Height="210" Width="300" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="310" Width="600" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
-            <StackPanel Orientation="Vertical">
-                <Label Content="Nombre Usuario"/>
+            <materialDesign:Card Padding="32" Margin="16" Width="350">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Usuario"/>
 
-                <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" />
+                    <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" />
 
-                <Label Content="Contraseña"/>
+                    <Label Content="Contraseña"/>
 
-                <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
-                    <Button x:Name="IngresarButton" Content="Acceder" Margin="5,0" Click="IngresarButton_Click" FontWeight="Bold" Foreground="White" />
-                    <Button x:Name="CancelarButton"   Click="CancelarButton_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="Cancelar" FontWeight="Bold" Foreground="White"  />
-                        </StackPanel>
-                    </Button>
+                    <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <StackPanel Orientation="Horizontal" Margin="25" HorizontalAlignment="Center" Height="40" Width="250">
+                        <Button x:Name="IngresarButton" Content="Acceder" Margin="10,0" Click="IngresarButton_Click" FontWeight="Bold" Foreground="White" />
+                        <Button x:Name="CancelarButton"   Click="CancelarButton_Click" Margin="20,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Cancelar" FontWeight="Bold" Foreground="White"  />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
+            </materialDesign:Card>
         </StackPanel>
     </Grid>
 </Window>
