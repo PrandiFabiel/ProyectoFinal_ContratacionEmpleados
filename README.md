@@ -12,7 +12,7 @@
 ***
 Este es un proyecto de la asignatura Programación Aplicada 1 el cual consiste en un sistema de reclutamiento de personal para una empresa X.
 
-** El proyecto cuenta con las siguientes funcionalidades: **
+**El proyecto cuenta con las siguientes funcionalidades:**
 - Registro de Uuarios
 - Registro de Personas
 - Registro de Vancantes
