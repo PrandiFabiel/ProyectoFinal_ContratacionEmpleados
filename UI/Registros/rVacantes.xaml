@@ -32,7 +32,7 @@
             <Label Content="Nombre:"/>
             <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"  Text="{Binding Nombre}"/>
             <Label Content="Disponible:" Margin="0,5"/>
-            <TextBox x:Name="DisponibleVacante_TextBox" Width="301" HorizontalAlignment="Left" Margin="5,0,0,0" Height="22" Text="{Binding Disponible}"/>
+            <TextBox x:Name="DisponibleVacante_TextBox" Width="301" HorizontalAlignment="Left" Margin="5,0,0,0" Height="22" Text="{Binding Disponible}" PreviewTextInput="DisponibleVacante_TextBox_PreviewTextInput"/>
             <Label Content="Fecha:"  Margin="0,5"/>
             <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"/>
 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -83,6 +84,13 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
                 MessageBox.Show("Falta llenar el campo disponible!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                DisponibleVacante_TextBox.Focus();
+            }
+
+            if (Convert.ToInt32(DisponibleVacante_TextBox.Text) <= 0)
+            {
+                esValido = false;
+                MessageBox.Show("El campo disponible no puede ser menor o igual que 0!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 DisponibleVacante_TextBox.Focus();
             }
 
@@ -179,6 +187,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 MessageBox.Show("Debe seleccionar una fila", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void DisponibleVacante_TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
