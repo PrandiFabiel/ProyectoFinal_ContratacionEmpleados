@@ -2,14 +2,14 @@
 
 
 ## Tabla de contenido
-1. [Informacion General]
-2. [Tecnologias]
-3. [Instalación]
-4. [Colaboradores]
+1. Informacion General
+2. Tecnologias
+3. Instalación
+4. Colaboradores
 
 
 ##Informacion General
-
+***
 Este es un proyecto de la asignatura Programación Aplicada 1 el cual consiste en un sistema de reclutamiento de personal para una empresa X.
 
 ** El proyecto cuenta con las siguientes funcionalidades: **
