@@ -4,24 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignLightBackground}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
         Title="Registro de Provincias" Height="250" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <StackPanel>
-                <Label Content="ProvinciaId:" FontFamily="Comic Sans MS" Margin="10,10,0,0"/>
+                <Label Content="ProvinciaId:"   Margin="10,10,0,0"/>
                 <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
                     <TextBox x:Name="ProvinciaIdTextbox" Text="{Binding ProvinciaId}" Width="100" Height="24"/>
                     <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" Height="24"/>
-                            <Label Content="Buscar" FontFamily="Comic Sans MS"/>
+                            <Label Content="Buscar"  Foreground="White" FontWeight="Bold"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
 
                 <StackPanel Margin="10,10,0,0">
-                    <Label Content="Nombre:" FontFamily="Comic Sans Ms"/>
+                    <Label Content="Nombre:"  />
                     <TextBox x:Name="NombreTextbox" Text="{Binding Nombre}" Width="300" Height="24" HorizontalAlignment="Left"/>
                 </StackPanel>
 
@@ -30,21 +38,21 @@
                     <Button x:Name="NuevoButton" Width="110" Click="NuevoButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/Files-New-File-icon.png" />
-                            <Label Content="Nuevo" FontFamily="Comic Sans Ms"/>
+                            <Label Content="Nuevo" Foreground="White" FontWeight="Bold"/>
                         </StackPanel>
                     </Button>
 
                     <Button x:Name="GuardarButton" Margin="10,0,0,0" Width="110" Click="GuardarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/floppy-icon.png" />
-                            <Label Content="Guardar" FontFamily="Comic Sans Ms"/>
+                            <Label Content="Guardar" Foreground="White" FontWeight="Bold" />
                         </StackPanel>
                     </Button>
 
                     <Button x:Name="EliminarButton" Margin="10,0,0,0" Width="110" Click="EliminarButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/symbol-delete-icon.png" />
-                            <Label Content="Eliminar" FontFamily="Comic Sans Ms"/>
+                            <Image Source="/Resources/blue-document-cross-icon.png" />
+                            <Label Content="Eliminar" Foreground="White" FontWeight="Bold" />
                         </StackPanel>
                     </Button>
 
