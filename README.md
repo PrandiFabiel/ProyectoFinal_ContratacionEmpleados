@@ -8,7 +8,7 @@
 4. Colaboradores
 
 
-##Informacion General
+## Informacion General
 ***
 Este es un proyecto de la asignatura Programación Aplicada 1 el cual consiste en un sistema de reclutamiento de personal para una empresa X.
 
@@ -56,5 +56,7 @@ contraseña: ```1234```
 ***
 Los estudiantes que coraboraron para que este proyecto se hiciera posible son:
 > Frankelyn Garcia Garcia: https://github.com/Frankelyn
+
 > Prandi Fabiel Cortorreal Reynoso: https://github.com/PrandiFabiel
+
 > Alvaro Starling Hernandez Luzon: https://github.com/Alvaro-Starling-Hernandez
