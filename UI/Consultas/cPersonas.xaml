@@ -4,8 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Consultas"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignLightBackground}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="Consulta de usuarios" Height="565" Width="600" WindowStartupLocation="CenterScreen">
+        Title="Consulta de Personas" Height="565" Width="600" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Horizontal">
@@ -48,11 +56,11 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Margin="125,25,0,0">
-                    <Button x:Name="Buscar_Button" Click="Buscar_Button_Click"  Height="72" Width="76">
+                <StackPanel Margin="120,25,0,0">
+                    <Button x:Name="Buscar_Button" Click="Buscar_Button_Click"  Height="72" Width="85">
                         <StackPanel Orientation="Vertical" >
                             <Image Source="/Resources/search-icon (3).png" Height="28" Width="67"/>
-                            <Label Content="Buscar" Width="56" FontWeight="Normal" FontStyle="Italic" FontSize="16" />
+                            <Label Content="Buscar" Width="56" FontWeight="Bold"  FontStyle="Italic" Foreground="White" FontSize="16" />
                         </StackPanel>
                     </Button>
                 </StackPanel>
