@@ -140,7 +140,7 @@
                             </Button>
 
                         </StackPanel>
-                        <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" AutoGenerateColumns="False"   Height="90" Margin="0,10,0,0">
+                        <DataGrid x:Name="DetalleDataGrid" IsReadOnly="True" ItemsSource="{Binding Detalle}" AutoGenerateColumns="False"   Height="90" Margin="0,10,0,0">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="EmpresaId" Binding="{Binding EmpresaId}"/>
                                 <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa.Nombre}" Width="150"/>

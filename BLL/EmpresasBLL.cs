@@ -120,7 +120,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
-                contexto.Empresas.Any(x => x.EmpresaId == id);
+                encontrado = contexto.Empresas.Any(x => x.EmpresaId == id);
             }
             catch (Exception)
             {

@@ -21,11 +21,11 @@
                 <StackPanel Orientation="Vertical">
                     <Label Content="Usuario"/>
 
-                    <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" />
+                    <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}" KeyDown="NombreUsuarioTextBox_KeyDown"/>
 
                     <Label Content="Contraseña" Margin="0,20,0,0"/>
 
-                    <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" KeyDown="ContrasenaPasswordBox_KeyDown"/>
                     <StackPanel Orientation="Horizontal" Margin="25" HorizontalAlignment="Center" Height="40" Width="250">
                         <Button x:Name="IngresarButton" Content="Acceder" Margin="10,0" Click="IngresarButton_Click" FontWeight="Bold" Foreground="White" />
                         <Button x:Name="CancelarButton"   Click="CancelarButton_Click" Margin="20,0,0,0">
@@ -38,4 +38,5 @@
             </materialDesign:Card>
         </StackPanel>
     </Grid>
+
 </Window>

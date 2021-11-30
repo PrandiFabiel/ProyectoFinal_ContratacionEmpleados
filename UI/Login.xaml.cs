@@ -52,5 +52,21 @@ namespace ProyectoFinal_ContratacionEmpleados.UI
         {
             Application.Current.Shutdown();
         }
+
+        private void NombreUsuarioTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                ContrasenaPasswordBox.Focus();
+            }
+        }
+
+        private void ContrasenaPasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                IngresarButton_Click(sender, e);
+            }
+        }
     }
 }

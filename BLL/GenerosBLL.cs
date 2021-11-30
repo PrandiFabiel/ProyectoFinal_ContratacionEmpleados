@@ -120,7 +120,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
-                contexto.Generos.Any(x => x.GeneroId == id);
+               encontrado = contexto.Generos.Any(x => x.GeneroId == id);
             }
             catch (Exception)
             {

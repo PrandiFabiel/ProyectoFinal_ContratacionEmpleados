@@ -29,6 +29,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             {
                 Provincia.UsuarioId = Utilidades.User.UsuarioId;
                 contexto.Provincias.Add(Provincia);
+                //contexto.Entry(Provincia).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -120,7 +121,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
             try
             {
-                contexto.Provincias.Any(x => x.ProvinciaId == id);
+                encontrado = contexto.Provincias.Any(x => x.ProvinciaId == id);
             }
             catch (Exception)
             {
