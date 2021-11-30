@@ -50,6 +50,129 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
                 Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",//clave: 1234
                 RolId = 1
             });
+
+            modelBuilder.Entity<Provincias>().HasData(new Provincias
+            {
+                ProvinciaId = 1,
+                Nombre = "Duarte"
+            });
+
+            modelBuilder.Entity<Provincias>().HasData(new Provincias
+            {
+                ProvinciaId = 2,
+                Nombre = "Santo Domingo"
+            });
+
+            modelBuilder.Entity<Provincias>().HasData(new Provincias
+            {
+                ProvinciaId = 3,
+                Nombre = "La Vega"
+            });
+
+            modelBuilder.Entity<Provincias>().HasData(new Provincias
+            {
+                ProvinciaId = 4,
+                Nombre = "Santiago de los Caballeros"
+            });
+
+            modelBuilder.Entity<Provincias>().HasData(new Provincias
+            {
+                ProvinciaId = 5,
+                Nombre = "Hermanas Mirabal"
+            });
+
+            modelBuilder.Entity<Ciudades>().HasData(new Ciudades
+            {
+                CiudadId = 1,
+                Nombre = "San Francisco de Macoris",
+                ProvinciaId = 1
+            });
+
+            modelBuilder.Entity<Ciudades>().HasData(new Ciudades
+            {
+                CiudadId = 2,
+                Nombre = "Santo Domingo Este",
+                ProvinciaId = 2
+            });
+
+            modelBuilder.Entity<Ciudades>().HasData(new Ciudades
+            {
+                CiudadId = 3,
+                Nombre = "La Vega",
+                ProvinciaId = 3
+            });
+
+            modelBuilder.Entity<Ciudades>().HasData(new Ciudades
+            {
+                CiudadId = 4,
+                Nombre = "Santiago",
+                ProvinciaId = 4
+            });
+
+            modelBuilder.Entity<Ciudades>().HasData(new Ciudades
+            {
+                CiudadId = 5,
+                Nombre = "Salcedo",
+                ProvinciaId = 5
+            });
+
+            modelBuilder.Entity<Sectores>().HasData(new Sectores
+            {
+                SectorId = 1,
+                Nombre = "Cenovi",
+                CiudadId = 1
+            });
+
+            modelBuilder.Entity<Sectores>().HasData(new Sectores
+            {
+                SectorId = 2,
+                Nombre = "Valle del Este",
+                CiudadId = 2
+            });
+
+            modelBuilder.Entity<Sectores>().HasData(new Sectores
+            {
+                SectorId = 3,
+                Nombre = "El Ranchito",
+                CiudadId = 3
+            });
+
+            modelBuilder.Entity<Sectores>().HasData(new Sectores
+            {
+                SectorId = 4,
+                Nombre = "Bella Vista",
+                CiudadId = 4
+            });
+
+            modelBuilder.Entity<Sectores>().HasData(new Sectores
+            {
+                SectorId = 5,
+                Nombre = "Ojo de agua",
+                CiudadId = 5
+            });
+
+
+            modelBuilder.Entity<Empresas>().HasData(new Empresas
+            {
+                EmpresaId = 1,
+                Nombre = "Ferreteria Jordan",
+                Puesto = "Vendedor",
+                Duracion = 9
+            });
+
+            modelBuilder.Entity<Generos>().HasData(new Generos
+            {
+                GeneroId = 1,
+                Descripcion = "Masculino"
+            });
+
+            modelBuilder.Entity<Generos>().HasData(new Generos
+            {
+                GeneroId = 2,
+                Descripcion = "Femenino"
+            });
+
+
         }
     }
 }
