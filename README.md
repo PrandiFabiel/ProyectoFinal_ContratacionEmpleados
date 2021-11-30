@@ -28,8 +28,58 @@ Este es un proyecto de la asignatura Programación Aplicada 1 el cual consiste e
 - Login
 - Consultas para cada uno de los registros
 
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+### Capturas de Pantalla
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/Login.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rCiudades.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rSectores.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rRoles.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rUsuarios.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rProvincias.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rPermisos.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rEmpresas.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rGeneros.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rPersonas.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rHabilidades.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rDepartamento.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rVacantes.jpg)
+
+
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cCiudades.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cSectores.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cRoles.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cUsuarios.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cProvincias.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cPermisos.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cEmpresas.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cGeneros.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cPersonas.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cHabilidades.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cDepartamentos.jpg)
+
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLasConsultas/cVacantes.jpg)
 ## Tecnologías
 ***
 Lista de tecnologias utilizadas en este proyecto:
