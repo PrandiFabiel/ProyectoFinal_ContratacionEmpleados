@@ -29,7 +29,7 @@ namespace ProyectoFinal_ContratacionEmpleados
 
             //UsuarioLabel.Content += Utilidades.User.NombreUsuario;
 
-            //RolLabel.Content += Utilidades.User.Roles.Descripcion.ToString();
+            //RolLabel.Content += Utilidades.User.Roles.Descripcion;
 
             //EmailLabel.Content += Utilidades.User.Email;
         }
