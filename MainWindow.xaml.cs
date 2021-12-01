@@ -23,6 +23,7 @@ namespace ProyectoFinal_ContratacionEmpleados
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -223,10 +224,10 @@ namespace ProyectoFinal_ContratacionEmpleados
             rPersonas rPersonas = new();
             rPersonas.Show();
         }
-
+        
         private void cerrarSesion_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void VerUsuarios_Click(object sender, RoutedEventArgs e)
