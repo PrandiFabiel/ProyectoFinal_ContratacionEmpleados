@@ -46,6 +46,11 @@ namespace ProyectoFinal_ContratacionEmpleados
             ButtonOpenMenu.Visibility = Visibility.Visible;
         }
 
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
         private void PruebaUsuarios_Click(object sender, RoutedEventArgs e)
         {
             rUsuarios rUsuarios = new rUsuarios();
