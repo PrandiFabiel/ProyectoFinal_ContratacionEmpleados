@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_ContratacionEmpleados.UI.Consultas;
+﻿using ProyectoFinal_ContratacionEmpleados.BLL;
+using ProyectoFinal_ContratacionEmpleados.UI.Consultas;
 using ProyectoFinal_ContratacionEmpleados.UI.Registros;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,50 @@ namespace ProyectoFinal_ContratacionEmpleados
         public MainWindow()
         {
             InitializeComponent();
+
+            //UsuarioLabel.Content += Utilidades.User.NombreUsuario;
+
+            //RolLabel.Content += Utilidades.User.Roles.Descripcion.ToString();
+
+            //EmailLabel.Content += Utilidades.User.Email;
+        }
+
+        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonCloseMenu.Visibility = Visibility.Visible;
+            ButtonOpenMenu.Visibility = Visibility.Collapsed;
+        }
+
+        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonCloseMenu.Visibility = Visibility.Collapsed;
+            ButtonOpenMenu.Visibility = Visibility.Visible;
+        }
+
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            /* UserControl usc = null;
+             GridMain.Children.Clear();
+
+             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
+             {
+                 case "ItemHome":
+                     usc = new UserControlHome();
+                     GridMain.Children.Add(usc);
+                     break;
+                 case "ItemCreate":
+                     usc = new UserControlCreate();
+                     GridMain.Children.Add(usc);
+                     break;
+                 default:
+                     break;
+             }*/
+        }
+
+        private void PruebaUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            rUsuarios rUsuarios = new rUsuarios();
+            rUsuarios.Show();
         }
 
         private void VacantesMenuItem_Click(object sender, RoutedEventArgs e)
@@ -42,19 +87,19 @@ namespace ProyectoFinal_ContratacionEmpleados
         private void UsuariosMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rUsuarios rUsuarios = new rUsuarios();
-            rUsuarios.Show(); 
+            rUsuarios.Show();
         }
 
         private void cUsuariosMenuItem_Click(object sender, RoutedEventArgs e)
         {
             cUsuarios cUsuarios = new cUsuarios();
-            cUsuarios.Show(); 
+            cUsuarios.Show();
         }
 
         private void PermisoMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rPermisos permisos = new rPermisos();
-            permisos.Show(); 
+            permisos.Show();
         }
 
         private void DepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
@@ -66,7 +111,7 @@ namespace ProyectoFinal_ContratacionEmpleados
         private void RolesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rRoles roles = new rRoles();
-            roles.Show(); 
+            roles.Show();
         }
         private void ProvinciaMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -77,7 +122,7 @@ namespace ProyectoFinal_ContratacionEmpleados
         private void CiudadesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rCiudades ciudad = new rCiudades();
-            ciudad.Show(); 
+            ciudad.Show();
         }
 
         private void SectoresMenuItem_Click(object sender, RoutedEventArgs e)
@@ -94,7 +139,7 @@ namespace ProyectoFinal_ContratacionEmpleados
         private void cPermisoMenuItem_Click(object sender, RoutedEventArgs e)
         {
             cPermisos cpermisos = new cPermisos();
-            cpermisos.Show(); 
+            cpermisos.Show();
         }
 
         private void cDepartamentosMenuItem_Click(object sender, RoutedEventArgs e)
@@ -112,7 +157,7 @@ namespace ProyectoFinal_ContratacionEmpleados
         private void cCiudadesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             cCiudades ciudadC = new cCiudades();
-            ciudadC.Show(); 
+            ciudadC.Show();
         }
 
         private void cSectoresMenuItem_Click(object sender, RoutedEventArgs e)
@@ -160,7 +205,7 @@ namespace ProyectoFinal_ContratacionEmpleados
         private void cRolesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             cRoles Croles = new cRoles();
-            Croles.Show(); 
+            Croles.Show();
         }
 
         private void PersonasMenuItem_Click(object sender, RoutedEventArgs e)
@@ -175,10 +220,46 @@ namespace ProyectoFinal_ContratacionEmpleados
             cPersonas.Show();
         }
 
-        private void NuevoMain_Click(object sender, RoutedEventArgs e)
+
+        private void CrearRol_Click(object sender, RoutedEventArgs e)
         {
-            Window1 w = new();
-            w.Show(); 
+            rRoles roles = new rRoles();
+            roles.Show();
+        }
+
+        private void CrearVacante_Click(object sender, RoutedEventArgs e)
+        {
+            rVacantes rVacante = new rVacantes();
+            rVacante.Show();
+        }
+
+        private void CrearPersona_Click(object sender, RoutedEventArgs e)
+        {
+            rPersonas rPersonas = new();
+            rPersonas.Show();
+        }
+
+        private void cerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void VerUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            cUsuarios cUsuarios = new cUsuarios();
+            cUsuarios.Show();
+        }
+
+        private void VerPersonas_Click(object sender, RoutedEventArgs e)
+        {
+            cPersonas cPersonas = new();
+            cPersonas.Show();
+        }
+
+        private void VerVacantes_Click(object sender, RoutedEventArgs e)
+        {
+            cVancates cVancate = new cVancates();
+            cVancate.Show();
         }
     }
 }
