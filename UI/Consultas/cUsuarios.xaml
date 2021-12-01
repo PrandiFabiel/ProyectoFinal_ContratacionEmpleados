@@ -65,7 +65,7 @@
                         <DataGridTextColumn Header="Nombre de usuario" Binding="{Binding NombreUsuario}"/>
                         <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
                         <DataGridTextColumn Header="Fecha de registro" Binding="{Binding FechaRegistroUsuario}"/>
-                        <DataGridTextColumn Header="Rol" Binding="{Binding RolId}"/>
+                        <DataGridTextColumn Header="Rol" Binding="{Binding Roles.Descripcion}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
