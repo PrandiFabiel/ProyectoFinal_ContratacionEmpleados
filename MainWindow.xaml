@@ -45,6 +45,10 @@
                     </MenuItem>
                 </MenuItem>
 
+                <MenuItem Header="Ver nuevo mainWindows">
+                    <MenuItem x:Name="NuevoMain" Header="Opinen" Click="NuevoMain_Click"/>
+                </MenuItem>
+
             </Menu>
 
 

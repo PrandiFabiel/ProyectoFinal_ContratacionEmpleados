@@ -141,7 +141,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Contexto contexto = new Contexto();
             try
             {
-                lista = contexto.Usuarios.Where(usuario).ToList();
+                lista = contexto.Usuarios.Where(usuario).Include(e => e.Roles).ToList();
             }
             catch (Exception)
             {
