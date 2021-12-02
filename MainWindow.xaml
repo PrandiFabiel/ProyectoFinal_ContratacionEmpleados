@@ -49,7 +49,7 @@
 
         </Grid>
         <!--menu-->
-        <Menu Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Background="DeepSkyBlue">
+        <Menu Height="40" HorizontalAlignment="Right" Foreground="White" VerticalAlignment="Top" Background="DeepSkyBlue">
             <MenuItem Header="Registros">
                 <MenuItem x:Name="VacantesMenuItem" Header="Registro de Vacantes" Click="VacantesMenuItem_Click"/>
                 <MenuItem x:Name="UsuariosMenuItem" Header="Registro de usuarios" Click="UsuariosMenuItem_Click"/>
@@ -91,7 +91,7 @@
             <materialDesign:Card Padding="32" Margin="16" Height="100" Width="250">
                 <StackPanel Orientation="Vertical" Height="100" Margin="0,0,0,0">
                     <Label Content="Usuarios" FontSize="15" FontWeight="Bold" Width="82" Margin="0,0,110,0" Height="23"/>
-                    <Button x:Name="VerUsuarios" Click="VerUsuarios_Click" Content="Ver" Height="25" Width="63" Margin="90,-20,0,0" RenderTransformOrigin="0.53,1.019"/>
+                    <Button x:Name="VerUsuarios" Click="VerUsuarios_Click" Foreground="White" Content="Ver" Height="25" Width="63" Margin="90,-20,0,0" RenderTransformOrigin="0.53,1.019"/>
                 </StackPanel>
             </materialDesign:Card>
         </StackPanel>
@@ -101,7 +101,7 @@
             <materialDesign:Card Padding="32" Margin="16" Height="100" Width="250">
                 <StackPanel Orientation="Vertical" Height="100" Margin="0,0,0,0">
                     <Label Content="Personas" FontSize="15" FontWeight="Bold" Width="82" Margin="0,0,110,0" Height="23"/>
-                    <Button x:Name="VerPersonas" Click="VerPersonas_Click" Content="Ver" Height="25" Width="63" Margin="90,-20,0,0" RenderTransformOrigin="0.53,1.019"/>
+                    <Button x:Name="VerPersonas" Click="VerPersonas_Click" Foreground="White" Content="Ver" Height="25" Width="63" Margin="90,-20,0,0" RenderTransformOrigin="0.53,1.019"/>
                 </StackPanel>
             </materialDesign:Card>
         </StackPanel>
@@ -111,7 +111,7 @@
             <materialDesign:Card Padding="32" Margin="16" Height="100" Width="250">
                 <StackPanel Orientation="Vertical" Height="100" Margin="0,0,0,0">
                     <Label Content="Vacantes" FontSize="15" FontWeight="Bold" Width="82" Margin="0,0,110,0" Height="23"/>
-                    <Button x:Name="VerVacantes" Click="VerVacantes_Click" Content="Ver" Height="25" Width="63" Margin="90,-20,0,0" RenderTransformOrigin="0.53,1.019"/>
+                    <Button x:Name="VerVacantes" Click="VerVacantes_Click" Foreground="White" Content="Ver" Height="25" Width="63" Margin="90,-20,0,0" RenderTransformOrigin="0.53,1.019"/>
                 </StackPanel>
             </materialDesign:Card>
         </StackPanel>
