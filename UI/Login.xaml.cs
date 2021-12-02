@@ -1,5 +1,6 @@
 ﻿using ProyectoFinal_ContratacionEmpleados.BLL;
 using ProyectoFinal_ContratacionEmpleados.Entidades;
+using ProyectoFinal_ContratacionEmpleados.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,6 +69,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI
             {
                 IngresarButton_Click(sender, e);
             }
+        }
+
+        rUsuarios rUsuarios = new rUsuarios();
+        private void crearUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            rUsuarios.Show();
         }
     }
 }
