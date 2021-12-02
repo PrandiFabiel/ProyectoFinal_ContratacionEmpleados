@@ -28,11 +28,11 @@ namespace ProyectoFinal_ContratacionEmpleados
         {
             InitializeComponent();
 
-            //UsuarioLabel.Content += Utilidades.User.NombreUsuario;
+            UsuarioLabel.Content += Utilidades.User.NombreUsuario;
 
             //RolLabel.Content += Utilidades.User.Roles.Descripcion;
 
-            //EmailLabel.Content += Utilidades.User.Email;
+            EmailLabel.Content += Utilidades.User.Email;
         }
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)

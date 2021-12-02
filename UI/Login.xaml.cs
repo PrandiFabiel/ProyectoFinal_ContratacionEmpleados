@@ -27,7 +27,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI
         }
 
         Usuarios usuarios = new Usuarios();
-        MainWindow Principal = new MainWindow();
+        MainWindow Principal;
 
 
         private void IngresarButton_Click(object sender, RoutedEventArgs e)
@@ -37,6 +37,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI
             if (paso)
             {
                 Utilidades.User = UsuariosBLL.GetUser(NombreUsuarioTextBox.Text);
+                Principal = new MainWindow();
                 this.Close();
                 Principal.Show();
             }
