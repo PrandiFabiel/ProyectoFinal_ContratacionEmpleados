@@ -18,6 +18,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return retorno;
         }
 
-        public static Usuarios User;
+        public static Usuarios User = new Usuarios();
+
     }
 }
