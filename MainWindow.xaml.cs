@@ -227,7 +227,9 @@ namespace ProyectoFinal_ContratacionEmpleados
         
         private void cerrarSesion_Click(object sender, RoutedEventArgs e)
         {
+            UI.Login login = new UI.Login();
             this.Close();
+            login.Show(); 
         }
 
         private void VerUsuarios_Click(object sender, RoutedEventArgs e)
