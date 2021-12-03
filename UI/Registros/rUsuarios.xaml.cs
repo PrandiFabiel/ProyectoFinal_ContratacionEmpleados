@@ -123,13 +123,13 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 GuardarButton.IsEnabled = true;
             }
 
-            if (NombreUsuarioTextBox.Text.Length == 0)
+            if (RolComboBox.Text.Length == 0)
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Nombre usuario está vacio", "Fallo",
+                MessageBox.Show("Rol está vacio", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
-                NombreUsuarioTextBox.Focus();
+                RolComboBox.Focus();
                 GuardarButton.IsEnabled = true;
             }
 
