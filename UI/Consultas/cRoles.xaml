@@ -47,7 +47,7 @@
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Left" >
+            <StackPanel HorizontalAlignment="Left" Margin="11">
                 <DataGrid x:Name="DatosDataGrid" IsReadOnly="True" Height="350" Width="463">
                     <DataGrid.Columns>
 
