@@ -55,7 +55,7 @@
                                     </Button>
                                 </StackPanel>
 
-                                <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding RolesDetalle}" Height="150" AutoGenerateColumns="False" >
+                                <DataGrid x:Name="DetalleDataGrid" IsReadOnly="True" ItemsSource="{Binding RolesDetalle}" Height="150" AutoGenerateColumns="False" >
                                     <DataGrid.Columns>
                                         <DataGridTextColumn Header="PermisoId" Binding="{Binding PermisoId}"/>
                                         <DataGridTextColumn Header="Descripcion" Binding="{Binding DescripcionPermiso}"/>

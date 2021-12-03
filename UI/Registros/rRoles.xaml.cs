@@ -64,19 +64,23 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-
-
-            Rol.RolesDetalle.Add(new RolesDetalle
+            if (PermisoComboBox.Text.Length == 0)
             {
-                RolId = Rol.RolId,
-                PermisoId = (int)PermisoComboBox.SelectedValue,
-                DescripcionPermiso = PermisosBLL.GetDescripcion((int)PermisoComboBox.SelectedValue),
-                VecesAsignado = PermisosBLL.GetVecesAsignado((int)PermisoComboBox.SelectedValue)
-            });
+                MessageBox.Show("Debe eligir un permiso", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else
+            {
+                Rol.RolesDetalle.Add(new RolesDetalle
+                {
+                    RolId = Rol.RolId,
+                    PermisoId = (int)PermisoComboBox.SelectedValue,
+                    DescripcionPermiso = PermisosBLL.GetDescripcion((int)PermisoComboBox.SelectedValue),
+                    VecesAsignado = PermisosBLL.GetVecesAsignado((int)PermisoComboBox.SelectedValue)
+                });
 
-
-
-            Cargar();
+                Cargar();
+            }
         }
 
         private void RemoverFilaButton_Click(object sender, RoutedEventArgs e)
