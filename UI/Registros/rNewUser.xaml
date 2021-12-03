@@ -1,0 +1,77 @@
+﻿<Window x:Class="ProyectoFinal_ContratacionEmpleados.UI.Registros.rNewUser"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignLightBackground}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
+        xmlns:PasswordHelper="clr-namespace:ProyectoFinal_ContratacionEmpleados.Resources.PasswordHelper"
+        mc:Ignorable="d"
+        Title="Registro de usuarios" Height="530" Width="502" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+            <StackPanel Orientation="Vertical">
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <StackPanel>
+                        <Label Content="Registrarse" HorizontalAlignment="Center" FontSize="35" FontWeight="Bold" />
+                    </StackPanel>
+                    <StackPanel>
+                        <Image Source="/Resources/person-icon.png" Margin="110,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel>
+
+                    </StackPanel>
+                </StackPanel>
+
+
+
+                <Label Content="Nombre usuario:"/>
+                <TextBox x:Name="NewNombreUsuarioTextBox" Text="{Binding NombreUsuario}" Width="380" HorizontalAlignment="Left"/>
+
+                <Label Content="Fecha de registro:" Margin="0,10,0,0"/>
+                <DatePicker x:Name="NewFecha_DatePicker" SelectedDate="{Binding FechaRegistroUsuario}" SelectedDateFormat="Short" Width="380" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+
+                <Label Content="Email:" Margin="0,10,0,0"/>
+                <TextBox x:Name="NewEmailTextBox" Text="{Binding Email}" Width="380" HorizontalAlignment="Left" />
+
+                <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
+                    <Label Content="Rol:" Margin="0,10,0,0"/>
+                    <ComboBox x:Name="NewRolComboBox" SelectedValue="{Binding RolId}" Width="100" />
+                </StackPanel>
+
+                <Label Content="Clave:" Margin="0,10,0,0"/>
+                <PasswordBox x:Name="NewClavePasswordBox" PasswordHelper:PasswordHelper.Attach="True" PasswordHelper:PasswordHelper.Password="{Binding Clave,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" Width="380" HorizontalAlignment="Left"/>
+
+                <Label Content="Confirmar clave:" Margin="0,10,0,0"/>
+                <PasswordBox x:Name="NewConfirmarClavePasswordBox" Width="380" HorizontalAlignment="Left"/>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Margin="60,20" Width="270">
+                <Button x:Name="NewNuevoButton" Click="NuevoButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Files-New-File-icon.png" Height="20"/>
+                        <Label Content="Nuevo" FontWeight="Bold" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="NewGuardarButton" Margin="15,0" Click="GuardarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/floppy-icon.png" Height="20"/>
+                        <Label Content="Guardar" FontWeight="Bold" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

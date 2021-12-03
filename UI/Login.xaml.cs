@@ -71,10 +71,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI
             }
         }
 
-        rUsuarios rUsuarios = new rUsuarios();
+        rNewUser rNewUser = new rNewUser();
         private void crearUsuario_Click(object sender, RoutedEventArgs e)
         {
-            rUsuarios.Show();
+            rNewUser.Show();
         }
     }
 }
