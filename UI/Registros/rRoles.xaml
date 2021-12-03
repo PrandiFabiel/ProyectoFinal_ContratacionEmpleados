@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Roles" Height="580" Width="600">
+        Title="Registro de Roles" Height="580" Width="600" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid>
             <StackPanel Orientation="Vertical" Margin="10,0,10,0">
