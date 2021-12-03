@@ -59,6 +59,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 Limpiar();
                 MessageBox.Show("Transaccion exitosa!", "Exito",
                     MessageBoxButton.OK, MessageBoxImage.Information);
+                this.Close();
             }
             else
                 MessageBox.Show("Transaccion Fallida", "Fallo",
