@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados"
         mc:Ignorable="d"
-        Title="Window1" Height="690" Width="1100" WindowStartupLocation="CenterScreen">
+        Title="Sistema de Reclutamiento" Height="690" Width="1100" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -151,21 +151,7 @@
                         <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
                 </Grid>
-                <!-- Este es un menu vertical <Menu HorizontalAlignment="Left" x:Name="ListViewMenu" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="LightGray">
-                    <Menu.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel />
-                        </ItemsPanelTemplate>
-                    </Menu.ItemsPanel>
-                    <MenuItem Header="Registros" Height="60" Width="160" materialDesign:ShadowAssist.Darken="True">
-                            <Button Content="Home" VerticalAlignment="Center" Margin="20 10"/>
-                    </MenuItem>
-                    <MenuItem Header="Consultas" Height="60" Width="165">
-                            <Button Content="Home" VerticalAlignment="Center" Margin="20 10"/>
-                    </MenuItem>
-
-                </Menu> -->
-
+                
                 <ListView x:Name="ListViewMenu" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem x:Name="ItemHome" Height="60">
                         <StackPanel Orientation="Horizontal">
