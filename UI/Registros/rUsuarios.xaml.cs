@@ -41,16 +41,26 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             this.DataContext = usuario;
         }
 
+        private void Cargar()
+        {
+            this.DataContext = null;
+            this.DataContext = usuario;
+        }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var estudiante = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
+            Usuarios encontrado = UsuariosBLL.Buscar(usuario.UsuarioId);
 
-            if (usuario != null)
-                this.usuario = estudiante;
+            if (encontrado != null)
+            {
+                usuario = encontrado;
+                Cargar();
+            }
             else
+            {
                 Limpiar();
-
-            this.DataContext = this.usuario;
+                MessageBox.Show("Usuario no existe en la base de datos", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
