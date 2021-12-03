@@ -152,29 +152,29 @@
                     </Button>
                 </Grid>
                 
-                <ListView x:Name="ListViewMenu" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
-                    <ListViewItem x:Name="ItemHome" Height="60">
+                <ListView x:Name="ListViewMenu" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged_1">
+                    <ListViewItem x:Name="RolesView" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="CallToAction" Height="25" Width="25" Margin="10"/>
-                            <Button Content="Roles" x:Name="CrearRol" Background="LightGray" Click="CrearRol_Click" BorderBrush="LightGray" VerticalAlignment="Center" Margin="3 10"/>
+                            <TextBlock Text="Roles" x:Name="CrearRol" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemCreate" Height="60">
+                    <ListViewItem x:Name="VacantesView" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Work" Height="25" Width="25" Margin="10"/>
-                            <Button x:Name="CrearVacante" Content="Vacantes" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Center" Margin="3 10" Click="CrearVacante_Click"/>
+                            <TextBlock x:Name="CrearVacante" Text="Vacantes" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
+                    <ListViewItem Height="60" x:Name="PersonaView">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AccountAdd" Height="25" Width="25" Margin="10"/>
-                            <Button x:Name="CrearPersona" Click="CrearPersona_Click" Content="Personas" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Center" Margin="3 10"/>
+                            <TextBlock x:Name="CrearPersona" Text="Personas"  VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
+                    <ListViewItem Height="60" x:Name="CerrarSesionView">
+                        <StackPanel  Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Logout" Height="25" Width="25" Margin="10"/>
-                            <Button x:Name="cerrarSesion" Click="cerrarSesion_Click" Content="Cerrar Sesion" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Center" Margin="3 10"/>
+                            <TextBlock x:Name="cerrarSesion"  Text="Cerrar Sesion" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

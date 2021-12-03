@@ -206,32 +206,6 @@ namespace ProyectoFinal_ContratacionEmpleados
             cPersonas.Show();
         }
 
-
-        private void CrearRol_Click(object sender, RoutedEventArgs e)
-        {
-            rRoles roles = new rRoles();
-            roles.Show();
-        }
-
-        private void CrearVacante_Click(object sender, RoutedEventArgs e)
-        {
-            rVacantes rVacante = new rVacantes();
-            rVacante.Show();
-        }
-
-        private void CrearPersona_Click(object sender, RoutedEventArgs e)
-        {
-            rPersonas rPersonas = new();
-            rPersonas.Show();
-        }
-        
-        private void cerrarSesion_Click(object sender, RoutedEventArgs e)
-        {
-            UI.Login login = new UI.Login();
-            this.Close();
-            login.Show(); 
-        }
-
         private void VerUsuarios_Click(object sender, RoutedEventArgs e)
         {
             cUsuarios cUsuarios = new cUsuarios();
@@ -248,6 +222,37 @@ namespace ProyectoFinal_ContratacionEmpleados
         {
             cVancates cVancate = new cVancates();
             cVancate.Show();
+        }
+
+        private void ListViewMenu_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (ListViewMenu.SelectedIndex == -1) { return; }
+
+                switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
+                {
+                    case "RolesView":
+                        rRoles roles = new rRoles();
+                        roles.Show();
+
+                        ListViewMenu.SelectedIndex = -1;
+                        break;
+                    case "VacantesView":
+                        rVacantes V = new rVacantes();
+                        V.Show();
+                        ListViewMenu.SelectedIndex = -1;
+                        break;
+                    case "PersonaView":
+                        rPersonas P = new rPersonas();
+                        P.Show();
+                        ListViewMenu.SelectedIndex = -1;
+                        break;
+                    case "CerrarSesionView":
+                        UI.Login login = new UI.Login();
+                        this.Close();
+                        login.Show();
+                        ListViewMenu.SelectedIndex = -1;
+                        break;
+                }
         }
     }
 }
