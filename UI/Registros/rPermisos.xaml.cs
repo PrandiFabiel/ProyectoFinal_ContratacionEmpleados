@@ -54,7 +54,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
 
-                MessageBox.Show("Ya existe una Habilidad con esta descripcion!", "Fallo",
+                MessageBox.Show("Ya existe un permiso con esta descripcion!", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 PermisoIdTextBox.Focus();
             }
@@ -62,16 +62,26 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             return esValido;
         }
 
+        private void Cargar()
+        {
+            this.DataContext = null;
+            this.DataContext = permiso;
+        }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var permisoB = PermisosBLL.Buscar(Utilidades.ToInt(PermisoIdTextBox.Text));
+            Permisos encontrado = PermisosBLL.Buscar(permiso.PermisoId);
 
-            if (permiso != null)
-                this.permiso = permisoB;
+            if (encontrado != null)
+            {
+                permiso = encontrado;
+                Cargar();
+            }
             else
-                this.permiso = new Permisos();
-
-            this.DataContext = this.permiso;
+            {
+                Limpiar();
+                MessageBox.Show("Permiso no existe en la base de datos", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)

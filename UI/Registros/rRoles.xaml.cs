@@ -62,7 +62,6 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             }
         }
 
-        //int aumento = 0;
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
 
