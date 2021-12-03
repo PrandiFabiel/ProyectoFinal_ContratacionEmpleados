@@ -56,19 +56,27 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
             return esValido;
         }
+        private void Cargar()
+        {
+            this.DataContext = null;
+            this.DataContext = ciudad;
+        }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var ciudadB = CiudadesBLL.Buscar(Utilidades.ToInt(CiudadIdTextBox.Text));
+            Ciudades encontrado = CiudadesBLL.Buscar(ciudad.CiudadId);
 
-            if (ciudad != null)
-                this.ciudad = ciudadB;
+            if (encontrado != null)
+            {
+                ciudad = encontrado;
+                Cargar();
+            }
             else
-                this.ciudad = new Ciudades();
-
-            this.DataContext = this.ciudad;
+            {
+                Limpiar();
+                MessageBox.Show("Ciudad no existe en la base de datos", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
-
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
             Limpiar();
