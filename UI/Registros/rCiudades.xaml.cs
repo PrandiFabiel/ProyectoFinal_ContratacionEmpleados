@@ -54,6 +54,15 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 NombreTextBox.Focus();
             }
 
+            if (ProvinciaComboBox.Text.Length == 0)
+            {
+                esValido = false;
+
+                MessageBox.Show("Provincia está vacio", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                ProvinciaComboBox.Focus();
+            }
+
             return esValido;
         }
         private void Cargar()

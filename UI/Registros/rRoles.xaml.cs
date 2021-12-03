@@ -142,6 +142,15 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 GuardarButton.IsEnabled = true;
             }
 
+            if (PermisoComboBox.Text.Length == 0)
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("Permiso no puede está vacio", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                PermisoComboBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
             return esValido;
         }
     }
