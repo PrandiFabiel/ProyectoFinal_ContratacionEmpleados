@@ -1,9 +1,12 @@
-﻿using ProyectoFinal_ContratacionEmpleados.BLL;
+﻿using Microsoft.EntityFrameworkCore;
+using ProyectoFinal_ContratacionEmpleados.BLL;
+using ProyectoFinal_ContratacionEmpleados.DAL;
 using ProyectoFinal_ContratacionEmpleados.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,7 +25,8 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
     public partial class rPersonas : Window
     {
         Personas Persona = new Personas();
-        
+        Contexto contexto = new Contexto();
+
         public rPersonas()
         {
             InitializeComponent();
@@ -44,13 +48,8 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             ProvinciaCombobox.SelectedValuePath = "ProvinciaId";
             ProvinciaCombobox.DisplayMemberPath = "Nombre";
 
-            CiudadCombobox.ItemsSource = CiudadesBLL.GetCiudades();
-            CiudadCombobox.SelectedValuePath = "ProvinciaId";
-            CiudadCombobox.DisplayMemberPath = "Nombre";
-
-            SectorCombobox.ItemsSource = SectoresBLL.GetSectores();
-            SectorCombobox.SelectedValuePath = "CiudadId";
-            SectorCombobox.DisplayMemberPath = "Nombre";
+            CiudadCombobox.IsEnabled = false;
+            SectorCombobox.IsEnabled = false;
         }
 
         private void Cargar()
@@ -85,21 +84,42 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 esValido = false;
                 MessageBox.Show("Falta el campo Cedula", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if (CedulaTextbox.Text.Length != 13)
+            {
+                esValido = false;
+                MessageBox.Show("El campo Cedula no es valido debe ingresar un numero de cedula xxx-xxxxxxx-x", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
             if (TelefonoTextbox.Text.Length == 0)
             {
                 esValido = false;
                 MessageBox.Show("Falta el campo Telefono", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            if (TelefonoTextbox.Text.Length != 14)
+            {
+                esValido = false;
+                MessageBox.Show("El campo Telefono no es valido, debe ingresar un numero de telefono (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             if (CelularTextbox.Text.Length == 0)
             {
                 esValido = false;
                 MessageBox.Show("Falta el campo Celular", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if (CelularTextbox.Text.Length != 14)
+            {
+                esValido = false;
+                MessageBox.Show("El campo Celular no es valido, debe ingresar un numero de celular (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
             if (EmailTextbox.Text.Length == 0)
             {
                 esValido = false;
                 MessageBox.Show("Falta el campo Email", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if (!EmailTextbox.Text.Contains("@"))
+            {
+                esValido = false;
+                MessageBox.Show("Debe ingresar un campo Email valido, se esperaba @", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
             if (GeneroCombobox.Text.Length == 0)
             {
                 esValido = false;
@@ -130,6 +150,11 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 esValido = false;
                 MessageBox.Show("Falta el campo Referencia Familiar (Telefono)", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if (TelefonoReferenciaFamiliarTextbox.Text.Length != 14)
+            {
+                esValido = false;
+                MessageBox.Show("El campo Referencia Familiar (Telefono) no es valido, debe ingresar un numero de telefono (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
             if (NombreReferenciaPersonalTextbox.Text.Length == 0)
             {
                 esValido = false;
@@ -139,6 +164,11 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
                 MessageBox.Show("Falta el campo Referencia Personal (Telefono)", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            if (TelefonoReferenciaPersonalTextbox.Text.Length != 14)
+            {
+                esValido = false;
+                MessageBox.Show("El campo Referencia Personal (Telefono) no es valido, debe ingresar un numero de telefono (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             if (VacanteCombobox.Text.Length == 0)
             {
@@ -204,7 +234,24 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
-            if(EmpresaCombobox.Text.Length == 0)
+
+            if (ProvinciaCombobox.SelectedValue == null)
+            {
+                MessageBox.Show("Debe elegir una provincia", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (CiudadCombobox.SelectedValue == null)
+            {
+                MessageBox.Show("Debe elegir una Ciudad", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (SectorCombobox.SelectedValue == null)
+            {
+                MessageBox.Show("Debe elegir un Sector", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (EmpresaCombobox.Text.Length == 0)
             {
                 MessageBox.Show("Debe elegir una empresa", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -231,6 +278,34 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 Persona.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
+        }
+
+        private void ProvinciaCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CiudadCombobox.IsEnabled = true;
+            CiudadCombobox.Focus();
+            CiudadCombobox.ItemsSource = Utilidades.getCiudades((int)ProvinciaCombobox.SelectedValue);
+            CiudadCombobox.SelectedValuePath = "ProvinciaId";
+            CiudadCombobox.DisplayMemberPath = "Nombre";
+        }
+
+        private void CiudadCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SectorCombobox.IsEnabled = true;
+            SectorCombobox.Focus();
+            if (CiudadCombobox.SelectedValue != null)
+            {
+                
+                SectorCombobox.ItemsSource = Utilidades.getSectores((int)CiudadCombobox.SelectedValue);
+                SectorCombobox.SelectedValuePath = "CiudadId";
+                SectorCombobox.DisplayMemberPath = "Nombre";
+            }      
+        }
+
+        private void SectorCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SectorCombobox.IsEnabled = false;
+            CiudadCombobox.IsEnabled = false;
         }
     }
 }

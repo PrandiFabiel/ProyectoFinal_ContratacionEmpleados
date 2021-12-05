@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_ContratacionEmpleados.Entidades;
+﻿using ProyectoFinal_ContratacionEmpleados.DAL;
+using ProyectoFinal_ContratacionEmpleados.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,50 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
         }
 
         public static Usuarios User = new Usuarios();
+
+        public static List<Ciudades> getCiudades(int id)
+        {
+            List<Ciudades> lista = new List<Ciudades>();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                lista = contexto.Ciudades.Where(x => x.ProvinciaId == id).ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return lista;
+        }
+
+        public static List<Sectores> getSectores(int id)
+        {
+            List<Sectores> lista = new List<Sectores>();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                lista = contexto.Sectores.Where(x => x.CiudadId == id).ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return lista;
+        }
 
     }
 }

@@ -46,17 +46,17 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Cedula"  />
-                        <TextBox x:Name="CedulaTextbox" Text="{Binding Cedula}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <TextBox x:Name="CedulaTextbox" Text="{Binding Cedula}" Height="24" Width="250"  HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Telefono"  />
-                        <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Height="24" Width="250"  HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Vacante"  />
-                        <ComboBox x:Name="VacanteCombobox" SelectedValue="{Binding VacanteId}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="VacanteCombobox" SelectedValue="{Binding VacanteId}" Height="24" Width="250"  HorizontalAlignment="Left"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -64,17 +64,17 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Provincia"  />
-                        <ComboBox x:Name="ProvinciaCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="ProvinciaCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250" SelectionChanged="ProvinciaCombobox_SelectionChanged"  HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Ciudad"  />
-                        <ComboBox x:Name="CiudadCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="CiudadCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250" SelectionChanged="CiudadCombobox_SelectionChanged"  HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Sector"  />
-                        <ComboBox x:Name="SectorCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="SectorCombobox" SelectedValue="{Binding ProvinciaId}" Height="24" Width="250" SelectionChanged="SectorCombobox_SelectionChanged"  HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
