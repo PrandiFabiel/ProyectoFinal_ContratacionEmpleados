@@ -10,6 +10,7 @@
     <None Remove="Resources\Alarm-Minus-icon.png" />
     <None Remove="Resources\Alarm-Plus-icon.png" />
     <None Remove="Resources\blue-document-cross-icon.png" />
+    <None Remove="Resources\contratacion.ico" />
     <None Remove="Resources\Files-New-File-icon.png" />
     <None Remove="Resources\floppy-icon.png" />
     <None Remove="Resources\gabriel_isak-existence.png" />
@@ -26,6 +27,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\blue-document-cross-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\contratacion.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Files-New-File-icon.png">

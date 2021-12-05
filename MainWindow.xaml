@@ -13,7 +13,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados"
         mc:Ignorable="d"
-        Title="Sistema de Reclutamiento" Height="690" Width="1100" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+        Icon="/Resources/contratacion.ico"
+    Title="Sistema de Reclutamiento" Height="690" Width="1100" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
