@@ -247,17 +247,24 @@ namespace ProyectoFinal_ContratacionEmpleados
                         ListViewMenu.SelectedIndex = -1;
                         break;
                     case "CerrarSesionView":
+                        Utilidades.ok = false;
                         UI.Login login = new UI.Login();
                         this.Close();
                         login.Show();
+                        Utilidades.ok = true;
                         ListViewMenu.SelectedIndex = -1;
                         break;
                 }
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closed(object sender, EventArgs e)
         {
-            Application.Current.Shutdown();
+            if (Utilidades.ok)
+            {
+                Application.Current.Shutdown();
+            }
         }
+
+        
     }
 }

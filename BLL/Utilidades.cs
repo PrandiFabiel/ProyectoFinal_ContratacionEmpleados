@@ -21,6 +21,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
 
         public static Usuarios User = new Usuarios();
 
+        public static bool ok = true;
         public static List<Ciudades> getCiudades(int id)
         {
             List<Ciudades> lista = new List<Ciudades>();

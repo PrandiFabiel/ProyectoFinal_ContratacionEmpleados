@@ -25,6 +25,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI
         public Login()
         {
             InitializeComponent();
+            NombreUsuarioTextBox.Focus();
         }
 
         Usuarios usuarios = new Usuarios();
