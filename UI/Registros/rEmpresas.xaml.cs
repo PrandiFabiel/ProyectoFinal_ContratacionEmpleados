@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -49,7 +50,22 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 esValido = false;
                 MessageBox.Show("Falta el Telefono", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-
+            if (TelefonoTextbox.Text.Length != 14)
+            {
+                esValido = false;
+                MessageBox.Show("Telefono no valido, debe agregar numero de telefono (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+           
+            if (PuestoTextbox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Falta el campo Puesto de trabajo", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            if (DuracionTextbox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Falta el campo Duracion", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 
             return esValido;
         }
@@ -105,5 +121,13 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("No fue posible eliminar", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void DuracionTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        
     }
 }

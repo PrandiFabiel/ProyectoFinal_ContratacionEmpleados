@@ -45,7 +45,7 @@
 
                 <StackPanel Margin="10,10,0,0">
                     <Label Content="Duracion (meses):"  />
-                    <TextBox x:Name="DuracionTextbox" Text="{Binding Duracion}" Width="280" Height="24" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="DuracionTextbox" Text="{Binding Duracion}" Width="280" Height="24" PreviewTextInput="DuracionTextbox_PreviewTextInput" HorizontalAlignment="Left"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
