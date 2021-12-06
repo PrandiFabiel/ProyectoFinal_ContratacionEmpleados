@@ -50,7 +50,7 @@
 
         </Grid>
         <!--menu-->
-        <Menu Height="40" HorizontalAlignment="Right" Foreground="White" VerticalAlignment="Top" Background="DeepSkyBlue">
+        <Menu Height="40" HorizontalAlignment="Right" Foreground="White" VerticalAlignment="Top" Background="DeepSkyBlue" FontWeight="Bold">
             <MenuItem Header="Registros">
                 <MenuItem x:Name="VacantesMenuItem" Header="Registro de Vacantes" Click="VacantesMenuItem_Click"/>
                 <MenuItem x:Name="UsuariosMenuItem" Header="Registro de usuarios" Click="UsuariosMenuItem_Click"/>
