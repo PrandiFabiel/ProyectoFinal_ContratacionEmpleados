@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoFinal_ContratacionEmpleados.DAL;
 
 namespace ProyectoFinal_ContratacionEmpleados.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20211206163452_Agregando_Entidades_ModelCreatingPrandi")]
+    partial class Agregando_Entidades_ModelCreatingPrandi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -273,35 +275,35 @@ namespace ProyectoFinal_ContratacionEmpleados.Migrations
                             PermisoId = 1,
                             Descripcion = "PermisoProfe",
                             UsuarioId = 1,
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         },
                         new
                         {
                             PermisoId = 2,
                             Descripcion = "Permiso2",
                             UsuarioId = 1,
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         },
                         new
                         {
                             PermisoId = 3,
                             Descripcion = "Permiso3",
                             UsuarioId = 1,
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         },
                         new
                         {
                             PermisoId = 4,
                             Descripcion = "Permiso4",
                             UsuarioId = 1,
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         },
                         new
                         {
                             PermisoId = 5,
                             Descripcion = "Permiso5",
                             UsuarioId = 1,
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         });
                 });
 
@@ -609,7 +611,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Migrations
                             UsuarioId = 1,
                             Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
                             Email = "profe098@gmail.com",
-                            FechaRegistroUsuario = new DateTime(2021, 12, 6, 12, 36, 47, 263, DateTimeKind.Local).AddTicks(4689),
+                            FechaRegistroUsuario = new DateTime(2021, 12, 6, 12, 34, 50, 924, DateTimeKind.Local).AddTicks(5225),
                             NombreUsuario = "Admin",
                             RolId = 1
                         });

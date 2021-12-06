@@ -30,18 +30,85 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Agregando 5 entidades de permisos
             modelBuilder.Entity<Permisos>().HasData(new Permisos
             {
                 PermisoId = 1,
-                Descripcion = "PermisoProfe"
+                Descripcion = "PermisoProfe",
+                UsuarioId = 1,
+                VecesAsignado = 1
+            });
+
+            modelBuilder.Entity<Permisos>().HasData(new Permisos
+            {
+                PermisoId = 2,
+                Descripcion = "Permiso2",
+                UsuarioId = 1,
+                VecesAsignado = 1
+
+            });
+
+            modelBuilder.Entity<Permisos>().HasData(new Permisos
+            {
+                PermisoId = 3,
+                Descripcion = "Permiso3",
+                UsuarioId = 1,
+                VecesAsignado = 1
+            });
+
+            modelBuilder.Entity<Permisos>().HasData(new Permisos
+            {
+                PermisoId = 4,
+                Descripcion = "Permiso4",
+                UsuarioId = 1,
+                VecesAsignado = 1
+            });
+
+            modelBuilder.Entity<Permisos>().HasData(new Permisos
+            {
+                PermisoId = 5,
+                Descripcion = "Permiso5",
+                UsuarioId = 1,
+                VecesAsignado = 1
+            });
+
+            //Agregando 5 entidades de roles
+            modelBuilder.Entity<Roles>().HasData(new Roles
+            {
+                RolId = 1,
+                Descripcion = "Administrador",
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Roles>().HasData(new Roles
             {
-                RolId = 1,
-                Descripcion = "Administrador"
+                RolId = 2,
+                Descripcion = "Empleado",
+                UsuarioId = 1
             });
 
+            modelBuilder.Entity<Roles>().HasData(new Roles
+            {
+                RolId = 3,
+                Descripcion = "Tester",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Roles>().HasData(new Roles
+            {
+                RolId = 4,
+                Descripcion = "Programador",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Roles>().HasData(new Roles
+            {
+                RolId = 5,
+                Descripcion = "Jefe",
+                UsuarioId = 1
+            });
+
+            //Entidad de Usuarios por defecto del sistema 
             modelBuilder.Entity<Usuarios>().HasData(new Usuarios
             {
                 UsuarioId = 1,
