@@ -48,16 +48,25 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
 
-                MessageBox.Show("El campo Nombre está vacio", "Fallo",
+                MessageBox.Show("El campo Nombre está vacio", "Advertencia",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 NombreTextBox.Focus();
+            }
+
+            if (CiudadComboBox.Text.Length == 0)
+            {
+                esValido = false;
+
+                MessageBox.Show("El campo Ciudad está vacio", "Advertencia",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                CiudadComboBox.Focus();
             }
 
             if (SectoresBLL.ExisteNombre(NombreTextBox.Text) == true)
             {
                 esValido = false;
 
-                MessageBox.Show("Ya existe un Sector con este nombre!", "Fallo",
+                MessageBox.Show("Ya existe un Sector con este nombre!", "Advertencia",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 NombreTextBox.Focus();
             }
@@ -68,14 +77,18 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var sect = SectoresBLL.Buscar(Utilidades.ToInt(SectorIdTextBox.Text));
+            var Sector = SectoresBLL.Buscar(sector.SectorId);
 
-            if (sector != null)
-                this.sector = sect;
+            if (Sector != null)
+            {
+                this.sector = Sector;
+                this.DataContext = sector;
+            }
             else
-                this.sector = new Sectores();
-
-            this.DataContext = this.sector;
+            {
+                Limpiar();
+                MessageBox.Show("Sector no existe en la base de datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
