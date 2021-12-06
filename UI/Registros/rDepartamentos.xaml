@@ -20,7 +20,7 @@
                 <Label Content="Departamento Id:"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="DepartamentoIdTextBox" Text="{Binding DepartamentoId}" Width="100" Height="22" Margin="5,0,0,0"/>
+                    <TextBox x:Name="DepartamentoIdTextBox" Text="{Binding DepartamentoId}" Width="100" Height="22" Margin="5,0,0,0" PreviewTextInput="DepartamentoIdTextBox_PreviewTextInput"/>
                     <Button x:Name="BuscarButton" Margin="6,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" />
