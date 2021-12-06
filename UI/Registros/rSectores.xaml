@@ -35,7 +35,7 @@
                 </StackPanel>
                 <StackPanel Margin="0,5,10,0" HorizontalAlignment="Left">
                     <Label Content="Ciudad:"/>
-                    <ComboBox x:Name="CiudadComboBox" SelectedValue="{Binding CiudadId}" Margin="5,0,0,0" Width="105" />
+                    <ComboBox x:Name="CiudadComboBox" SelectedValue="{Binding CiudadId}" Margin="5,0,0,0" Width="323" />
                 </StackPanel>
             </StackPanel>
 
