@@ -31,7 +31,7 @@
 
                 <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
                     <Label Content="Nombre:"/>
-                    <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" Width="483" Height="22" />
+                    <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" Width="483" Height="24" />
                 </StackPanel>
                 <StackPanel Margin="0,0,10,0" HorizontalAlignment="Left">
                     <Label Content="Provincia:"/>
