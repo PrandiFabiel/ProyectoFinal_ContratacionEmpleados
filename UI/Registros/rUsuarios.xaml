@@ -24,7 +24,7 @@
                     <StackPanel>
                         <Label Content="UsuarioId:"/>
                         <StackPanel Orientation="Horizontal" Width="230" HorizontalAlignment="Left">
-                            <TextBox x:Name="UsuarioIdTextBox" Text="{Binding UsuarioId}" Width="100" Height="22"/>
+                            <TextBox x:Name="UsuarioIdTextBox" Text="{Binding UsuarioId}" PreviewTextInput="UsuarioIdTextBox_PreviewTextInput" Width="100" Height="22"/>
                             <Button x:Name="BuscarButton" Margin="6,0" Click="BuscarButton_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Resources/search-icon (3).png" Height="20"/>

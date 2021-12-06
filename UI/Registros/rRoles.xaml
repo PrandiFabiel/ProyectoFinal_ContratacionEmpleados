@@ -22,7 +22,7 @@
                     <Label Content="RolId:"/>
 
                     <StackPanel Orientation="Horizontal">
-                        <TextBox x:Name="RolDetelleIdTextBox" Text="{Binding RolId}"  Width="100" Height="22"/>
+                        <TextBox x:Name="RolDetelleIdTextBox" Text="{Binding RolId}" PreviewTextInput="RolDetelleIdTextBox_PreviewTextInput" Width="100" Height="22"/>
                         <Button x:Name="BuscarButton" Margin="5,0" Click="BuscarButton_Click">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/search-icon (3).png" Height="24"/>

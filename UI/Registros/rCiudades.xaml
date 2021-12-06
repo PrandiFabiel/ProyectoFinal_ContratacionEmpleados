@@ -20,7 +20,7 @@
                 <Label Content="Ciudad Id:"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="CiudadIdTextBox" Text="{Binding CiudadId}" Width="100" Height="22"/>
+                    <TextBox x:Name="CiudadIdTextBox" Text="{Binding CiudadId}" PreviewTextInput="CiudadIdTextBox_PreviewTextInput"  Width="100" Height="22"/>
                     <Button x:Name="BuscarButton" Margin="6,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" />

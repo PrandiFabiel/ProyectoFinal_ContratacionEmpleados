@@ -19,7 +19,7 @@
             <StackPanel>
                 <Label Content="EmpresaId:"   Margin="10,10,0,0"/>
                 <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
-                    <TextBox x:Name="EmpresaIdTextbox" Text="{Binding EmpresaId}" Width="70" Height="22"/>
+                    <TextBox x:Name="EmpresaIdTextbox" Text="{Binding EmpresaId}" PreviewTextInput="EmpresaIdTextbox_PreviewTextInput" Width="70" Height="22"/>
                     <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" Height="24"/>

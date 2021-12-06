@@ -117,11 +117,6 @@ namespace ProyectoFinal_ContratacionEmpleados
             rSector.Show();
         }
 
-        private void CambiarContrasenaMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void cPermisoMenuItem_Click(object sender, RoutedEventArgs e)
         {
             cPermisos cpermisos = new cPermisos();

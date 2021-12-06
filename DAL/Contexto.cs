@@ -255,7 +255,34 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
                 Telefono = "(809)-725-0577",
                 UsuarioId = 1
             });
-            
+            modelBuilder.Entity<Empresas>().HasData(new Empresas
+            {
+                EmpresaId = 3,
+                Nombre = "Guarina",
+                Puesto = "Vendedor",
+                Duracion = 8,
+                Telefono = "(809)-200-6222",
+                UsuarioId = 1
+            });
+            modelBuilder.Entity<Empresas>().HasData(new Empresas
+            {
+                EmpresaId = 4,
+                Nombre = "Aviva",
+                Puesto = "Vendedor",
+                Duracion = 8,
+                Telefono = "(809)-372-1744",
+                UsuarioId = 1
+            });
+            modelBuilder.Entity<Empresas>().HasData(new Empresas
+            {
+                EmpresaId = 5,
+                Nombre = "Effective",
+                Puesto = "Vendedor",
+                Duracion = 8,
+                Telefono = "(502)-327-3700",
+                UsuarioId = 1
+            });
+
             //Agregando entidades de genero
             modelBuilder.Entity<Generos>().HasData(new Generos
             {

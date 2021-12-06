@@ -21,7 +21,7 @@
                 <Label Content="Fecha"   Margin="495,10,0,0"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
-                <TextBox x:Name="PersonaIdTextbox" Text="{Binding PersonaId}"   Height="24" Width="90"/>
+                <TextBox x:Name="PersonaIdTextbox" Text="{Binding PersonaId}" PreviewTextInput="PersonaIdTextbox_PreviewTextInput"  Height="24" Width="90"/>
                 <Button x:Name="BuscarButton" Click="BuscarButton_Click" Margin="10,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/search-icon (3).png" />
