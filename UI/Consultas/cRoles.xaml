@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consulta de Roles" Height="600" Width="520" WindowStartupLocation="CenterScreen">
+        Title="Consulta de Roles" Height="600" Width="520" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Horizontal">

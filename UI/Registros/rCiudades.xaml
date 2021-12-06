@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Ciudades" Height="270" Width="460" WindowStartupLocation="CenterScreen">
+        Title="Registro de Ciudades" Height="270" Width="460" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,0,0,0">
             <StackPanel Orientation="Vertical">
