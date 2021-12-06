@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -125,6 +126,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             else
                 MessageBox.Show("No fue posible eliminar", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void SectorIdTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
