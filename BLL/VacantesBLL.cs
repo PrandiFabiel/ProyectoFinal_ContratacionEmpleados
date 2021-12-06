@@ -193,6 +193,32 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return lista;
         }
 
+        public static List<VacantesDetalle> GetListDetalle(int id)
+        {
+            List<VacantesDetalle> lista = new List<VacantesDetalle>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                var vacante = VacantesBLL.Buscar(id);
+                if (vacante != null)
+                {
+                    lista = vacante.VacantesDetalle;
+                    //var lista2 = lista.Where(criterio);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
+        }
+
         public static List<Vacantes> GetVacantes()
         {
             Contexto contexto = new Contexto();

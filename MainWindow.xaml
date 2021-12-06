@@ -79,6 +79,8 @@
                 <MenuItem x:Name="cRolesMenuItem" Header="Consulta de Roles" Click="cRolesMenuItem_Click"/>
                 <MenuItem x:Name="cDepartamentosMenuItem" Header="Consulta de Departamentos" Click="cDepartamentosMenuItem_Click"/>
                 <MenuItem x:Name="cHabilidadesMenuItem" Header="Consulta de Habilidades" Click="cHabilidadesMenuItem_Click"/>
+                <MenuItem x:Name="cHabilidadesPorVacanteMenuItem" Header="Consulta de Habilidades por vacante" Click="cHabilidadesPorVacanteMenuItem_Click"/>
+                
 
                 <MenuItem Header="Consultas de Direcciones">
                     <MenuItem x:Name="cProvinciaMenuItem" Header="Consulta de Provincias" Click="cProvinciaMenuItem_Click"/>

@@ -265,5 +265,10 @@ namespace ProyectoFinal_ContratacionEmpleados
             }
         }
 
+        private void cHabilidadesPorVacanteMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cHabilidadesPorVacantes cHabilidadesPorVacantesObj = new cHabilidadesPorVacantes();
+            cHabilidadesPorVacantesObj.Show();
+        }
     }
 }
