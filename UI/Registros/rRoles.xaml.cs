@@ -90,6 +90,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 Rol.RolesDetalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
