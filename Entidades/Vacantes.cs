@@ -18,7 +18,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Entidades
         public string Requisitos { get; set; }
         public string Descripcion { get; set; }
         public int Disponible { get; set; }
-        public int UsusarioId { get; set; }
+        public int UsuarioId { get; set; }
 
         [ForeignKey("DepartamentoId")]
         public virtual Departamentos Departamento { get; set; }

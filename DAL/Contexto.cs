@@ -172,6 +172,77 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
                 Descripcion = "Femenino"
             });
 
+            modelBuilder.Entity<Departamentos>().HasData(new Departamentos
+            {
+                DepartamentoId = 1,
+                Nombre = "Ventas",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Departamentos>().HasData(new Departamentos
+            {
+                DepartamentoId = 2,
+                Nombre = "Compras",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Departamentos>().HasData(new Departamentos
+            {
+                DepartamentoId = 3,
+                Nombre = "TI",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Departamentos>().HasData(new Departamentos
+            {
+                DepartamentoId = 4,
+                Nombre = "Recursos Humanos",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Departamentos>().HasData(new Departamentos
+            {
+                DepartamentoId = 5,
+                Nombre = "Mantenimiento",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Habilidades>().HasData(new Habilidades
+            {
+                HabilidadId = 1,
+                Descripcion = "Liderazgo",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Habilidades>().HasData(new Habilidades
+            {
+                HabilidadId = 2,
+                Descripcion = "Actitud positiva",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Habilidades>().HasData(new Habilidades
+            {
+                HabilidadId = 3,
+                Descripcion = "Adaptabilidad y flexibilidad",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Habilidades>().HasData(new Habilidades
+            {
+                HabilidadId = 4,
+                Descripcion = "Comunicación",
+                UsuarioId = 1
+            });
+
+            modelBuilder.Entity<Habilidades>().HasData(new Habilidades
+            {
+                HabilidadId = 5,
+                Descripcion = "Trabajo en equipo",
+                UsuarioId = 1
+            });
+
+
 
         }
     }

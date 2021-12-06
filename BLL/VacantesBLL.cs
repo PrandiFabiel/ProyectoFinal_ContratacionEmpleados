@@ -26,6 +26,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Contexto contexto = new Contexto();
             try
             {
+                vacante.UsuarioId = Utilidades.User.UsuarioId;
                 foreach (var detalle in vacante.VacantesDetalle)
                 {
                     detalle.Habilidad.VecesAsignada += 1;
