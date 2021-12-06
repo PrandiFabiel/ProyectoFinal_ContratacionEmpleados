@@ -178,6 +178,12 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
         {
             var detalle = (VacantesDetalle)DetalleDataGrid.SelectedItem;
 
+            if(DetalleDataGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar una fila", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
             {
                 vacante.VacantesDetalle.RemoveAt(DetalleDataGrid.SelectedIndex);
