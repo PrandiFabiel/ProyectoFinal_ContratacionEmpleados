@@ -19,7 +19,7 @@
             <StackPanel Orientation="Vertical">
                 <Label Content="Vacante id:" />
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="VacanteId_TextBox" Width="100" Height="22" Margin="5,0,0,0" Text="{Binding VacanteId}"/>
+                    <TextBox x:Name="VacanteId_TextBox" Width="100" Height="22" Margin="5,0,0,0" Text="{Binding VacanteId}" PreviewTextInput="VacanteId_TextBox_PreviewTextInput"/>
                     <Button x:Name="Buscar_Button" Margin="5,0" Click="Buscar_Button_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/search-icon (3).png" />
