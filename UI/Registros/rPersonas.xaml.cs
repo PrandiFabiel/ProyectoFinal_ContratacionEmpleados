@@ -273,24 +273,31 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void QuitarButton_Click(object sender, RoutedEventArgs e)
         {
+            if(DetalleDataGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un item", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
             {
                 Persona.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
-            else
-            {
-                MessageBox.Show("Debe Seleccionar una fila del dataGrid", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+         
         }
 
         private void ProvinciaCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CiudadCombobox.IsEnabled = true;
             CiudadCombobox.Focus();
-            CiudadCombobox.ItemsSource = Utilidades.getCiudades((int)ProvinciaCombobox.SelectedValue);
-            CiudadCombobox.SelectedValuePath = "ProvinciaId";
-            CiudadCombobox.DisplayMemberPath = "Nombre";
+            if(ProvinciaCombobox.SelectedValue != null)
+            {
+                CiudadCombobox.ItemsSource = Utilidades.getCiudades((int)ProvinciaCombobox.SelectedValue);
+                CiudadCombobox.SelectedValuePath = "ProvinciaId";
+                CiudadCombobox.DisplayMemberPath = "Nombre";
+            }
+            
         }
 
         private void CiudadCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
