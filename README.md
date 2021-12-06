@@ -31,6 +31,8 @@ Este es un proyecto de la asignatura Programación Aplicada 1 el cual consiste e
 ### Capturas de Pantalla
 ![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/Login.jpg)
 
+![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/Inicio.jpg)
+
 ![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rCiudades.jpg)
 
 ![Image text](https://github.com/Alvaro-Starling-Hernandez/Imagenes/blob/master/ImagenesDeLosRegistros/rSectores.jpg)
