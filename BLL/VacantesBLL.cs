@@ -54,14 +54,14 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var proyectoAnterior = contexto.Vacantes
+                var vacanteAnterior = contexto.Vacantes
                                                .Where(x => x.VacanteId == vacante.VacanteId)
                                                .Include(x => x.VacantesDetalle)
                                                .ThenInclude(x => x.Habilidad)
                                                .AsNoTracking()
                                                .SingleOrDefault();
 
-                foreach (var detalle in proyectoAnterior.VacantesDetalle)
+                foreach (var detalle in vacanteAnterior.VacantesDetalle)
                 {
                     var habilidad = contexto.Habilidades.Find(detalle.Habilidad.HabilidadId);
                     habilidad.VecesAsignada -= 1;
@@ -157,6 +157,7 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
                 vacante = contexto.Vacantes.Where(x => x.VacanteId == id)
                                              .Include(x => x.VacantesDetalle)
                                              .ThenInclude(x => x.Habilidad)
+                                             .AsNoTracking()
                                              .SingleOrDefault();
             }
             catch (Exception)

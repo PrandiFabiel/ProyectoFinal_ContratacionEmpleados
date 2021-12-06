@@ -58,46 +58,46 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             if (NombreVacante_TextBox.Text.Length == 0)
             {
                 esValido = false;
-                MessageBox.Show("El Campo Nombre no puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("El Campo Nombre no puede estar vacio", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 NombreVacante_TextBox.Focus();
             }
             if (DepartamentoComboBox.Text.Length == 0)
             {
                 esValido = false;
-                MessageBox.Show("El Campo Departamento no puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("El Campo Departamento no puede estar vacio", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 DepartamentoComboBox.Focus();
             }
             if (Requisitos_TextBox.Text.Length == 0)
             {
                 esValido = false;
-                MessageBox.Show("El Campo Requisitos no Puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("El Campo Requisitos no Puede estar vacio", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 Requisitos_TextBox.Focus();
             }
             if (Descripcion_TextBox.Text.Length == 0)
             {
                 esValido = false;
-                MessageBox.Show("El Campo Descripcion no Puede estar vacio", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("El Campo Descripcion no Puede estar vacio", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 Descripcion_TextBox.Focus();
             }
 
             if (DisponibleVacante_TextBox.Text.Length == 0)
             {
                 esValido = false;
-                MessageBox.Show("Falta llenar el campo disponible!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Falta llenar el campo disponible!", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 DisponibleVacante_TextBox.Focus();
             }
 
             if (Convert.ToInt32(DisponibleVacante_TextBox.Text) <= 0)
             {
                 esValido = false;
-                MessageBox.Show("El campo disponible no puede ser menor o igual que 0!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("El campo disponible no puede ser menor o igual que 0!", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 DisponibleVacante_TextBox.Focus();
             }
 
             if (DetalleDataGrid.Items.Count == 0)
             {
                 esValido = false;
-                MessageBox.Show("Falta llenar el datagrid", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Falta llenar el datagrid", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
             return esValido;
@@ -116,7 +116,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             else
             {
                 Limpiar();
-                MessageBox.Show("No existe Vacante con ese Id", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No existe en la base de datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             Cargar();
@@ -156,15 +156,15 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            if(HabilidadComboBox.Text.Length == 0)
+            if (HabilidadComboBox.Text.Length == 0)
             {
-                MessageBox.Show("Debe seleccionar una Habilidad", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Debe seleccionar una Habilidad", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
                 var detalle = new VacantesDetalle
                 {
-                    VacanteDetalleId = this.vacante.VacanteId,
+                    VacanteId = this.vacante.VacanteId,
                     Habilidad = (Habilidades)HabilidadComboBox.SelectedItem
                 };
 
@@ -180,7 +180,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
             if(DetalleDataGrid.SelectedItem == null)
             {
-                MessageBox.Show("Debe seleccionar una fila", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Debe seleccionar una fila", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -188,10 +188,6 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 vacante.VacantesDetalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar una fila", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

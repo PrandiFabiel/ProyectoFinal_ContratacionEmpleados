@@ -64,14 +64,18 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var habili = HabilidadesBLL.Buscar(Utilidades.ToInt(HabilidadIdTextBox.Text));
+            var Habilidad = HabilidadesBLL.Buscar(habilidad.HabilidadId);
 
-            if (habilidad != null)
-                this.habilidad = habili;
+            if (Habilidad != null)
+            {
+                this.habilidad = Habilidad;
+                this.DataContext = habilidad;
+            }
             else
-                this.habilidad = new Habilidades();
-
-            this.DataContext = this.habilidad;
+            {
+                Limpiar();
+                MessageBox.Show("Habilidad no existe en la base de datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
