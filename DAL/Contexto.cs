@@ -118,125 +118,175 @@ namespace ProyectoFinal_ContratacionEmpleados.DAL
                 RolId = 1
             });
 
+            //Agregando 5 entidades de provincias
             modelBuilder.Entity<Provincias>().HasData(new Provincias
             {
                 ProvinciaId = 1,
-                Nombre = "Duarte"
+                Nombre = "Duarte",
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Provincias>().HasData(new Provincias
             {
                 ProvinciaId = 2,
-                Nombre = "Santo Domingo"
+                Nombre = "Santo Domingo",
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Provincias>().HasData(new Provincias
             {
                 ProvinciaId = 3,
-                Nombre = "La Vega"
+                Nombre = "La Vega",
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Provincias>().HasData(new Provincias
             {
                 ProvinciaId = 4,
-                Nombre = "Santiago de los Caballeros"
+                Nombre = "Santiago de los Caballeros",
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Provincias>().HasData(new Provincias
             {
                 ProvinciaId = 5,
-                Nombre = "Hermanas Mirabal"
+                Nombre = "Hermanas Mirabal",
+                UsuarioId = 1
             });
 
+            //Agregando 5 entidades de ciudad
             modelBuilder.Entity<Ciudades>().HasData(new Ciudades
             {
                 CiudadId = 1,
                 Nombre = "San Francisco de Macoris",
-                ProvinciaId = 1
+                ProvinciaId = 1,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Ciudades>().HasData(new Ciudades
             {
                 CiudadId = 2,
                 Nombre = "Santo Domingo Este",
-                ProvinciaId = 2
+                ProvinciaId = 2,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Ciudades>().HasData(new Ciudades
             {
                 CiudadId = 3,
                 Nombre = "La Vega",
-                ProvinciaId = 3
+                ProvinciaId = 3,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Ciudades>().HasData(new Ciudades
             {
                 CiudadId = 4,
                 Nombre = "Santiago",
-                ProvinciaId = 4
+                ProvinciaId = 4,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Ciudades>().HasData(new Ciudades
             {
                 CiudadId = 5,
                 Nombre = "Salcedo",
-                ProvinciaId = 5
+                ProvinciaId = 5,
+                UsuarioId = 1
             });
 
+            //Agregando 5 entidades de sectores
             modelBuilder.Entity<Sectores>().HasData(new Sectores
             {
                 SectorId = 1,
                 Nombre = "Cenovi",
-                CiudadId = 1
+                CiudadId = 1,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Sectores>().HasData(new Sectores
             {
                 SectorId = 2,
                 Nombre = "Valle del Este",
-                CiudadId = 2
+                CiudadId = 2,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Sectores>().HasData(new Sectores
             {
                 SectorId = 3,
                 Nombre = "El Ranchito",
-                CiudadId = 3
+                CiudadId = 3,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Sectores>().HasData(new Sectores
             {
                 SectorId = 4,
                 Nombre = "Bella Vista",
-                CiudadId = 4
+                CiudadId = 4,
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Sectores>().HasData(new Sectores
             {
                 SectorId = 5,
                 Nombre = "Ojo de agua",
-                CiudadId = 5
+                CiudadId = 5,
+                UsuarioId = 1
             });
 
-
+            //Agregando entidades de Empresas
             modelBuilder.Entity<Empresas>().HasData(new Empresas
             {
                 EmpresaId = 1,
                 Nombre = "Ferreteria Jordan",
                 Puesto = "Vendedor",
-                Duracion = 9
+                Telefono = "(809)-290-8243",
+                Duracion = 9,
+                UsuarioId = 1
             });
-
+            modelBuilder.Entity<Empresas>().HasData(new Empresas
+            {
+                EmpresaId = 2,
+                Nombre = "Ferreteria INCOROSA",
+                Puesto = "Vendedor",
+                Duracion = 3,
+                Telefono = "(809)-725-0577",
+                UsuarioId = 1
+            });
+            
+            //Agregando entidades de genero
             modelBuilder.Entity<Generos>().HasData(new Generos
             {
                 GeneroId = 1,
-                Descripcion = "Masculino"
+                Descripcion = "Masculino",
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Generos>().HasData(new Generos
             {
                 GeneroId = 2,
-                Descripcion = "Femenino"
+                Descripcion = "Femenino",
+                UsuarioId = 1
+            });
+            modelBuilder.Entity<Generos>().HasData(new Generos
+            {
+                GeneroId = 3,
+                Descripcion = "Homosexual",
+                UsuarioId = 1
+            });
+            modelBuilder.Entity<Generos>().HasData(new Generos
+            {
+                GeneroId = 4,
+                Descripcion = "Transexual",
+                UsuarioId = 1
+            });
+            modelBuilder.Entity<Generos>().HasData(new Generos
+            {
+                GeneroId = 5,
+                Descripcion = "Bisexual",
+                UsuarioId = 1
             });
 
             modelBuilder.Entity<Departamentos>().HasData(new Departamentos

@@ -95,7 +95,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 CedulaTextbox.Focus();
             }
-            if (CedulaTextbox.Text.Length != 13)
+            else if (CedulaTextbox.Text.Length != 13)
             {
                 esValido = false;
                 MessageBox.Show("El campo Cedula no es valido debe ingresar un numero de cedula xxx-xxxxxxx-x", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -107,7 +107,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("Falta el campo Telefono", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 TelefonoTextbox.Focus();
             }
-            if (TelefonoTextbox.Text.Length != 14)
+            else if (TelefonoTextbox.Text.Length != 14)
             {
                 esValido = false;
                 MessageBox.Show("El campo Telefono no es valido, debe ingresar un numero de telefono (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -119,7 +119,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("Falta el campo Celular", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 CelularTextbox.Focus();
             }
-            if (CelularTextbox.Text.Length != 14)
+            else if (CelularTextbox.Text.Length != 14)
             {
                 esValido = false;
                 MessageBox.Show("El campo Celular no es valido, debe ingresar un numero de celular (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -131,7 +131,13 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("Falta el campo Email", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 EmailTextbox.Focus();
             }
-            if (!EmailTextbox.Text.Contains("@"))
+            else if (EmailTextbox.Text.Length < 6)
+            {
+                esValido = false;
+                MessageBox.Show("Email no valido", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                EmailTextbox.Focus();
+            }
+            else if (!EmailTextbox.Text.Contains("@"))
             {
                 esValido = false;
                 MessageBox.Show("Debe ingresar un campo Email valido, se esperaba @", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -170,7 +176,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("Falta el campo Referencia Familiar (Telefono)", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 TelefonoReferenciaFamiliarTextbox.Focus();
             }
-            if (TelefonoReferenciaFamiliarTextbox.Text.Length != 14)
+            else if (TelefonoReferenciaFamiliarTextbox.Text.Length != 14)
             {
                 esValido = false;
                 MessageBox.Show("El campo Referencia Familiar (Telefono) no es valido, debe ingresar un numero de telefono (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -188,7 +194,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("Falta el campo Referencia Personal (Telefono)", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
                 TelefonoReferenciaPersonalTextbox.Focus();
             }
-            if (TelefonoReferenciaPersonalTextbox.Text.Length != 14)
+            else if (TelefonoReferenciaPersonalTextbox.Text.Length != 14)
             {
                 esValido = false;
                 MessageBox.Show("El campo Referencia Personal (Telefono) no es valido, debe ingresar un numero de telefono (xxx)-xxx-xxxx", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);

@@ -80,10 +80,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            bool paso = ProvinciasBLL.Guardar(Provincia);
-
             if (!validar())
-                return;
+                return; 
+
+            bool paso = ProvinciasBLL.Guardar(Provincia);
 
             if (paso)
             {  

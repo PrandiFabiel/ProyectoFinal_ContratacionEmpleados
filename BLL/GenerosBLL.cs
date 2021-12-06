@@ -176,13 +176,13 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return lista;
         }
 
-        public static bool ExisteNombre(string descripcion)
+        public static bool ExisteNombre(string datos)
         {
             Contexto contexto = new Contexto();
             bool encontrado = false;
             try
             {
-                encontrado = contexto.Generos.Any(r => r.Descripcion == descripcion);
+                encontrado = contexto.Generos.Any(x => x.Descripcion == datos);
             }
             catch (Exception)
             {

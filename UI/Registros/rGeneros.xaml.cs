@@ -44,11 +44,11 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 MessageBox.Show("Falta la descripcion", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
-            if (GenerosBLL.ExisteNombre(DescripcionTextbox.Text) == true)
+            if (GenerosBLL.ExisteNombre(DescripcionTextbox.Text)==true)
             {
                 esValido = false;
 
-                MessageBox.Show("Ya existe una Provincia con este nombre!", "Fallo",
+                MessageBox.Show("Ya existe un Genero con este nombre!", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 DescripcionTextbox.Focus();
             }
@@ -57,7 +57,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var genero = GenerosBLL.Buscar(Genero.GeneroId);
+            var genero = GenerosBLL.Buscar(Utilidades.ToInt(GeneroIdTextbox.Text));
 
             if(genero != null)
             {
@@ -78,10 +78,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            bool paso = GenerosBLL.Guardar(Genero);
-
             if (!validar())
                 return;
+
+            bool paso = GenerosBLL.Guardar(Genero);
 
             if (paso)
             {
@@ -96,7 +96,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (GenerosBLL.Eliminar(Genero.GeneroId))
+            if (GenerosBLL.Eliminar(Utilidades.ToInt(GeneroIdTextbox.Text)))
             {
                 Limpiar();
                 MessageBox.Show("Registro Eliminado!", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
