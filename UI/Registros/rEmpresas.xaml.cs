@@ -128,6 +128,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        
+        private void TelefonoTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9-()]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
     }
 }

@@ -46,12 +46,12 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Cedula"  />
-                        <TextBox x:Name="CedulaTextbox" Text="{Binding Cedula}" Height="24" Width="250"  HorizontalAlignment="Left"/>
+                        <TextBox x:Name="CedulaTextbox" Text="{Binding Cedula}" PreviewTextInput="CedulaTextbox_PreviewTextInput" Height="24" Width="250"  HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Telefono"  />
-                        <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" Height="24" Width="250"  HorizontalAlignment="Left"/>
+                        <TextBox x:Name="TelefonoTextbox" Text="{Binding Telefono}" PreviewTextInput="TelefonoTextbox_PreviewTextInput" Height="24" Width="250"  HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
@@ -79,7 +79,7 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Celular"  />
-                        <TextBox x:Name="CelularTextbox" Text="{Binding Celular}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <TextBox x:Name="CelularTextbox" Text="{Binding Celular}" PreviewTextInput="CelularTextbox_PreviewTextInput" Height="24" Width="250"   HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
@@ -102,7 +102,7 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Referencia Familiar (Telefono)"  />
-                        <TextBox x:Name="TelefonoReferenciaFamiliarTextbox" Text="{Binding TelefonoReferenciaFamiliar}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <TextBox x:Name="TelefonoReferenciaFamiliarTextbox" Text="{Binding TelefonoReferenciaFamiliar}" PreviewTextInput="TelefonoReferenciaFamiliarTextbox_PreviewTextInput" Height="24" Width="250"   HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
@@ -112,7 +112,7 @@
 
                     <StackPanel Orientation="Vertical" Margin="10,10,0,0">
                         <Label Content="Referencia Personal (Telefono)"  />
-                        <TextBox x:Name="TelefonoReferenciaPersonalTextbox" Text="{Binding TelefonoReferenciaPersonal}" Height="24" Width="250"   HorizontalAlignment="Left"/>
+                        <TextBox x:Name="TelefonoReferenciaPersonalTextbox" Text="{Binding TelefonoReferenciaPersonal}" PreviewTextInput="TelefonoReferenciaPersonalTextbox_PreviewTextInput" Height="24" Width="250"   HorizontalAlignment="Left"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

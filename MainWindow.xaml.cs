@@ -265,6 +265,5 @@ namespace ProyectoFinal_ContratacionEmpleados
             }
         }
 
-        
     }
 }

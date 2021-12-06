@@ -307,5 +307,35 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             SectorCombobox.IsEnabled = false;
             CiudadCombobox.IsEnabled = false;
         }
+
+        private void TelefonoTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9-()]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void CelularTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9-()]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void TelefonoReferenciaFamiliarTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9-()]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void TelefonoReferenciaPersonalTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9-()]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void CedulaTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9-]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
     }
 }
