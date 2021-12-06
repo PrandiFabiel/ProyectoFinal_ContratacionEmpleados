@@ -85,6 +85,13 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void RemoverFilaButton_Click(object sender, RoutedEventArgs e)
         {
+
+            if (DetalleDataGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar una fila", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
             {
                 Rol.RolesDetalle.RemoveAt(DetalleDataGrid.SelectedIndex);
