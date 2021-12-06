@@ -278,6 +278,10 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 Persona.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
+            else
+            {
+                MessageBox.Show("Debe Seleccionar una fila del dataGrid", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void ProvinciaCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
