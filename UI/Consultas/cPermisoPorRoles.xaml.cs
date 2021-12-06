@@ -17,24 +17,24 @@ using System.Windows.Shapes;
 namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
 {
     /// <summary>
-    /// Interaction logic for cHabilidadesPorVacantes.xaml
+    /// Interaction logic for cPermisoPorRoles.xaml
     /// </summary>
-    public partial class cHabilidadesPorVacantes : Window
+    public partial class cPermisoPorRoles : Window
     {
-        public cHabilidadesPorVacantes()
+        public cPermisoPorRoles()
         {
             InitializeComponent();
         }
 
         private void Buscar_Button_Click(object sender, RoutedEventArgs e)
         {
-            List<VacantesDetalle> listado = new List<VacantesDetalle>();
+            List<RolesDetalle> listado = new List<RolesDetalle>();
 
-            if (IdVacante_TextBox.Text.Trim().Length > 0)
+            if (IdRol_TextBox.Text.Trim().Length > 0)
             {
                 try
                 {
-                    listado = VacantesBLL.GetListDetalle(Utilidades.ToInt(IdVacante_TextBox.Text));
+                    listado = RolesBLL.GetListDetalle(Utilidades.ToInt(IdRol_TextBox.Text));
 
                 }
                 catch (FormatException)

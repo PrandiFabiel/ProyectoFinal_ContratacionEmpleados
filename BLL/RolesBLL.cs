@@ -154,6 +154,31 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
         }
 
 
+        public static List<RolesDetalle> GetListDetalle(int id)
+        {
+            List<RolesDetalle> lista = new List<RolesDetalle>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                var rol = RolesBLL.Buscar(id);
+                if (rol != null)
+                {
+                    lista = rol.RolesDetalle;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
+        }
+
         public static List<Roles> GetRoles()
         {
             List<Roles> lista = new List<Roles>();
