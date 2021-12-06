@@ -63,14 +63,18 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var depar = DepartamentosBLL.Buscar(Utilidades.ToInt(DepartamentoIdTextBox.Text));
+            var Departamento = DepartamentosBLL.Buscar(departamento.DepartamentoId);
 
-            if (departamento != null)
-                this.departamento = depar;
+            if (Departamento != null)
+            {
+                this.departamento = Departamento;
+                this.DataContext = departamento;
+            }
             else
-                this.departamento = new Departamentos();
-
-            this.DataContext = this.departamento;
+            {
+                Limpiar();
+                MessageBox.Show("Departemento no existe en la base de datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
