@@ -107,7 +107,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Nombres está vacio", "Fallo",
+                MessageBox.Show("Nombre de usuario está vacio", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 NombreUsuarioTextBox.Focus();
                 GuardarButton.IsEnabled = true;
@@ -117,7 +117,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
                 GuardarButton.IsEnabled = false;
-                MessageBox.Show("Apellidos está vacio", "Fallo",
+                MessageBox.Show("Email está vacio", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
                 EmailTextBox.Focus();
                 GuardarButton.IsEnabled = true;
@@ -163,6 +163,14 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 GuardarButton.IsEnabled = true;
             }
 
+            if (!EmailTextBox.Text.Contains('@'))
+            {
+                esValido = false;
+                GuardarButton.IsEnabled = false;
+                MessageBox.Show("Debe ingresar un campo Email valido, se esperaba @", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                EmailTextBox.Focus();
+                GuardarButton.IsEnabled = true;
+            }
 
             return esValido;
         }
