@@ -13,7 +13,7 @@
         Background="{DynamicResource MaterialDesignLightBackground}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="Consulta de Personas" Height="565" Width="600" WindowStartupLocation="CenterScreen">
+        Title="Consulta de Personas" Height="565" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Horizontal">
