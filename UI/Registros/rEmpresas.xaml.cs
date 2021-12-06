@@ -43,6 +43,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
                 MessageBox.Show("Falta el Nombre", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                NombreTextbox.Focus();
             }
 
             if (TelefonoTextbox.Text.Length == 0)
