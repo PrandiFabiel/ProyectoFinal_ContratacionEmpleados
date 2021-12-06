@@ -540,6 +540,8 @@ namespace ProyectoFinal_ContratacionEmpleados.Migrations
 
                     b.HasKey("RolDetalleId");
 
+                    b.HasIndex("PermisoId");
+
                     b.HasIndex("RolId");
 
                     b.ToTable("RolesDetalle");
@@ -637,7 +639,7 @@ namespace ProyectoFinal_ContratacionEmpleados.Migrations
                             UsuarioId = 1,
                             Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
                             Email = "profe098@gmail.com",
-                            FechaRegistroUsuario = new DateTime(2021, 12, 6, 14, 4, 5, 369, DateTimeKind.Local).AddTicks(6582),
+                            FechaRegistroUsuario = new DateTime(2021, 12, 6, 17, 5, 6, 813, DateTimeKind.Local).AddTicks(1065),
                             NombreUsuario = "Admin",
                             RolId = 1
                         });
@@ -758,11 +760,19 @@ namespace ProyectoFinal_ContratacionEmpleados.Migrations
 
             modelBuilder.Entity("ProyectoFinal_ContratacionEmpleados.Entidades.RolesDetalle", b =>
                 {
+                    b.HasOne("ProyectoFinal_ContratacionEmpleados.Entidades.Permisos", "Permisos")
+                        .WithMany()
+                        .HasForeignKey("PermisoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ProyectoFinal_ContratacionEmpleados.Entidades.Roles", null)
                         .WithMany("RolesDetalle")
                         .HasForeignKey("RolId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Permisos");
                 });
 
             modelBuilder.Entity("ProyectoFinal_ContratacionEmpleados.Entidades.Sectores", b =>

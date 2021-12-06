@@ -64,6 +64,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
+            
             if (PermisoComboBox.Text.Length == 0)
             {
                 MessageBox.Show("Debe eligir un permiso", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -76,7 +77,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                     RolId = Rol.RolId,
                     PermisoId = (int)PermisoComboBox.SelectedValue,
                     DescripcionPermiso = PermisosBLL.GetDescripcion((int)PermisoComboBox.SelectedValue),
-                    VecesAsignado = PermisosBLL.GetVecesAsignado((int)PermisoComboBox.SelectedValue)
+                    VecesAsignado = PermisosBLL.GetVecesAsignado((int)PermisoComboBox.SelectedValue),
                 });
 
                 Cargar();

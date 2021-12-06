@@ -44,7 +44,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
             }
             else
             {
-                MessageBox.Show("Debes ingresar un Id de alquiler.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Debes ingresar un Id de Rol.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
             DatosDataGrid.ItemsSource = null;
@@ -54,7 +54,7 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Consultas
             ConteoTextbox.Text = conteo.ToString();
             if (conteo == 0)
             {
-                MessageBox.Show("No existe Alquiler con este Id!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No existe Rol con este Id!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
