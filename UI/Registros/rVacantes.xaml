@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal_ContratacionEmpleados.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Vacantes" Height="820" Width="750" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Registro de Vacantes" Height="700" Width="750" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Vertical">
@@ -29,19 +29,42 @@
                 </StackPanel>
             </StackPanel>
 
-            <Label Content="Nombre:"/>
-            <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"  Text="{Binding Nombre}"/>
-            <Label Content="Disponible:" Margin="0,5"/>
-            <TextBox x:Name="DisponibleVacante_TextBox" Width="301" HorizontalAlignment="Left" Margin="5,0,0,0" Height="22" Text="{Binding Disponible}" PreviewTextInput="DisponibleVacante_TextBox_PreviewTextInput"/>
-            <Label Content="Fecha:"  Margin="0,5"/>
-            <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"/>
 
-            <Label Content="Departamento:"  Margin="0,5"/>
-            <ComboBox x:Name="DepartamentoComboBox" SelectedValue="{Binding DepartamentoId}" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" />
-            <Label Content="Requisitos:"  Margin="0,5"/>
-            <TextBox x:Name="Requisitos_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="698" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Requisitos}" Height="42"/>
-            <Label Content="Descripcion:"  Margin="0,5"/>
-            <TextBox x:Name="Descripcion_TextBox" AcceptsReturn="True" TextWrapping="Wrap" Width="697" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Descripcion}" Height="42"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Nombre:"/>
+                    <TextBox x:Name="NombreVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"  Text="{Binding Nombre}"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+                    <Label Content="Disponible:"/>
+                    <TextBox x:Name="DisponibleVacante_TextBox" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Disponible}" PreviewTextInput="DisponibleVacante_TextBox_PreviewTextInput"/>
+                </StackPanel>
+                
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Fecha:"/>
+                    <DatePicker x:Name="Fecha_DatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+                    <Label Content="Departamento:"/>
+                    <ComboBox x:Name="DepartamentoComboBox" SelectedValue="{Binding DepartamentoId}" Width="300" HorizontalAlignment="Left" Margin="5,0,0,0" />
+                </StackPanel>
+
+            </StackPanel>
+
+            
+
+            
+            <Label Content="Requisitos:"  Margin="0,10"/>
+            <TextBox x:Name="Requisitos_TextBox" Width="698" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Requisitos}"/>
+            <Label Content="Descripcion:"  Margin="0,10"/>
+            <TextBox x:Name="Descripcion_TextBox" Width="697" HorizontalAlignment="Left" Margin="5,0,0,0" Text="{Binding Descripcion}"/>
 
             <StackPanel Orientation="Vertical">
                 <GroupBox Margin="5,10" Header="Detalle de la Vacante" Width="700" HorizontalAlignment="Left">
