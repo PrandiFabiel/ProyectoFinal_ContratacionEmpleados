@@ -276,5 +276,11 @@ namespace ProyectoFinal_ContratacionEmpleados
             cPermisoPorRoles cPermisoPorRoles = new cPermisoPorRoles();
             cPermisoPorRoles.Show(); 
         }
+
+        private void cEmpresasPorPersonaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cEmpresaXpersona cEmpresaXpersona = new();
+            cEmpresaXpersona.Show();
+        }
     }
 }

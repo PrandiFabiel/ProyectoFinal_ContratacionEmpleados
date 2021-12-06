@@ -81,7 +81,7 @@
                 <MenuItem x:Name="cHabilidadesMenuItem" Header="Consulta de Habilidades" Click="cHabilidadesMenuItem_Click"/>
                 <MenuItem x:Name="cHabilidadesPorVacanteMenuItem" Header="Consulta de Habilidades por vacante" Click="cHabilidadesPorVacanteMenuItem_Click"/>
                 <MenuItem x:Name="cPermisoPorRolesMenuItem" Header="Consulta de Permisos por Roles" Click="cPermisoPorRolesMenuItem_Click"/>
-
+                <MenuItem x:Name="cEmpresasPorPersonaMenuItem" Header="Consulta de Empresas por Personas" Click="cEmpresasPorPersonaMenuItem_Click"/>
 
                 <MenuItem Header="Consultas de Direcciones">
                     <MenuItem x:Name="cProvinciaMenuItem" Header="Consulta de Provincias" Click="cProvinciaMenuItem_Click"/>

@@ -227,5 +227,30 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             return encontrado;
         }
 
+        public static List<PersonasDetalle> GetListDetalle(int id)
+        {
+            List<PersonasDetalle> lista = new List<PersonasDetalle>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                var persona = PersonasBLL.Buscar(id);
+                if (persona != null)
+                {
+                    lista = persona.Detalle;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
+        }
+
     }
 }
