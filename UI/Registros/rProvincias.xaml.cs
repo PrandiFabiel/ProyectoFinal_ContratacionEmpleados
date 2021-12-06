@@ -42,7 +42,19 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
             {
                 esValido = false;
                 MessageBox.Show("Falta el nombre", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                NombreTextbox.Focus();
             }
+
+            if (ProvinciasBLL.ExisteNombre(NombreTextbox.Text) == true)
+            {
+                esValido = false;
+
+                MessageBox.Show("Ya existe una Provincia con este nombre!", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                NombreTextbox.Focus();
+            }
+
+
             return esValido;
         }
         private void BuscarButton_Click(object sender, RoutedEventArgs e)

@@ -207,6 +207,25 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             }
             return lista;
         }
-        
+
+        public static bool ExisteNombre(string cedula)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+            try
+            {
+                encontrado = contexto.Personas.Any(r => r.Cedula == cedula);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
+
     }
 }

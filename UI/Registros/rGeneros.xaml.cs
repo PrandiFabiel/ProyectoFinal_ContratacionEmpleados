@@ -43,6 +43,15 @@ namespace ProyectoFinal_ContratacionEmpleados.UI.Registros
                 esValido = false;
                 MessageBox.Show("Falta la descripcion", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+
+            if (GenerosBLL.ExisteNombre(DescripcionTextbox.Text) == true)
+            {
+                esValido = false;
+
+                MessageBox.Show("Ya existe una Provincia con este nombre!", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                DescripcionTextbox.Focus();
+            }
             return esValido;
         }
 

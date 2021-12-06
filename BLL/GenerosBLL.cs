@@ -175,5 +175,24 @@ namespace ProyectoFinal_ContratacionEmpleados.BLL
             }
             return lista;
         }
+
+        public static bool ExisteNombre(string descripcion)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+            try
+            {
+                encontrado = contexto.Generos.Any(r => r.Descripcion == descripcion);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
     }
 }
